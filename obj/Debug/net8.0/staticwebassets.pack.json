@@ -1,8 +1,368 @@
 {
   "Files": [
     {
-      "Id": "D:\\Dev web\\Cs-Plantlover\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Cs-Plantlover.bundle.scp.css",
-      "PackagePath": "staticwebassets\\Cs-Plantlover.bundle.scp.css"
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\css\\elegant-icons.css",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\css\\elegant-icons.css"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\css\\jquery-ui.min.css",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\css\\jquery-ui.min.css"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\css\\nice-select.css",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\css\\nice-select.css"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\css\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\css\\owl.carousel.min.css"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\css\\slicknav.min.css",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\css\\slicknav.min.css"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\css\\style.css",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\css\\style.css"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\fonts\\ElegantIcons.eot",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\fonts\\ElegantIcons.eot"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\fonts\\ElegantIcons.svg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\fonts\\ElegantIcons.svg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\fonts\\ElegantIcons.ttf",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\fonts\\ElegantIcons.ttf"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\fonts\\ElegantIcons.woff",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\fonts\\ElegantIcons.woff"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\banner\\banner-1.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\banner\\banner-1.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\banner\\banner-2.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\banner\\banner-2.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\blog\\blog-1.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\blog\\blog-1.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\blog\\blog-2.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\blog\\blog-2.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\blog\\blog-3.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\blog\\blog-3.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\blog\\blog-4.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\blog\\blog-4.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\blog\\blog-5.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\blog\\blog-5.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\blog\\blog-6.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\blog\\blog-6.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\blog\\details\\details-author.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\blog\\details\\details-author.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\blog\\details\\details-hero.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\blog\\details\\details-hero.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\blog\\details\\details-pic.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\blog\\details\\details-pic.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\blog\\sidebar\\sr-1.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\blog\\sidebar\\sr-1.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\blog\\sidebar\\sr-2.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\blog\\sidebar\\sr-2.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\blog\\sidebar\\sr-3.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\blog\\sidebar\\sr-3.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\breadcrumb.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\breadcrumb.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\cart\\cart-1.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\cart\\cart-1.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\cart\\cart-2.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\cart\\cart-2.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\cart\\cart-3.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\cart\\cart-3.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\categories\\cat-1.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\categories\\cat-1.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\categories\\cat-2.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\categories\\cat-2.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\categories\\cat-3.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\categories\\cat-3.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\categories\\cat-4.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\categories\\cat-4.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\categories\\cat-5.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\categories\\cat-5.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\featured\\feature-1.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\featured\\feature-1.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\featured\\feature-2.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\featured\\feature-2.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\featured\\feature-3.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\featured\\feature-3.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\featured\\feature-4.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\featured\\feature-4.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\featured\\feature-5.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\featured\\feature-5.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\featured\\feature-6.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\featured\\feature-6.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\featured\\feature-7.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\featured\\feature-7.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\featured\\feature-8.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\featured\\feature-8.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\hero\\banner.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\hero\\banner.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\language.png",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\language.png"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\latest-product\\lp-1.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\latest-product\\lp-1.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\latest-product\\lp-2.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\latest-product\\lp-2.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\latest-product\\lp-3.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\latest-product\\lp-3.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\logo.png",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\logo.png"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\payment-item.png",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\payment-item.png"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\details\\product-details-1.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\details\\product-details-1.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\details\\product-details-2.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\details\\product-details-2.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\details\\product-details-3.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\details\\product-details-3.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\details\\product-details-4.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\details\\product-details-4.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\details\\product-details-5.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\details\\product-details-5.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\details\\thumb-1.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\details\\thumb-1.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\details\\thumb-2.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\details\\thumb-2.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\details\\thumb-3.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\details\\thumb-3.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\details\\thumb-4.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\details\\thumb-4.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\discount\\pd-1.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\discount\\pd-1.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\discount\\pd-2.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\discount\\pd-2.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\discount\\pd-3.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\discount\\pd-3.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\discount\\pd-4.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\discount\\pd-4.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\discount\\pd-5.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\discount\\pd-5.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\discount\\pd-6.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\discount\\pd-6.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\product-1.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\product-1.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\product-10.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\product-10.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\product-11.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\product-11.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\product-12.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\product-12.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\product-2.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\product-2.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\product-3.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\product-3.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\product-4.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\product-4.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\product-5.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\product-5.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\product-6.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\product-6.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\product-7.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\product-7.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\product-8.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\product-8.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\product-9.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\product-9.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\js\\jquery-3.3.1.min.js",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\js\\jquery-3.3.1.min.js"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\js\\jquery-ui.min.js",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\js\\jquery-ui.min.js"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\js\\jquery.nice-select.min.js",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\js\\jquery.nice-select.min.js"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\js\\jquery.slicknav.js",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\js\\jquery.slicknav.js"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\js\\main.js",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\js\\main.js"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\js\\mixitup.min.js",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\js\\mixitup.min.js"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\js\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\js\\owl.carousel.min.js"
     },
     {
       "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\css\\site.css",
@@ -11,6 +371,246 @@
     {
       "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\6860360.png",
+      "PackagePath": "staticwebassets\\img\\6860360.png"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\Group 12.png",
+      "PackagePath": "staticwebassets\\img\\Group 12.png"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\Group 24.png",
+      "PackagePath": "staticwebassets\\img\\Group 24.png"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\Group 25.png",
+      "PackagePath": "staticwebassets\\img\\Group 25.png"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\Group 26.png",
+      "PackagePath": "staticwebassets\\img\\Group 26.png"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\Group 27.png",
+      "PackagePath": "staticwebassets\\img\\Group 27.png"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\Group-4.png",
+      "PackagePath": "staticwebassets\\img\\Group-4.png"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\PlantLover..svg",
+      "PackagePath": "staticwebassets\\img\\PlantLover..svg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\Rectangle 102.png",
+      "PackagePath": "staticwebassets\\img\\Rectangle 102.png"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\Rectangle 104.png",
+      "PackagePath": "staticwebassets\\img\\Rectangle 104.png"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\Rectangle 44.png",
+      "PackagePath": "staticwebassets\\img\\Rectangle 44.png"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\Rectangle 45.png",
+      "PackagePath": "staticwebassets\\img\\Rectangle 45.png"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\Rectangle 46.png",
+      "PackagePath": "staticwebassets\\img\\Rectangle 46.png"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\caytrongnha.jpg",
+      "PackagePath": "staticwebassets\\img\\caytrongnha.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\hero.png",
+      "PackagePath": "staticwebassets\\img\\hero.png"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\image-removebg-preview.png",
+      "PackagePath": "staticwebassets\\img\\image-removebg-preview.png"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\josefin-HtCgLIDy-2U-unsplash.png",
+      "PackagePath": "staticwebassets\\img\\josefin-HtCgLIDy-2U-unsplash.png"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\khonggianxanh.jpg",
+      "PackagePath": "staticwebassets\\img\\khonggianxanh.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\logo.png",
+      "PackagePath": "staticwebassets\\img\\logo.png"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\logo.svg",
+      "PackagePath": "staticwebassets\\img\\logo.svg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\logo1.png",
+      "PackagePath": "staticwebassets\\img\\logo1.png"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\logochu.png",
+      "PackagePath": "staticwebassets\\img\\logochu.png"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\most popular.png",
+      "PackagePath": "staticwebassets\\img\\most popular.png"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\most popular.svg",
+      "PackagePath": "staticwebassets\\img\\most popular.svg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\pexels-anna-khomutova-5596711 1.png",
+      "PackagePath": "staticwebassets\\img\\pexels-anna-khomutova-5596711 1.png"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\pexels-karolina-grabowska-4207787.png",
+      "PackagePath": "staticwebassets\\img\\pexels-karolina-grabowska-4207787.png"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\pexels-stephanie-ho-993626 1.png",
+      "PackagePath": "staticwebassets\\img\\pexels-stephanie-ho-993626 1.png"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\photo-1592150621744-aca64f48394a.avif",
+      "PackagePath": "staticwebassets\\img\\photo-1592150621744-aca64f48394a.avif"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\photo-1595313269158-e5beea1a7cc0.avif",
+      "PackagePath": "staticwebassets\\img\\photo-1595313269158-e5beea1a7cc0.avif"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\photo-1597200049962-d57cc388f6a5.avif",
+      "PackagePath": "staticwebassets\\img\\photo-1597200049962-d57cc388f6a5.avif"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\photo-1604762524889-3e2fcc145683.avif",
+      "PackagePath": "staticwebassets\\img\\photo-1604762524889-3e2fcc145683.avif"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\photo-1604762525343-62309354f8a1.avif",
+      "PackagePath": "staticwebassets\\img\\photo-1604762525343-62309354f8a1.avif"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\photo-1604762525953-2c80447cc4a6.avif",
+      "PackagePath": "staticwebassets\\img\\photo-1604762525953-2c80447cc4a6.avif"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\photo-1604762526063-07244a385cdf.avif",
+      "PackagePath": "staticwebassets\\img\\photo-1604762526063-07244a385cdf.avif"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\photo-1610354745731-33642d488abb.avif",
+      "PackagePath": "staticwebassets\\img\\photo-1610354745731-33642d488abb.avif"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\photo-1610630876605-97b3e670f56c.avif",
+      "PackagePath": "staticwebassets\\img\\photo-1610630876605-97b3e670f56c.avif"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\photo-1614594975525-e45190c55d0b.avif",
+      "PackagePath": "staticwebassets\\img\\photo-1614594975525-e45190c55d0b.avif"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\photo-1617096716008-bba2e240999b.avif",
+      "PackagePath": "staticwebassets\\img\\photo-1617096716008-bba2e240999b.avif"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\photo-1620803113545-8cd9d55c4a31.avif",
+      "PackagePath": "staticwebassets\\img\\photo-1620803113545-8cd9d55c4a31.avif"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\photo-1620803366004-119b57f54cd6.avif",
+      "PackagePath": "staticwebassets\\img\\photo-1620803366004-119b57f54cd6.avif"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\photo-1684738054008-6fcab69c48b0.avif",
+      "PackagePath": "staticwebassets\\img\\photo-1684738054008-6fcab69c48b0.avif"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\photo-1684913127590-54e08d09a34b.avif",
+      "PackagePath": "staticwebassets\\img\\photo-1684913127590-54e08d09a34b.avif"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\photo-1684913955206-90dc82032486.avif",
+      "PackagePath": "staticwebassets\\img\\photo-1684913955206-90dc82032486.avif"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\photo-1685430488624-e5971910cba4.avif",
+      "PackagePath": "staticwebassets\\img\\photo-1685430488624-e5971910cba4.avif"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\photo-1686118356917-c88a78b625ac.avif",
+      "PackagePath": "staticwebassets\\img\\photo-1686118356917-c88a78b625ac.avif"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\photo-1687162257300-922d62ff80c8.avif",
+      "PackagePath": "staticwebassets\\img\\photo-1687162257300-922d62ff80c8.avif"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\photo-1687958755392-d263a47860e0.avif",
+      "PackagePath": "staticwebassets\\img\\photo-1687958755392-d263a47860e0.avif"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\photo-1689150421131-140385516944.avif",
+      "PackagePath": "staticwebassets\\img\\photo-1689150421131-140385516944.avif"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\photo-1689150683719-4e4ab39f0b50.avif",
+      "PackagePath": "staticwebassets\\img\\photo-1689150683719-4e4ab39f0b50.avif"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\photo-1692604947955-ea7c8e41fa8c.avif",
+      "PackagePath": "staticwebassets\\img\\photo-1692604947955-ea7c8e41fa8c.avif"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\photo-1692829560507-a6c7be0a7e38.avif",
+      "PackagePath": "staticwebassets\\img\\photo-1692829560507-a6c7be0a7e38.avif"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\plant 2.png",
+      "PackagePath": "staticwebassets\\img\\plant 2.png"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\plant.png",
+      "PackagePath": "staticwebassets\\img\\plant.png"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\premium_photo-1680127399693-96343c4e06b9.avif",
+      "PackagePath": "staticwebassets\\img\\premium_photo-1680127399693-96343c4e06b9.avif"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\premium_photo-1680127399693-96343c4e06b9.jpg",
+      "PackagePath": "staticwebassets\\img\\premium_photo-1680127399693-96343c4e06b9.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\shop bg.png",
+      "PackagePath": "staticwebassets\\img\\shop bg.png"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\sologan.png",
+      "PackagePath": "staticwebassets\\img\\sologan.png"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\vadim-kaipov-8ZELrodSvTc-unsplash (1).png",
+      "PackagePath": "staticwebassets\\img\\vadim-kaipov-8ZELrodSvTc-unsplash (1).png"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\vadim-kaipov-8ZELrodSvTc-unsplash.png",
+      "PackagePath": "staticwebassets\\img\\vadim-kaipov-8ZELrodSvTc-unsplash.png"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\img\\yoksel-zok-v20zlbSKfAg-unsplash 1.png",
+      "PackagePath": "staticwebassets\\img\\yoksel-zok-v20zlbSKfAg-unsplash 1.png"
     },
     {
       "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\js\\site.js",

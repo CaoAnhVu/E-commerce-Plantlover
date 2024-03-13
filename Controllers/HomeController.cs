@@ -15,6 +15,7 @@ namespace Cs_Plantlover.Controllers
 
         public IActionResult Index()
         {
+            
             return View();
         }
 
