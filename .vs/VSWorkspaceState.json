@@ -1,14 +1,16 @@
 {
   "ExpandedNodes": [
     "",
+    "\\.github",
+    "\\.github\\workflows",
+    "\\bin",
+    "\\bin\\Debug",
     "\\Controllers",
     "\\Models",
-    "\\Views",
-    "\\Views\\Shared",
-    "\\wwwroot",
-    "\\wwwroot\\1LayoutPlantlover",
-    "\\wwwroot\\1LayoutPlantlover\\fonts"
+    "\\obj",
+    "\\Properties",
+    "\\Views"
   ],
-  "SelectedNode": "\\appsettings.json",
+  "SelectedNode": "\\Models\\ErrorViewModel.cs",
   "PreviewInSolutionExplorer": false
 }

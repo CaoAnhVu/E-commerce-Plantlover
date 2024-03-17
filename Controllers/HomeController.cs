@@ -6,6 +6,7 @@ namespace Cs_Plantlover.Controllers
 {
     public class HomeController : Controller
     {
+        DawebContext db = new DawebContext();
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
@@ -15,8 +16,8 @@ namespace Cs_Plantlover.Controllers
 
         public IActionResult Index()
         {
-            
-            return View();
+            List<DanhMucSp> lstsanpham = db.DanhMucSps.ToList();
+            return View(lstsanpham);
         }
 
         public IActionResult Privacy()

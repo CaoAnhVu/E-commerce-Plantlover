@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace Cs_Plantlover.Models;
 
@@ -40,13 +41,21 @@ public partial class DawebContext : DbContext
     public virtual DbSet<ViTri> ViTris { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=LAPTOP-TUG3IS92;Initial Catalog=DAWEB;Integrated Security=True;Connect Timeout=30;Encrypt=True;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False");
+    {
+        if (!optionsBuilder.IsConfigured)
+        {
+            IConfigurationRoot configuration = new ConfigurationBuilder()
+                .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+                .AddJsonFile("appsettings.json")
+                .Build();
+
+            optionsBuilder.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
+        }
+    }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.UseCollation("SQL_Latin1_General_CP1_CI_AS");
-
         modelBuilder.Entity<CheDoA>(entity =>
         {
             entity.HasKey(e => e.MaCheDoAs);
@@ -58,7 +67,6 @@ public partial class DawebContext : DbContext
                 .HasMaxLength(150)
                 .HasColumnName("TenCheDoAS");
         });
-
         modelBuilder.Entity<ChiTietHoaDon>(entity =>
         {
             entity.HasKey(e => new { e.MaChiTietSp, e.MaHoaDon });
@@ -114,6 +122,7 @@ public partial class DawebContext : DbContext
 
             entity.Property(e => e.MaSp).HasColumnName("MaSP");
             entity.Property(e => e.AnhDaiDien).HasMaxLength(500);
+            entity.Property(e => e.GiaBan).HasColumnType("decimal(18, 0)");
             entity.Property(e => e.MaCheDoAs).HasColumnName("MaCheDoAS");
             entity.Property(e => e.MoTa).HasMaxLength(4000);
             entity.Property(e => e.TenSp)
@@ -131,7 +140,7 @@ public partial class DawebContext : DbContext
             entity.HasOne(d => d.MaKichThuocNavigation).WithMany(p => p.DanhMucSps)
                 .HasForeignKey(d => d.MaKichThuoc)
                 .HasConstraintName("FK_DanhMucSP_KichThuocSP");
-
+              
             entity.HasOne(d => d.MaMoiTruongSongNavigation).WithMany(p => p.DanhMucSps)
                 .HasForeignKey(d => d.MaMoiTruongSong)
                 .HasConstraintName("FK_DanhMucSP_MoiTruongSongSP");

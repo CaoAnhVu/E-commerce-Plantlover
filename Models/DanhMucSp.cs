@@ -23,6 +23,9 @@ public partial class DanhMucSp
 
     public string? AnhDaiDien { get; set; }
 
+
+    public decimal? GiaBan { get; set; }
+
     public virtual ICollection<ChiTietSp> ChiTietSps { get; set; } = new List<ChiTietSp>();
 
     public virtual CheDoA? MaCheDoAsNavigation { get; set; }

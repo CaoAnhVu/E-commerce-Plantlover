@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>Cs-Plantlover</RootNamespace>
+    <UserSecretsId>7d35768f-a7b8-4272-ac10-252eafae2ba7</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -28,6 +29,10 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\ProductsImages\" />
   </ItemGroup>
 
 </Project>
