@@ -129,6 +129,10 @@
       "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\blog\\sidebar\\sr-3.jpg"
     },
     {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\breadcrumb.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\breadcrumb.jpg"
+    },
+    {
       "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\cart\\cart-1.jpg",
       "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\cart\\cart-1.jpg"
     },
@@ -197,6 +201,10 @@
       "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\hero\\banner.jpg"
     },
     {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\language.png",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\language.png"
+    },
+    {
       "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\latest-product\\lp-1.jpg",
       "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\latest-product\\lp-1.jpg"
     },
@@ -207,6 +215,14 @@
     {
       "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\latest-product\\lp-3.jpg",
       "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\latest-product\\lp-3.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\logo1.png",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\logo1.png"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\payment-item.png",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\payment-item.png"
     },
     {
       "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\details\\product-details-1.jpg",
@@ -347,110 +363,6 @@
     {
       "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\js\\owl.carousel.min.js",
       "PackagePath": "staticwebassets\\1LayoutPlantlover\\js\\owl.carousel.min.js"
-    },
-    {
-      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\ProductsImages\\Images\\BachTrinhBien.jpg",
-      "PackagePath": "staticwebassets\\ProductsImages\\Images\\BachTrinhBien.jpg"
-    },
-    {
-      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\ProductsImages\\Images\\BoCapVang.jpg",
-      "PackagePath": "staticwebassets\\ProductsImages\\Images\\BoCapVang.jpg"
-    },
-    {
-      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\ProductsImages\\Images\\CucTanAnDo.jpg",
-      "PackagePath": "staticwebassets\\ProductsImages\\Images\\CucTanAnDo.jpg"
-    },
-    {
-      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\ProductsImages\\Images\\DaTamPhuc.jpg",
-      "PackagePath": "staticwebassets\\ProductsImages\\Images\\DaTamPhuc.jpg"
-    },
-    {
-      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\ProductsImages\\Images\\DeVuong.jpg",
-      "PackagePath": "staticwebassets\\ProductsImages\\Images\\DeVuong.jpg"
-    },
-    {
-      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\ProductsImages\\Images\\DuoiCongTim.jpg",
-      "PackagePath": "staticwebassets\\ProductsImages\\Images\\DuoiCongTim.jpg"
-    },
-    {
-      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\ProductsImages\\Images\\DuoiCongVanVang.jpg",
-      "PackagePath": "staticwebassets\\ProductsImages\\Images\\DuoiCongVanVang.jpg"
-    },
-    {
-      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\ProductsImages\\Images\\DuoiCongXanhThuySinh.jpg",
-      "PackagePath": "staticwebassets\\ProductsImages\\Images\\DuoiCongXanhThuySinh.jpg"
-    },
-    {
-      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\ProductsImages\\Images\\HanhPhuc.jpg",
-      "PackagePath": "staticwebassets\\ProductsImages\\Images\\HanhPhuc.jpg"
-    },
-    {
-      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\ProductsImages\\Images\\HoaHongLeoHerzogin.jpg",
-      "PackagePath": "staticwebassets\\ProductsImages\\Images\\HoaHongLeoHerzogin.jpg"
-    },
-    {
-      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\ProductsImages\\Images\\HoaHongNgoaiCarey.jpg",
-      "PackagePath": "staticwebassets\\ProductsImages\\Images\\HoaHongNgoaiCarey.jpg"
-    },
-    {
-      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\ProductsImages\\Images\\HuongThao.jpg",
-      "PackagePath": "staticwebassets\\ProductsImages\\Images\\HuongThao.jpg"
-    },
-    {
-      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\ProductsImages\\Images\\KimPhatTai.jpg",
-      "PackagePath": "staticwebassets\\ProductsImages\\Images\\KimPhatTai.jpg"
-    },
-    {
-      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\ProductsImages\\Images\\LuoiHoHoangKim.jpg",
-      "PackagePath": "staticwebassets\\ProductsImages\\Images\\LuoiHoHoangKim.jpg"
-    },
-    {
-      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\ProductsImages\\Images\\LuoiHoThaiXanh.jpg",
-      "PackagePath": "staticwebassets\\ProductsImages\\Images\\LuoiHoThaiXanh.jpg"
-    },
-    {
-      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\ProductsImages\\Images\\NhoXanhKieng.jpg",
-      "PackagePath": "staticwebassets\\ProductsImages\\Images\\NhoXanhKieng.jpg"
-    },
-    {
-      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\ProductsImages\\Images\\OiKieng.jpg",
-      "PackagePath": "staticwebassets\\ProductsImages\\Images\\OiKieng.jpg"
-    },
-    {
-      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\ProductsImages\\Images\\PhongLaDo.jpg",
-      "PackagePath": "staticwebassets\\ProductsImages\\Images\\PhongLaDo.jpg"
-    },
-    {
-      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\ProductsImages\\Images\\PhongLan.jpg",
-      "PackagePath": "staticwebassets\\ProductsImages\\Images\\PhongLan.jpg"
-    },
-    {
-      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\ProductsImages\\Images\\PhuQuy.jpg",
-      "PackagePath": "staticwebassets\\ProductsImages\\Images\\PhuQuy.jpg"
-    },
-    {
-      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\ProductsImages\\Images\\PhuQuyThuySinh.jpg",
-      "PackagePath": "staticwebassets\\ProductsImages\\Images\\PhuQuyThuySinh.jpg"
-    },
-    {
-      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\ProductsImages\\Images\\SenDaKimCuong.jpg",
-      "PackagePath": "staticwebassets\\ProductsImages\\Images\\SenDaKimCuong.jpg"
-    },
-    {
-      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\ProductsImages\\Images\\TaoKieng.jpg",
-      "PackagePath": "staticwebassets\\ProductsImages\\Images\\TaoKieng.jpg"
-    },
-    {
-      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\ProductsImages\\Images\\TreVang.jpg",
-      "PackagePath": "staticwebassets\\ProductsImages\\Images\\TreVang.jpg"
-    },
-    {
-      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\ProductsImages\\Images\\TrucBachHop.jpg",
-      "PackagePath": "staticwebassets\\ProductsImages\\Images\\TrucBachHop.jpg"
-    },
-    {
-      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\ProductsImages\\Images\\TrucCanCau.jpg",
-      "PackagePath": "staticwebassets\\ProductsImages\\Images\\TrucCanCau.jpg"
     },
     {
       "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\css\\site.css",

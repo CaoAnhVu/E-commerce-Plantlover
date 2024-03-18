@@ -478,7 +478,7 @@ ol {
 }
 
 .header__menu ul li a {
-	font-size: 14	px;
+	font-size: 14px;
 	color: #252525;
 	text-transform: uppercase;
 	font-weight: 700;
@@ -2663,6 +2663,9 @@ ol {
 	font-size: 14px;
 	line-height: 32px;
 }
+.footer__widget ul li a:hover {
+	color: #7fad39; 
+}
 
 .footer__widget p {
 	font-size: 14px;
@@ -2723,6 +2726,9 @@ ol {
 	background: #7fad39;
 	color: #ffffff;
 	border-color: #ffffff;
+}
+.footer__widget .footer__widget__sethover a:hover {
+	background: #7fad39;
 }
 
 .footer__copyright {

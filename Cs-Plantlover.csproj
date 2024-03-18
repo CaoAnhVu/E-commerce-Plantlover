@@ -9,6 +9,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\ProductsImages\**" />
+    <Content Remove="wwwroot\ProductsImages\**" />
+    <EmbeddedResource Remove="wwwroot\ProductsImages\**" />
+    <None Remove="wwwroot\ProductsImages\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="wwwroot\1LayoutPlantlover\fonts\ElegantIcons.svg" />
     <None Include="wwwroot\1LayoutPlantlover\fonts\fontawesome-webfont.svg" />
     <None Include="wwwroot\1LayoutPlantlover\fonts\fontawesome-webfont.woff2" />
@@ -29,10 +36,6 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="wwwroot\ProductsImages\" />
   </ItemGroup>
 
 </Project>
