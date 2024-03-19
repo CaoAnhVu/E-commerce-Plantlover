@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "D:\\Dev web\\Cs-Plantlover\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\models\\khachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:models\\khachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\models\\vitri.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:models\\vitri.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\models\\moitruongsongsp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:models\\moitruongsongsp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\models\\dawebcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:models\\dawebcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\models\\nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,32 +23,28 @@
       "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\models\\vitri.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:models\\vitri.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\models\\dawebcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:models\\dawebcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\models\\chedoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:models\\chedoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\models\\moitruongsongsp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:models\\moitruongsongsp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\models\\kichthuocsp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:models\\kichthuocsp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\wwwroot\\1layoutplantlover\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:wwwroot\\1layoutplantlover\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\models\\khachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:models\\khachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\models\\hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:models\\hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\models\\chitietsp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:models\\chitietsp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,144 +70,145 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "KhachHang.cs",
-              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Models\\KhachHang.cs",
-              "RelativeDocumentMoniker": "Models\\KhachHang.cs",
-              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Models\\KhachHang.cs",
-              "RelativeToolTip": "Models\\KhachHang.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-18T14:03:35.508Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MoiTruongSongSp.cs",
-              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Models\\MoiTruongSongSp.cs",
-              "RelativeDocumentMoniker": "Models\\MoiTruongSongSp.cs",
-              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Models\\MoiTruongSongSp.cs",
-              "RelativeToolTip": "Models\\MoiTruongSongSp.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-18T14:03:34.462Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "NhanVien.cs",
-              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Models\\NhanVien.cs",
-              "RelativeDocumentMoniker": "Models\\NhanVien.cs",
-              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Models\\NhanVien.cs",
-              "RelativeToolTip": "Models\\NhanVien.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-18T14:03:33.3Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Models\\User.cs",
-              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Models\\User.cs",
-              "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-18T14:03:32.075Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ViTri.cs",
-              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Models\\ViTri.cs",
-              "RelativeDocumentMoniker": "Models\\ViTri.cs",
-              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Models\\ViTri.cs",
-              "RelativeToolTip": "Models\\ViTri.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-18T14:03:29.524Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ErrorViewModel.cs",
-              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Models\\ErrorViewModel.cs",
-              "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
-              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Models\\ErrorViewModel.cs",
-              "RelativeToolTip": "Models\\ErrorViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-18T14:03:04.15Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "CheDoA.cs",
               "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Models\\CheDoA.cs",
               "RelativeDocumentMoniker": "Models\\CheDoA.cs",
               "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Models\\CheDoA.cs",
               "RelativeToolTip": "Models\\CheDoA.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-18T13:57:37.844Z",
+              "WhenOpened": "2024-03-19T07:41:30.76Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "style.css",
-              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\css\\style.css",
-              "RelativeDocumentMoniker": "wwwroot\\1LayoutPlantlover\\css\\style.css",
-              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\css\\style.css",
-              "RelativeToolTip": "wwwroot\\1LayoutPlantlover\\css\\style.css",
-              "ViewState": "AQIAAFgKAAAAAAAAAAAAAFoKAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-03-18T01:23:15.593Z"
+              "DocumentIndex": 0,
+              "Title": "ViTri.cs",
+              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Models\\ViTri.cs",
+              "RelativeDocumentMoniker": "Models\\ViTri.cs",
+              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Models\\ViTri.cs",
+              "RelativeToolTip": "Models\\ViTri.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T07:40:58.491Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T07:39:10.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NhanVien.cs",
+              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Models\\NhanVien.cs",
+              "RelativeDocumentMoniker": "Models\\NhanVien.cs",
+              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Models\\NhanVien.cs",
+              "RelativeToolTip": "Models\\NhanVien.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAA4wBQAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T07:32:09.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "KichThuocSp.cs",
+              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Models\\KichThuocSp.cs",
+              "RelativeDocumentMoniker": "Models\\KichThuocSp.cs",
+              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Models\\KichThuocSp.cs",
+              "RelativeToolTip": "Models\\KichThuocSp.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T07:30:46.771Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA3AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-17T14:18:23.146Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DawebContext.cs",
-              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Models\\DawebContext.cs",
-              "RelativeDocumentMoniker": "Models\\DawebContext.cs",
-              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Models\\DawebContext.cs",
-              "RelativeToolTip": "Models\\DawebContext.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAkwHQAAAAeAAAA",
+              "Title": "KhachHang.cs",
+              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Models\\KhachHang.cs",
+              "RelativeDocumentMoniker": "Models\\KhachHang.cs",
+              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Models\\KhachHang.cs",
+              "RelativeToolTip": "Models\\KhachHang.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T08:43:24.362Z",
+              "WhenOpened": "2024-03-19T07:25:26.968Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "_ValidationScriptsPartial.cshtml",
-              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-18T03:18:04.496Z",
+              "Title": "HoaDon.cs",
+              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Models\\HoaDon.cs",
+              "RelativeDocumentMoniker": "Models\\HoaDon.cs",
+              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Models\\HoaDon.cs",
+              "RelativeToolTip": "Models\\HoaDon.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAIBJwBUAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T07:22:11.664Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DawebContext.cs",
+              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Models\\DawebContext.cs",
+              "RelativeDocumentMoniker": "Models\\DawebContext.cs",
+              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Models\\DawebContext.cs",
+              "RelativeToolTip": "Models\\DawebContext.cs",
+              "ViewState": "AQIAADAAAAAAAAAAAAAuwAMAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T07:22:01.661Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
+              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "Models\\ErrorViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T07:22:00.97Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MoiTruongSongSp.cs",
+              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Models\\MoiTruongSongSp.cs",
+              "RelativeDocumentMoniker": "Models\\MoiTruongSongSp.cs",
+              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Models\\MoiTruongSongSp.cs",
+              "RelativeToolTip": "Models\\MoiTruongSongSp.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T07:31:42.904Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ChiTietSp.cs",
+              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Models\\ChiTietSp.cs",
+              "RelativeDocumentMoniker": "Models\\ChiTietSp.cs",
+              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Models\\ChiTietSp.cs",
+              "RelativeToolTip": "Models\\ChiTietSp.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAQwBUAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T07:13:00.513Z",
               "EditorCaption": ""
             }
           ]
