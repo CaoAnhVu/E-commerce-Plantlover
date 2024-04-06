@@ -17,15 +17,13 @@ builder.Configuration.AddJsonFile("appsettings.json");
 builder.Services.AddDbContext<DoAnWebDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DoAnWebDb")));
 
-
-
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
 var connectionString = builder.Configuration.GetConnectionString("DoAnWebDbContext");
 builder.Services.AddDbContext<DoAnWebDbContext>(x => x.UseSqlServer(connectionString));
 
-builder.Services.AddIdentity <IdentityUser, IdentityRole> ()
+builder.Services.AddIdentity <User, IdentityRole> ()
 .AddDefaultTokenProviders()
 .AddDefaultUI()
 .AddEntityFrameworkStores <DoAnWebDbContext> ();
@@ -52,6 +50,7 @@ app.UseRouting();
 app.UseAuthorization();
 app.UseSession();
 app.MapRazorPages();
+
 app.UseEndpoints(endpoints => {
     endpoints.MapRazorPages();
     endpoints.MapControllerRoute("default", "{area=Customer}/{controller=Home}/{action=Index}/{id?}");

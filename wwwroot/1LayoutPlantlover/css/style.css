@@ -2094,7 +2094,7 @@ ol {
 }
 
 .checkout h6 a {
-	text-decoration: underline;
+	text-decoration: none;
 	color: #999999;
 }
 

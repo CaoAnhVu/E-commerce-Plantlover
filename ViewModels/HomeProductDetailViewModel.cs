@@ -5,7 +5,7 @@ namespace Cs_Plantlover.ViewModels
 {
     public class HomeProductDetailViewModel
     {
-        public DanhMucSP danhMucSP { get; set; }
-        public List<ChiTietSP> chiTietSP { get; set; }
+        public required DanhMucSP danhMucSP { get; set; }
+        public required List<ChiTietSP> chiTietSP { get; set; }
     }
 }

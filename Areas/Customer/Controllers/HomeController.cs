@@ -1,32 +1,28 @@
 using Cs_Plantlover.Models;
-/*using Cs_Plantlover.Models.Authentication;*/
 using Cs_Plantlover.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
 using System.Diagnostics;
 using X.PagedList;
 
 namespace Areas.Customer.Controllers
 {
-    [Area("customer")]
-    [Route("customer")]
+    [Area("Customer")]
     public class HomeController : Controller
     {
         private readonly DoAnWebDbContext _db;
         private readonly ILogger<HomeController> _logger;
-        private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly SignInManager<User> _signInManager;        
 
-        public HomeController(DoAnWebDbContext db, ILogger<HomeController> logger, SignInManager<IdentityUser> signInManager)
+        public HomeController(DoAnWebDbContext db, ILogger<HomeController> logger, SignInManager<User> signInManager)
         {
             _db = db;
             _logger = logger;
             _signInManager = signInManager;
         }
-        [Route("")]
-        [Route("index")]
         /*[Authentication]*/
+        
         public IActionResult Index(int? page)
         {
             int pageSize = 8;
@@ -36,6 +32,7 @@ namespace Areas.Customer.Controllers
             return View(lst);
         }
         /* [Authentication]*/
+        [Route("Sanphamtheoloai")]
         public IActionResult SanPhamTheoLoai(int? machucnang, int? page)
         {
             int pageSize = 8;
@@ -46,6 +43,7 @@ namespace Areas.Customer.Controllers
             return View(lst);
         }
         /*[Authentication]*/
+        [Route("Chitietsanpham")]
         public IActionResult ChiTietSanPham(int maSP)
         {
             var sanPham = _db.DanhMucSps.SingleOrDefault(x => x.MaSP == maSP);
@@ -64,15 +62,12 @@ namespace Areas.Customer.Controllers
             return NotFound();*/
         }
         /*[Authentication]*/
+        [Route("ProductDetail")]
         public IActionResult ProductDetail(int maSP)
         {
             var sanPham = _db.DanhMucSps.SingleOrDefault(x => x.MaSP == maSP);
             var anhSanPham = _db.ChiTietSps.Where(x => x.MaSP == maSP).ToList();
-            var homeProductDetailViewModel = new HomeProductDetailViewModel
-            {
-                danhMucSP = sanPham,
-                chiTietSP = anhSanPham
-            };
+            var homeProductDetailViewModel = new HomeProductDetailViewModel { danhMucSP = sanPham, chiTietSP = anhSanPham };
             return View(homeProductDetailViewModel);
         }
 

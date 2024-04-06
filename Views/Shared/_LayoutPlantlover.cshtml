@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<User> SignInManager
+@inject UserManager<User> UserManager
+<!DOCTYPE html>
 <html lang="zxx">
 
 <head>
@@ -58,7 +61,7 @@
         </div>
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
-                <li class="active"><a href="./index.html">Trang chủ</a></li>
+                <li class="active"><a href="https://localhost:7216/">Trang chủ</a></li>
                 <li><a href="./shop-grid.html">Cửa hàng</a></li>
                 <li>
                     <a href="#">Trang</a>
@@ -96,7 +99,8 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="header__top__left">
                             <ul>
-                                <li><i class="fa fa-envelope"></i> hello@plantlover.com</li>
+                                <li><i class="fa fa-envelope" id="manage" class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage"></i>Hello @UserManager.GetUserName(User)!</li>
+                                @* <a id="manage" class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @UserManager.GetUserName(User)!</a> *@
                                 <li>Hỗ trợ miễn phí ship cho tất cả đơn hàng từ 1 triệu đồng</li>
                             </ul>
                         </div>
@@ -132,13 +136,13 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="header__logo ">
-                        <a href="./index.html"><img src="../1LayoutPlantlover/img/logo.png" alt="" style="max-width: 250px; max-height: 150px; margin-left:50px;"></a>
+                        <a href="https://localhost:7216/"><img src="../1LayoutPlantlover/img/logo.png" alt="" style="max-width: 250px; max-height: 150px; margin-left:50px;"></a>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <nav class="header__menu">
                         <ul>
-                            <li class="active"><a href="./index.html">Trang Chủ</a></li>
+                            <li class="active"><a href="https://localhost:7216/">Trang Chủ</a></li>
                             <li><a href="./shop-grid.html">Cửa Hàng</a></li>
                             <li>
                                 <a href="#">Trang</a>
@@ -339,7 +343,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="footer__about">
                         <div class="footer__about__logo">
-                            <a href="./index.html"><img src="../1LayoutPlantlover/img/logo.png" alt=""  style="max-width: 250px; max-height: 150px; margin-left:20px;"></a>
+                            <a href="https://localhost:7216/"><img src="../1LayoutPlantlover/img/logo.png" alt="" style="max-width: 250px; max-height: 150px; margin-left:20px;"></a>
                         </div>
                         <ul>
                             <li>Địa chỉ: 82, Đường Sư Vạn Hạnh, TP.Hồ Chí Minh</li>
