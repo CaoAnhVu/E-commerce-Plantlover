@@ -1,0 +1,15 @@
+﻿@model IEnumerable<ChucNangSP>
+<div class="col-lg-3">
+    <div class="hero__categories">
+        <div class="hero__categories__all">
+            <i class="fa fa-bars"></i>
+            <span>Danh Mục Sản Phẩm</span>
+        </div>
+        <ul>
+            @foreach(var item in Model)
+            {
+                <li><a asp-controller="Home" asp-action="SanPhamTheoLoai" asp-route-machucnang="@item.MaChucNang">@item.TenChucNang</a></li>
+            }  
+        </ul>
+    </div>
+</div>

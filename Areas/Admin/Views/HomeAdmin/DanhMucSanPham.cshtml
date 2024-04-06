@@ -1,0 +1,73 @@
+﻿@using Cs_Plantlover.Models
+@using X.PagedList.Mvc.Core;
+@model X.PagedList.IPagedList<DanhMucSP>
+@{
+    ViewData["Title"] = "DanhMucSanPham";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<h1>Danh mục các sản phẩm</h1>
+
+<p>
+    <a asp-action="ThemSanPhamMoi">Create New</a>
+</p>
+<p>@TempData["Message"]</p>
+<table class="table">
+    <thead>
+        <tr class="table-warning"> 
+            <th>
+                Tên sản phẩm
+            </th>
+            <th>
+                Mã chức năng
+            </th>
+            <th>
+                Mã vị trí
+            </th>
+            <th>
+                Mã kích thước
+            </th>
+            <th>
+                Mã môi trường sống
+            </th>
+            <th>
+                Giá bán
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr class="table-success">
+            <td>
+                @Html.DisplayFor(modelItem => item.TenSP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaChucNang)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaViTri)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaKichThuoc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaMoiTruongSong)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GiaBan)
+            </td>
+            <td>
+                <a asp-action="SuaSanPham" asp-route-maSanPham="@item.MaSP">Edit</a> | 
+                <a asp-action="Details" asp-route-id="@item.MaSP">Details</a> |
+                <a asp-action="XoaSanPham" asp-route-maSanPham="@item.MaSP">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+@Html.PagedListPager(Model, page => Url.Action("DanhMucSanPham", new { page = page }),new  PagedListRenderOptions(){
+        LiElementClasses = new List<string> { "page-item" }, 
+        PageClasses = new List<string> { "page-link" } 
+ })
+

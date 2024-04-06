@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -27,15 +27,98 @@
     <None Include="wwwroot\1LayoutPlantlover\js\main.js" />
     <None Include="wwwroot\1LayoutPlantlover\js\mixitup.min.js" />
     <None Include="wwwroot\1LayoutPlantlover\js\owl.carousel.min.js" />
+    <None Include="wwwroot\LayoutAdmin\.DS_Store" />
+    <None Include="wwwroot\LayoutAdmin\assets\css\style.css.map" />
+    <None Include="wwwroot\LayoutAdmin\assets\fonts\Ubuntu\Ubuntu-Bold.woff2" />
+    <None Include="wwwroot\LayoutAdmin\assets\fonts\Ubuntu\Ubuntu-Light.woff2" />
+    <None Include="wwwroot\LayoutAdmin\assets\fonts\Ubuntu\Ubuntu-Medium.woff2" />
+    <None Include="wwwroot\LayoutAdmin\assets\fonts\Ubuntu\Ubuntu-Regular.woff2" />
+    <None Include="wwwroot\LayoutAdmin\assets\images\dashboard\circle.svg" />
+    <None Include="wwwroot\LayoutAdmin\assets\images\logo-mini.svg" />
+    <None Include="wwwroot\LayoutAdmin\assets\images\logo.svg" />
+    <None Include="wwwroot\LayoutAdmin\assets\js\chart.js" />
+    <None Include="wwwroot\LayoutAdmin\assets\js\dashboard.js" />
+    <None Include="wwwroot\LayoutAdmin\assets\js\file-upload.js" />
+    <None Include="wwwroot\LayoutAdmin\assets\js\hoverable-collapse.js" />
+    <None Include="wwwroot\LayoutAdmin\assets\js\jquery.cookie.js" />
+    <None Include="wwwroot\LayoutAdmin\assets\js\misc.js" />
+    <None Include="wwwroot\LayoutAdmin\assets\js\off-canvas.js" />
+    <None Include="wwwroot\LayoutAdmin\assets\js\todo.js" />
+    <None Include="wwwroot\LayoutAdmin\assets\js\todolist.js" />
+    <None Include="wwwroot\LayoutAdmin\assets\scss\components\_badges.scss" />
+    <None Include="wwwroot\LayoutAdmin\assets\scss\components\_bootstrap-progress.scss" />
+    <None Include="wwwroot\LayoutAdmin\assets\scss\components\_breadcrumbs.scss" />
+    <None Include="wwwroot\LayoutAdmin\assets\scss\components\_buttons.scss" />
+    <None Include="wwwroot\LayoutAdmin\assets\scss\components\_cards.scss" />
+    <None Include="wwwroot\LayoutAdmin\assets\scss\components\_checkbox-radio.scss" />
+    <None Include="wwwroot\LayoutAdmin\assets\scss\components\_dropdown.scss" />
+    <None Include="wwwroot\LayoutAdmin\assets\scss\components\_forms.scss" />
+    <None Include="wwwroot\LayoutAdmin\assets\scss\components\_icons.scss" />
+    <None Include="wwwroot\LayoutAdmin\assets\scss\components\_lists.scss" />
+    <None Include="wwwroot\LayoutAdmin\assets\scss\components\_preview.scss" />
+    <None Include="wwwroot\LayoutAdmin\assets\scss\components\_tables.scss" />
+    <None Include="wwwroot\LayoutAdmin\assets\scss\components\_todo-list.scss" />
+    <None Include="wwwroot\LayoutAdmin\assets\scss\landing-screens\_auth.scss" />
+    <None Include="wwwroot\LayoutAdmin\assets\scss\mixins\_animation.scss" />
+    <None Include="wwwroot\LayoutAdmin\assets\scss\mixins\_background.scss" />
+    <None Include="wwwroot\LayoutAdmin\assets\scss\mixins\_badges.scss" />
+    <None Include="wwwroot\LayoutAdmin\assets\scss\mixins\_blockqoute.scss" />
+    <None Include="wwwroot\LayoutAdmin\assets\scss\mixins\_breadcrumbs.scss" />
+    <None Include="wwwroot\LayoutAdmin\assets\scss\mixins\_buttons.scss" />
+    <None Include="wwwroot\LayoutAdmin\assets\scss\mixins\_cards.scss" />
+    <None Include="wwwroot\LayoutAdmin\assets\scss\mixins\_misc.scss" />
+    <None Include="wwwroot\LayoutAdmin\assets\scss\mixins\_pagination.scss" />
+    <None Include="wwwroot\LayoutAdmin\assets\scss\mixins\_popovers.scss" />
+    <None Include="wwwroot\LayoutAdmin\assets\scss\mixins\_text.scss" />
+    <None Include="wwwroot\LayoutAdmin\assets\scss\mixins\_tooltips.scss" />
+    <None Include="wwwroot\LayoutAdmin\assets\scss\style.scss" />
+    <None Include="wwwroot\LayoutAdmin\assets\scss\_dashboard.scss" />
+    <None Include="wwwroot\LayoutAdmin\assets\scss\_demo.scss" />
+    <None Include="wwwroot\LayoutAdmin\assets\scss\_fonts.scss" />
+    <None Include="wwwroot\LayoutAdmin\assets\scss\_footer.scss" />
+    <None Include="wwwroot\LayoutAdmin\assets\scss\_functions.scss" />
+    <None Include="wwwroot\LayoutAdmin\assets\scss\_layouts.scss" />
+    <None Include="wwwroot\LayoutAdmin\assets\scss\_misc.scss" />
+    <None Include="wwwroot\LayoutAdmin\assets\scss\_navbar.scss" />
+    <None Include="wwwroot\LayoutAdmin\assets\scss\_reset.scss" />
+    <None Include="wwwroot\LayoutAdmin\assets\scss\_sidebar.scss" />
+    <None Include="wwwroot\LayoutAdmin\assets\scss\_typography.scss" />
+    <None Include="wwwroot\LayoutAdmin\assets\scss\_utilities.scss" />
+    <None Include="wwwroot\LayoutAdmin\assets\scss\_variables.scss" />
+    <None Include="wwwroot\LayoutAdmin\assets\scss\_vertical-wrapper.scss" />
+    <None Include="wwwroot\LayoutAdmin\assets\scss\_widget-grid.scss" />
+    <None Include="wwwroot\LayoutAdmin\assets\vendors\chart.js\Chart.min.js" />
+    <None Include="wwwroot\LayoutAdmin\assets\vendors\js\bootstrap.min.js.map" />
+    <None Include="wwwroot\LayoutAdmin\assets\vendors\js\vendor.bundle.base.js" />
+    <None Include="wwwroot\LayoutAdmin\assets\vendors\mdi\css\materialdesignicons.min.css.map" />
+    <None Include="wwwroot\LayoutAdmin\assets\vendors\mdi\fonts\materialdesignicons-webfont.woff2" />
+    <None Include="wwwroot\LayoutAdmin\gulp-tasks\inject.js" />
+    <None Include="wwwroot\LayoutAdmin\gulp-tasks\serve.js" />
+    <None Include="wwwroot\LayoutAdmin\gulp-tasks\vendors.js" />
+    <None Include="wwwroot\LayoutAdmin\PSD\Purple_dashboard_free.psd" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.2" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.2" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.2">
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.3">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
+    <PackageReference Include="X.PagedList" Version="9.1.2" />
+    <PackageReference Include="X.PagedList.Mvc.Core" Version="9.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Customer\Data\" />
+    <Folder Include="Areas\Customer\Models\" />
+    <Folder Include="wwwroot\1LayoutPlantlover\ProductsImages\Images\" />
   </ItemGroup>
 
 </Project>

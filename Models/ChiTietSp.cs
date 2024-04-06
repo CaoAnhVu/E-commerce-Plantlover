@@ -1,28 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace Cs_Plantlover.Models;
-
-public partial class ChiTietSp
+namespace Cs_Plantlover.Models
 {
-    [Required]
-    public int MaChiTietSp { get; set; }
-    [Required]
-    public int? MaSp { get; set; }
-    [StringLength(500)]
-    public string? HinhAnh { get; set; }
-    [Range(0, int.MaxValue)]
-    [Required]
-    public decimal? DonGiaBan { get; set; }
-    [Range(0, 1)]
-    public double? GiamGia { get; set; }
-    [Range (0, int.MaxValue)]
-    public decimal? GiaBan { get; set; }
-    [Required, Range (0, int.MaxValue)]
-    public int? SoLuong { get; set; }
+    public class ChiTietSP
+    {
+        [Key,Required]
+        public int MaChiTietSP { get; set; }
+        [Required]
+        public int MaSP { get; set; }
+        [Required, StringLength(500)]
+        public String? HinhAnh { get; set; }
+        [Required, Range(17,2)]
+        public decimal DonGiaBan { get; set; }
+        [Range(2,1)]
+        public decimal? GiamGia {  get; set; }
+        [Range(17,2)]
+        public decimal GiaBan { get; set; }
+        [Required]
+        public int SoLuong {  get; set; }
+        public virtual ICollection<ChiTietHoaDon> ChiTietHoaDons { get; set; } = new List<ChiTietHoaDon>();
+        public virtual ICollection<AnhChiTietSP> AnhChiTietSPs { get; set; } = new List<AnhChiTietSP>();
+        public virtual DanhMucSP? MaSpNavigation { get; set; }
 
-    public virtual ICollection<ChiTietHoaDon> ChiTietHoaDons { get; set; } = new List<ChiTietHoaDon>();
-
-    public virtual DanhMucSp? MaSpNavigation { get; set; }
+    }
 }

@@ -1,14 +1,3 @@
 {
-  "dependencies": {
-    "secrets1": {
-      "type": "secrets.user"
-    },
-    "mssql1": {
-      "serviceConnectorResourceId": "",
-      "secretStore": "LocalSecretsFile",
-      "type": "mssql.local",
-      "connectionId": "ConnectionStrings:LAPTOP-TUG3IS92",
-      "dynamicId": null
-    }
-  }
+  "dependencies": {}
 }

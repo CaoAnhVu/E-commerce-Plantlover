@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace Cs_Plantlover.Models;
-
-public partial class ChucNangSp
+namespace Cs_Plantlover.Models
 {
-    [Required]
-    public int MaChucNang { get; set; }
-    [StringLength(150)]
-    [Required] 
-    public string? TenChucNang { get; set; }
-    public virtual ICollection<DanhMucSp> DanhMucSps { get; set; } = new List<DanhMucSp>();
+    public class ChucNangSP
+    {
+        [Key,Required]
+        public int MaChucNang {  get; set; }
+        [Required, StringLength(150)]
+        public String? TenChucNang { get; set; }
+        public virtual ICollection<DanhMucSP> DanhMucSPs { get; set; } = new List<DanhMucSP>();
+    }
 }
