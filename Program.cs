@@ -22,14 +22,23 @@ builder.Services.AddControllersWithViews();
 
 var connectionString = builder.Configuration.GetConnectionString("DoAnWebDbContext");
 builder.Services.AddDbContext<DoAnWebDbContext>(x => x.UseSqlServer(connectionString));
+builder.Services.AddScoped<IChucNangSPRepository, ChucNangSPRepository>();
+builder.Services.AddScoped<IViTriRepository, ViTriRepository>();
 
 builder.Services.AddIdentity <User, IdentityRole> ()
 .AddDefaultTokenProviders()
 .AddDefaultUI()
 .AddEntityFrameworkStores <DoAnWebDbContext> ();
 
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.LoginPath = $"/Identity/Account/Login";
+    options.LogoutPath = $"/Identity/Account/Logout";
+    options.LoginPath = $"/Identity/Account/AccessDenied";
+}
+) ;
+
 builder.Services.AddRazorPages();
-builder.Services.AddScoped<IChucNangSPRepository, ChucNangSPRepository>();
 builder.Services.AddSession();
 
 var app = builder.Build();
@@ -52,10 +61,10 @@ app.UseAuthorization();
 app.UseSession();
 app.MapRazorPages();
 
-app.UseEndpoints(endpoints => {
-    endpoints.MapRazorPages();
-    endpoints.MapControllerRoute(name: "Admin", pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
-    endpoints.MapControllerRoute(name: "default", pattern:"{area=Customer}/{controller=Home}/{action=Index}/{id?}");
+app.UseEndpoints(endpoints => 
+{
+    endpoints.MapControllerRoute("default", "{area=Customer}/{controller=Home}/{action=Index}/{id?}");
+    endpoints.MapControllerRoute("Admin", "{area=exits}/{controller=Home}/{action=Index}/{id?}");
 });
 
 

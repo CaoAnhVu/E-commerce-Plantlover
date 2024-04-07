@@ -1,6 +1,34 @@
 {
   "Files": [
     {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\ProductsImages\\Images\\New folder\\cayanqua.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\ProductsImages\\Images\\New folder\\cayanqua.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\ProductsImages\\Images\\New folder\\caybongmat.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\ProductsImages\\Images\\New folder\\caybongmat.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\ProductsImages\\Images\\New folder\\cayhangrao.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\ProductsImages\\Images\\New folder\\cayhangrao.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\ProductsImages\\Images\\New folder\\cayhoa.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\ProductsImages\\Images\\New folder\\cayhoa.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\ProductsImages\\Images\\New folder\\caylockhongkhi.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\ProductsImages\\Images\\New folder\\caylockhongkhi.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\ProductsImages\\Images\\New folder\\cayphongthuy.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\ProductsImages\\Images\\New folder\\cayphongthuy.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\ProductsImages\\Images\\New folder\\caytrangtri.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\ProductsImages\\Images\\New folder\\caytrangtri.jpg"
+    },
+    {
       "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\ProductsImages\\Images\\caybachtrinhbien.jpg",
       "PackagePath": "staticwebassets\\1LayoutPlantlover\\ProductsImages\\Images\\caybachtrinhbien.jpg"
     },
@@ -413,24 +441,32 @@
       "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\cart\\cart-3.jpg"
     },
     {
-      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\categories\\cat-1.jpg",
-      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\categories\\cat-1.jpg"
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\categories\\cayanqua.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\categories\\cayanqua.jpg"
     },
     {
-      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\categories\\cat-2.jpg",
-      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\categories\\cat-2.jpg"
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\categories\\caybongmat.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\categories\\caybongmat.jpg"
     },
     {
-      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\categories\\cat-3.jpg",
-      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\categories\\cat-3.jpg"
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\categories\\cayhangrao.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\categories\\cayhangrao.jpg"
     },
     {
-      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\categories\\cat-4.jpg",
-      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\categories\\cat-4.jpg"
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\categories\\cayhoa.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\categories\\cayhoa.jpg"
     },
     {
-      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\categories\\cat-5.jpg",
-      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\categories\\cat-5.jpg"
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\categories\\caylockhongkhi.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\categories\\caylockhongkhi.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\categories\\cayphongthuy.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\categories\\cayphongthuy.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\categories\\caytrangtri.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\categories\\caytrangtri.jpg"
     },
     {
       "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\featured\\feature-1.jpg",

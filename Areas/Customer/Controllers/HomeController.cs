@@ -1,3 +1,4 @@
+using Cs_Plantlover.Areas.Admin.Models;
 using Cs_Plantlover.Models;
 using Cs_Plantlover.ViewModels;
 using Microsoft.AspNetCore.Identity;
@@ -6,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 using X.PagedList;
 
-namespace Areas.Customer.Controllers
+namespace Cs_Plantlover.Areas.Customer.Controllers
 {
     [Area("Customer")]
     public class HomeController : Controller
@@ -21,14 +22,14 @@ namespace Areas.Customer.Controllers
             _logger = logger;
             _signInManager = signInManager;
         }
-        /*[Authentication]*/
         
         public IActionResult Index(int? page)
         {
+            
             int pageSize = 8;
             int pageNumber = page == null || page < 0 ? 1 : page.Value;
             var lstsanpham = _db.DanhMucSps.AsNoTracking().OrderBy(x => x.TenSP);
-            PagedList<DanhMucSP> lst = new PagedList<DanhMucSP>(lstsanpham, pageNumber, pageSize);
+            PagedList<DanhMucSP> lst = new PagedList<DanhMucSP> (lstsanpham, pageNumber, pageSize);
             return View(lst);
         }
         /* [Authentication]*/
@@ -37,11 +38,36 @@ namespace Areas.Customer.Controllers
         {
             int pageSize = 8;
             int pageNumber = page == null || page < 0 ? 1 : page.Value;
-            var lstsanpham = _db.DanhMucSps.AsNoTracking().Where(x => x.MaChucNang == machucnang).OrderBy(x => x.MaSP);
+            var lstsanpham = _db.DanhMucSps.AsNoTracking().Where(x => x.MaChucNang == machucnang).OrderBy(x => x.TenSP);
             PagedList<DanhMucSP> lst = new PagedList<DanhMucSP>(lstsanpham, pageNumber, pageSize);
             ViewBag.machucnang = machucnang;
             return View(lst);
+
+            
         }
+        [Route("Sanphamtheovitri")]
+        public IActionResult SanPhamTheoViTri(int? mavitri, int? page)
+        {
+            int pageSize = 8;
+            int pageNumber = page == null || page < 0 ? 1 : page.Value;
+            var lstsanpham = _db.DanhMucSps.AsNoTracking().Where(x => x.MaViTri == mavitri).OrderBy(x => x.TenSP);
+            PagedList<DanhMucSP> lst = new PagedList<DanhMucSP>(lstsanpham, pageNumber, pageSize);
+            ViewBag.mavitri = mavitri;
+            return View(lst);
+
+
+        }
+        /*
+                [Route("Sanphamtheoloai2")]
+                public IActionResult SanPhamTheoLoai2(int? machucnang, int? page)
+                {
+                    int pageSize = 8;
+                    int pageNumber = page == null || page < 0 ? 1 : page.Value;
+                    var lstsanpham = _db.DanhMucSps.AsNoTracking().Where(x => x.MaChucNang == machucnang).OrderBy(x => x.MaSP);
+                    PagedList<DanhMucSP> lst = new PagedList<DanhMucSP>(lstsanpham, pageNumber, pageSize);
+                    ViewBag.machucnang = machucnang;
+                    return View(lst);
+                }*/
         /*[Authentication]*/
         [Route("Chitietsanpham")]
         public IActionResult ChiTietSanPham(int maSP)

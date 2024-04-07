@@ -88,7 +88,7 @@
         <div class="humberger__menu__contact">
             <ul>
                 <li><i class="fa fa-envelope"></i> hello@colorlib.com</li>
-                <li>Hỗ trợ miễn phí ship cho tất cả đơn hàng từ 1 triệu đồng</li>
+                <li>Giao hàng miễn phí cho tất cả đơn hàng từ 1 triệu VNĐ</li>
             </ul>
         </div>
     </div>
@@ -163,10 +163,10 @@
                 <div class="col-lg-3">
                     <div class="header__cart">
                         <ul>
-                            <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                            <li><a href="#"><i class="fa fa-heart"></i> <span>0</span></a></li>
+                            <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>0</span></a></li>
                         </ul>
-                        <div class="header__cart__price">item: <span>150.000đ</span></div>
+                        <div class="header__cart__price">item: <span>0đ</span></div>
                     </div>
                 </div>
             </div>
@@ -222,28 +222,44 @@
             <div class="row">
                 <div class="categories__slider owl-carousel">
                     <div class="col-lg-3">
-                        <div class="categories__item set-bg" data-setbg="../1LayoutPlantlover/img/categories/cat-1.jpg">
-                            <h5><a href="#">Fresh Fruit</a></h5>
+                        <div class="categories__item set-bg" data-setbg="../1LayoutPlantlover/img/categories/cayphongthuy.jpg">
+                            <h5><a href="#">Cây phong thủy</a></h5>
                         </div>
                     </div>
+
                     <div class="col-lg-3">
-                        <div class="categories__item set-bg" data-setbg="../1LayoutPlantlover/img/categories/cat-2.jpg">
-                            <h5><a href="#">Dried Fruit</a></h5>
+                        <div class="categories__item set-bg" data-setbg="../1LayoutPlantlover/img/categories/caytrangtri.jpg">
+                            <h5><a href="#">Cây trang trí</a></h5>
                         </div>
                     </div>
+
                     <div class="col-lg-3">
-                        <div class="categories__item set-bg" data-setbg="../1LayoutPlantlover/img/categories/cat-3.jpg">
-                            <h5><a href="#">Vegetables</a></h5>
+                        <div class="categories__item set-bg" data-setbg="../1LayoutPlantlover/img/categories/caylockhongkhi.jpg">
+                            <h5><a href="#">Cây lọc không khí</a></h5>
                         </div>
                     </div>
+
                     <div class="col-lg-3">
-                        <div class="categories__item set-bg" data-setbg="../1LayoutPlantlover/img/categories/cat-4.jpg">
-                            <h5><a href="#">drink fruits</a></h5>
+                        <div class="categories__item set-bg" data-setbg="../1LayoutPlantlover/img/categories/cayhangrao.jpg">
+                                <h5><a href="#">Cây hàng rào</a></h5>
                         </div>
                     </div>
+
                     <div class="col-lg-3">
-                        <div class="categories__item set-bg" data-setbg="../1LayoutPlantlover/img/categories/cat-5.jpg">
-                            <h5><a href="#">drink fruits</a></h5>
+                        <div class="categories__item set-bg" data-setbg="../1LayoutPlantlover/img/categories/caybongmat.jpg">
+                            <h5><a href="#">Cây bóng mát</a></h5>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="categories__item set-bg" data-setbg="../1LayoutPlantlover/img/categories/cayanqua.jpg">
+                            <h5><a href="#">Cây ăn quả</a></h5>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3">
+                        <div class="categories__item set-bg" data-setbg="../1LayoutPlantlover/img/categories/cayhoa.jpg">
+                            <h5><a href="#">Cây hoa</a></h5>
                         </div>
                     </div>
                 </div>
@@ -256,20 +272,7 @@
     <section class="featured spad">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title">
-                        <h2>Featured Product</h2>
-                    </div>
-                    <div class="featured__controls">
-                        <ul>
-                            <li class="active" data-filter="*">All</li>
-                            <li data-filter=".oranges">Oranges</li>
-                            <li data-filter=".fresh-meat">Fresh Meat</li>
-                            <li data-filter=".vegetables">Vegetables</li>
-                            <li data-filter=".fastfood">Fastfood</li>
-                        </ul>
-                    </div>
-                </div>
+                @await Component.InvokeAsync("ViTriTheoLoaiMenu")
             </div>
             <div class="row featured__filter">
                 @RenderBody()

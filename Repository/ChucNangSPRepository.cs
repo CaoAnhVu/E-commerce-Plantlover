@@ -28,7 +28,7 @@ namespace Cs_Plantlover.Repository
 
         }
 
-        public ChucNangSP GetChucNangSP(string machucnangSP)
+        public ChucNangSP GetChucNangSP(int machucnangSP)
         {
             return _context.ChucNangSps.Find(machucnangSP);
         }

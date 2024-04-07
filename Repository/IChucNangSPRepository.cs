@@ -7,7 +7,7 @@ namespace Cs_Plantlover.Repository
         ChucNangSP Update(ChucNangSP chucnangSP);
         ChucNangSP Delete(ChucNangSP machucnangSP);
 
-        ChucNangSP GetChucNangSP(String machucnangSP);
+        ChucNangSP GetChucNangSP(int machucnangSP);
         IEnumerable<ChucNangSP> GetAllChucNangSP();       
     }
 }

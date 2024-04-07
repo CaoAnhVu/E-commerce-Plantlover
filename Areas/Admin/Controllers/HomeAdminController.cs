@@ -9,9 +9,8 @@ using X.PagedList;
 
 namespace Cs_Plantlover.Areas.Admin.Controllers
 {
-    [Area("admin")]
+    [Area("Admin")]
     [Route("admin")]
-    [Route("admin/homeadmin")]
     [Authorize(Roles = SD.Role_Admin)]
     public class HomeAdminController : Controller
     {
