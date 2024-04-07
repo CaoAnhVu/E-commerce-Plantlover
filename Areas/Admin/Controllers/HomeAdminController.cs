@@ -1,5 +1,8 @@
-﻿using Cs_Plantlover.Controllers;
+﻿using Cs_Plantlover.Areas.Admin.Models;
+using Cs_Plantlover.Controllers;
 using Cs_Plantlover.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using X.PagedList;
@@ -9,6 +12,7 @@ namespace Cs_Plantlover.Areas.Admin.Controllers
     [Area("admin")]
     [Route("admin")]
     [Route("admin/homeadmin")]
+    [Authorize(Roles = SD.Role_Admin)]
     public class HomeAdminController : Controller
     {
         private readonly DoAnWebDbContext _db;

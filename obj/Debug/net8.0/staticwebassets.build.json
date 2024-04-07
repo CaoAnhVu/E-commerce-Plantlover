@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xetPRkP7qk3hHxN6XC1aNyvY2iFzmjvH0gSfhL9lJbI=",
+  "Hash": "rV0VeJ7zbDR3c+yA5/TUIudlAu6nS1ti9mEwHmemcpc=",
   "Source": "Cs-Plantlover",
   "BasePath": "_content/Cs-Plantlover",
   "Mode": "Default",
@@ -4594,6 +4594,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\LayoutAdmin\\assets\\fonts\\Ubuntu\\Ubuntu-Regular.woff2"
+    },
+    {
+      "Identity": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\LayoutAdmin\\assets\\images\\background.png",
+      "SourceId": "Cs-Plantlover",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\",
+      "BasePath": "_content/Cs-Plantlover",
+      "RelativePath": "LayoutAdmin/assets/images/background.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\LayoutAdmin\\assets\\images\\background.png"
     },
     {
       "Identity": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\LayoutAdmin\\assets\\images\\dashboard\\circle.png",

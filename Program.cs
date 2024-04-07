@@ -42,6 +42,7 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
@@ -53,7 +54,8 @@ app.MapRazorPages();
 
 app.UseEndpoints(endpoints => {
     endpoints.MapRazorPages();
-    endpoints.MapControllerRoute("default", "{area=Customer}/{controller=Home}/{action=Index}/{id?}");
+    endpoints.MapControllerRoute(name: "Admin", pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+    endpoints.MapControllerRoute(name: "default", pattern:"{area=Customer}/{controller=Home}/{action=Index}/{id?}");
 });
 
 
