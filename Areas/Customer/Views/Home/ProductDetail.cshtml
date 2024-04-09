@@ -1,8 +1,11 @@
 ﻿@model Cs_Plantlover.ViewModels.HomeProductDetailViewModel
-
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<User> SignInManager
+@inject UserManager<User> UserManager
 @{
     ViewData["Title"] = "SanPhamTheoLoai";
     Layout = "~/Views/Shared/_LayoutPlantlover.cshtml";
+
 }
 
 <!-- Product Details Section Begin -->

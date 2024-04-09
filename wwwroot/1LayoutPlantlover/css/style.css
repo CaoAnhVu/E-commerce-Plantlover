@@ -458,6 +458,7 @@ ol {
 	color: #ffffff;
 	font-weight: 400;
 	padding: 5px 15px;
+	margin-top: 20px;
 }
 
 .header__menu ul li.active a {
@@ -808,6 +809,48 @@ ol {
 	left: auto;
 	right: -35px;
 }
+
+/*---------------------
+    banner begin
+-----------------------*/
+..banner {
+	display: flex;
+	overflow: hidden;
+}
+
+.banner__item {
+	flex: 1;
+	position: relative;
+	height: 400px;
+	background-size: cover;
+	background-position: center;
+}
+
+.banner__text {
+	position: absolute;
+	top: 40%;
+	left: 60%;
+	transform: translate(-27%, -64%);
+	color: #fff;
+}
+
+	.banner__text h2 {
+		font-size: 30px;
+		margin-bottom: 10px;
+	}
+
+	.banner__text p {
+		margin-bottom: 20px;
+	}
+
+	.banner__text a {
+		background-color: #5d8b2f;
+		color: #fff;
+		padding: 10px 15px;
+		text-decoration: none;
+	}
+
+
 
 /*---------------------
   Featured

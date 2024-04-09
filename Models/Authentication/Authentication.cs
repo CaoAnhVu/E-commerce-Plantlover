@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace Cs_Plantlover.Models.Authentication
 {
-    public class Authentication: ActionFilterAttribute
+    public class Authentication : ActionFilterAttribute
     {
         public override void OnActionExecuting(ActionExecutingContext context)
         {

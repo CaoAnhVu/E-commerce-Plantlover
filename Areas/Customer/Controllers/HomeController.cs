@@ -1,5 +1,6 @@
 using Cs_Plantlover.Areas.Admin.Models;
 using Cs_Plantlover.Models;
+/*using Cs_Plantlover.Models.Authentication;*/
 using Cs_Plantlover.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -22,10 +23,9 @@ namespace Cs_Plantlover.Areas.Customer.Controllers
             _logger = logger;
             _signInManager = signInManager;
         }
-        
-        public IActionResult Index(int? page)
+        /*[Authentication]*/
+        public IActionResult Index( int? page)
         {
-            
             int pageSize = 8;
             int pageNumber = page == null || page < 0 ? 1 : page.Value;
             var lstsanpham = _db.DanhMucSps.AsNoTracking().OrderBy(x => x.TenSP);
@@ -33,7 +33,7 @@ namespace Cs_Plantlover.Areas.Customer.Controllers
             return View(lst);
         }
         /* [Authentication]*/
-        [Route("Sanphamtheoloai")]
+        /*[Route("Sanphamtheoloai")]*/
         public IActionResult SanPhamTheoLoai(int? machucnang, int? page)
         {
             int pageSize = 8;
@@ -42,8 +42,6 @@ namespace Cs_Plantlover.Areas.Customer.Controllers
             PagedList<DanhMucSP> lst = new PagedList<DanhMucSP>(lstsanpham, pageNumber, pageSize);
             ViewBag.machucnang = machucnang;
             return View(lst);
-
-            
         }
         [Route("Sanphamtheovitri")]
         public IActionResult SanPhamTheoViTri(int? mavitri, int? page)
@@ -54,21 +52,8 @@ namespace Cs_Plantlover.Areas.Customer.Controllers
             PagedList<DanhMucSP> lst = new PagedList<DanhMucSP>(lstsanpham, pageNumber, pageSize);
             ViewBag.mavitri = mavitri;
             return View(lst);
-
-
         }
-        /*
-                [Route("Sanphamtheoloai2")]
-                public IActionResult SanPhamTheoLoai2(int? machucnang, int? page)
-                {
-                    int pageSize = 8;
-                    int pageNumber = page == null || page < 0 ? 1 : page.Value;
-                    var lstsanpham = _db.DanhMucSps.AsNoTracking().Where(x => x.MaChucNang == machucnang).OrderBy(x => x.MaSP);
-                    PagedList<DanhMucSP> lst = new PagedList<DanhMucSP>(lstsanpham, pageNumber, pageSize);
-                    ViewBag.machucnang = machucnang;
-                    return View(lst);
-                }*/
-        /*[Authentication]*/
+        
         [Route("Chitietsanpham")]
         public IActionResult ChiTietSanPham(int maSP)
         {

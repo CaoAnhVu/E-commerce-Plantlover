@@ -2,9 +2,10 @@
 @{
     ViewData["Title"] = "SanPhamTheoLoai";
     Layout = "~/Views/Shared/_LayoutPlantlover.cshtml";
+
 }
 
-
+    
 @using X.PagedList.Mvc.Core;
 @model X.PagedList.IPagedList<DanhMucSP>
 
@@ -14,7 +15,7 @@
 
 }
 <div class="product__pagination">
-    @Html.PagedListPager(Model, page => Url.Action("SanPhamTheoLoai", new { page = page, machucnang=ViewBag.machucnang}))
+    @Html.PagedListPager(Model, page => Url.Action("SanPhamTheoLoai", new { machucnang = ViewBag.machucnang , page = page }))
 </div> 
 
 

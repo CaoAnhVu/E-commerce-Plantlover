@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "D:\\Dev web\\Cs-Plantlover\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\views\\shared\\components\\vitritheoloaimenu\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:views\\shared\\components\\vitritheoloaimenu\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\views\\shared\\components\\chucnangspmenu\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:views\\shared\\components\\chucnangspmenu\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\areas\\customer\\views\\home\\sanphamtheovitri.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:areas\\customer\\views\\home\\sanphamtheovitri.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\repository\\vitrirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:repository\\vitrirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\areas\\customer\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,6 +17,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\views\\shared\\_layoutplantlover.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:views\\shared\\_layoutplantlover.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\models\\authentication\\authentication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:models\\authentication\\authentication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,68 +54,64 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Default.cshtml",
-              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Views\\Shared\\Components\\ChucNangSPMenu\\Default.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\Components\\ChucNangSPMenu\\Default.cshtml",
-              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Views\\Shared\\Components\\ChucNangSPMenu\\Default.cshtml",
-              "RelativeToolTip": "Views\\Shared\\Components\\ChucNangSPMenu\\Default.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-07T18:00:53.997Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Areas\\Customer\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Areas\\Customer\\Controllers\\HomeController.cs",
-              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Areas\\Customer\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Areas\\Customer\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAwwDAAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-07T17:57:45.044Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "SanPhamTheoViTri.cshtml",
               "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Areas\\Customer\\Views\\Home\\SanPhamTheoViTri.cshtml",
               "RelativeDocumentMoniker": "Areas\\Customer\\Views\\Home\\SanPhamTheoViTri.cshtml",
               "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Areas\\Customer\\Views\\Home\\SanPhamTheoViTri.cshtml",
               "RelativeToolTip": "Areas\\Customer\\Views\\Home\\SanPhamTheoViTri.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA0AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-07T17:56:45.248Z",
+              "WhenOpened": "2024-04-09T17:53:11.064Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ViTriRepository.cs",
+              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Repository\\ViTriRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\ViTriRepository.cs",
+              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Repository\\ViTriRepository.cs",
+              "RelativeToolTip": "Repository\\ViTriRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T17:52:56.008Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "Authentication.cs",
+              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Models\\Authentication\\Authentication.cs",
+              "RelativeDocumentMoniker": "Models\\Authentication\\Authentication.cs",
+              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Models\\Authentication\\Authentication.cs",
+              "RelativeToolTip": "Models\\Authentication\\Authentication.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAMwCQAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T17:15:01.585Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Areas\\Customer\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Areas\\Customer\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Areas\\Customer\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Areas\\Customer\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAAAgwDIAAABwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-07T17:57:45.044Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "_LayoutPlantlover.cshtml",
               "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Views\\Shared\\_LayoutPlantlover.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_LayoutPlantlover.cshtml",
               "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Views\\Shared\\_LayoutPlantlover.cshtml",
               "RelativeToolTip": "Views\\Shared\\_LayoutPlantlover.cshtml",
-              "ViewState": "AQIAAPwAAAAAAAAAAAAAABIBAAA/AAAA",
+              "ViewState": "AQIAAL8AAAAAAAAAAAAAAAIBAABJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-07T17:34:46.729Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Default.cshtml",
-              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Views\\Shared\\Components\\ViTriTheoLoaiMenu\\Default.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\Components\\ViTriTheoLoaiMenu\\Default.cshtml",
-              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Views\\Shared\\Components\\ViTriTheoLoaiMenu\\Default.cshtml",
-              "RelativeToolTip": "Views\\Shared\\Components\\ViTriTheoLoaiMenu\\Default.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-07T17:33:58.607Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-07T17:34:46.729Z"
             }
           ]
         }
