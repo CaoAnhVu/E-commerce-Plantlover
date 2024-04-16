@@ -7,6 +7,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Cs_Plantlover.Repository;
 using Microsoft.AspNetCore.Identity;
+using Data;
+using Repository.IRepository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,8 +19,6 @@ builder.Configuration.AddJsonFile("appsettings.json");
 builder.Services.AddDbContext<DoAnWebDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DoAnWebDb")));
 
-// Add services to the container.
-builder.Services.AddControllersWithViews();
 
 var connectionString = builder.Configuration.GetConnectionString("DoAnWebDbContext");
 builder.Services.AddDbContext<DoAnWebDbContext>(x => x.UseSqlServer(connectionString));
@@ -39,6 +39,9 @@ builder.Services.ConfigureApplicationCookie(options =>
 ) ;
 
 builder.Services.AddRazorPages();
+// Add services to the container.
+builder.Services.AddControllersWithViews();
+builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession();
 
 var app = builder.Build();
@@ -54,17 +57,17 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+app.UseSession();
 
 app.UseRouting();
 
 app.UseAuthorization();
-app.UseSession();
-app.MapRazorPages();
 
 app.UseEndpoints(endpoints => 
 {
     endpoints.MapControllerRoute("default", "{area=Customer}/{controller=Home}/{action=Index}/{id?}");
     endpoints.MapControllerRoute("Admin", "{area=exits}/{controller=Home}/{action=Index}/{id?}");
+    app.MapRazorPages();
 });
 
 

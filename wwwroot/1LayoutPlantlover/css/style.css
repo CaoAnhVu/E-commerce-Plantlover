@@ -430,7 +430,7 @@ ol {
 	.header__menu ul li .header__menu__dropdown {
 		position: absolute;
 		left: 0;
-		margin-top: 50px;
+		margin-top: 40px;
 		background: #4c544f;
 		width: 200px;
 		z-index: 9;
@@ -1964,10 +1964,12 @@ ol {
 	text-align: left;
 }
 
-.shoping__cart__table table tbody tr td.shoping__cart__item img {
-	display: inline-block;
-	margin-right: 25px;
-}
+	.shoping__cart__table table tbody tr td.shoping__cart__item img {
+		display: inline-block;
+		margin-right: 25px;
+		width: 100px;
+		height: 100px;
+	}
 
 .shoping__cart__table table tbody tr td.shoping__cart__item h5 {
 	color: #1c1c1c;

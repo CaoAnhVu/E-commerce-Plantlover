@@ -1,6 +1,6 @@
 ﻿using Cs_Plantlover.Models;
-using Cs_Plantlover.Repository;
 using Microsoft.AspNetCore.Mvc;
+using Repository.IRepository;
 namespace Cs_Plantlover.ViewComponents
 {
     public class ViTriTheoLoaiMenuViewComponent : ViewComponent

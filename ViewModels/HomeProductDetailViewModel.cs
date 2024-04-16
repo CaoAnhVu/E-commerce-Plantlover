@@ -7,5 +7,5 @@ namespace Cs_Plantlover.ViewModels
     {
         public required DanhMucSP danhMucSP { get; set; }
         public required List<ChiTietSP> chiTietSP { get; set; }
-    }
+       }
 }

@@ -41,8 +41,9 @@
         <div class="humberger__menu__cart">
             <ul>
                 <li><a href="#"><i class="fa fa-heart"></i> <span>0</span></a></li>
-                <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>0</span></a></li>
-            </ul>
+               
+            </ul> 
+            @await Component.InvokeAsync("CartWidget")
             <div class="header__cart__price">item: <span>0đ</span></div>
         </div>
         <div class="humberger__menu__widget">   
@@ -64,10 +65,9 @@
                 <li class="active"><a href="https://localhost:7216/">Trang chủ</a></li>
                 <li><a href="./shop-grid.html">Cửa hàng</a></li>
                 <li>
-                    <a href="#">Trang</a>
+                    <a >Trang</a>
                     <ul class="header__menu__dropdown">
-                        <li><a href="./shop-details.html">Chi Tiết Cửa Hàng</a></li>
-                        <li><a href="./shoping-cart.html">Giỏ Hàng</a></li>
+                        <li><a asp-area="Customer" asp-controller="Cart" asp-action="AddToCart">Giỏ Hàng</a></li>
                         <li><a href="./checkout.html">Thủ Tục Thanh Toán</a></li>
                         <li><a href="./blog-details.html">Chi Tiết Blog</a></li>
                     </ul>
@@ -145,10 +145,9 @@
                             <li class="active"><a href="https://localhost:7216/">Trang Chủ</a></li>
                             <li><a href="./shop-grid.html">Cửa Hàng</a></li>
                             <li>
-                                <a href="#">Trang</a>
+                                <a >Trang</a>
                                 <ul class="header__menu__dropdown">
-                                    <li><a href="./shop-details.html">Thông Tin Cửa Hàng</a></li>
-                                    <li><a href="./shoping-cart.html">Giỏ Hàng</a></li>
+                                    <li><a  asp-area="Customer" asp-controller="Cart" asp-action="Index" >Giỏ Hàng</a></li>
                                     <li><a href="./checkout.html">Thủ Tục Thanh Toán</a></li>
                                     <li><a href="./blog-details.html">Chi Tiết Blog</a></li>
                                 </ul>
@@ -162,8 +161,8 @@
                     <div class="header__cart">
                         <ul>
                             <li><a href="#"><i class="fa fa-heart"></i> <span>0</span></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>0</span></a></li>
                         </ul>
+                        @await Component.InvokeAsync("CartWidget")
                         <div class="header__cart__price">item: <span>0đ</span></div>
                     </div>
                 </div>
@@ -522,7 +521,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="blog__item">
                         <div class="blog__item__pic">
-                            <img src="~/1LayoutPlantlover/img/blog/cayphatdu1.jpg" alt="">
+                            <img src="~/1LayoutPlantlover/img/blog/cayphatdu2.jpg" alt="">
                         </div>
                         <div class="blog__item__text">
                             <ul>
@@ -552,7 +551,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="blog__item">
                         <div class="blog__item__pic">
-                            <img src="~/1LayoutPlantlover/img/blog/cayngugiabi.jpg" alt="">
+                            <img src="~/1LayoutPlantlover/img/blog/ngugiabi.jpg" alt="">
                         </div>
                         <div class="blog__item__text">
                             <ul>
@@ -647,6 +646,7 @@
     <script src="~/1LayoutPlantlover/js/mixitup.min.js"></script>
     <script src="~/1LayoutPlantlover/js/owl.carousel.min.js"></script>
     <script src="~/1LayoutPlantlover/js/main.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
 
 
 

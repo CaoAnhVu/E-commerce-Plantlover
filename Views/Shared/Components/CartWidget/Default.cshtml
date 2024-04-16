@@ -1,0 +1,16 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model Cart
+<ul>
+    <li><a href="https://localhost:7216/Customer/Cart"><i class="fa fa-shopping-bag"></i> <span>@(Model?.Items?.Count ?? 0)</span></a></li>
+</ul>
+
+@* 
+
+lỗi đang bị 
+1 thêm vô giỏ hàng thì hiện ra 2 cái check out
+2 không remove được sản phẩm *@

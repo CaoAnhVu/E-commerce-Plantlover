@@ -1,5 +1,7 @@
 ﻿using Cs_Plantlover.Areas.Admin.Controllers;
 using Cs_Plantlover.Models;
+using Data;
+
 /*using Cs_Plantlover.Models.Authentication;*/
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;

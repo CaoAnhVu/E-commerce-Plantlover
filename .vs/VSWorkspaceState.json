@@ -1,16 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\.github",
-    "\\.github\\workflows",
-    "\\bin",
-    "\\bin\\Debug",
-    "\\Controllers",
-    "\\Models",
-    "\\obj",
-    "\\Properties",
-    "\\Views"
+    ""
   ],
-  "SelectedNode": "\\appsettings.json",
+  "SelectedNode": "\\Cs-Plantlover.sln",
   "PreviewInSolutionExplorer": false
 }

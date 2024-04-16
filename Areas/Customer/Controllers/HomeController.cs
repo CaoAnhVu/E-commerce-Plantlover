@@ -2,6 +2,7 @@ using Cs_Plantlover.Areas.Admin.Models;
 using Cs_Plantlover.Models;
 /*using Cs_Plantlover.Models.Authentication;*/
 using Cs_Plantlover.ViewModels;
+using Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -29,7 +30,7 @@ namespace Cs_Plantlover.Areas.Customer.Controllers
             int pageSize = 8;
             int pageNumber = page == null || page < 0 ? 1 : page.Value;
             var lstsanpham = _db.DanhMucSps.AsNoTracking().OrderBy(x => x.TenSP);
-            PagedList<DanhMucSP> lst = new PagedList<DanhMucSP> (lstsanpham, pageNumber, pageSize);
+            PagedList<DanhMucSP> lst = new PagedList<DanhMucSP>(lstsanpham, pageNumber, pageSize);
             return View(lst);
         }
         /* [Authentication]*/
@@ -44,11 +45,20 @@ namespace Cs_Plantlover.Areas.Customer.Controllers
             return View(lst);
         }
         [Route("Sanphamtheovitri")]
-        public IActionResult SanPhamTheoViTri(int? mavitri, int? page)
+        public IActionResult SanPhamTheoViTri(int? mavitri, int? machucnang, int? page)
         {
             int pageSize = 8;
             int pageNumber = page == null || page < 0 ? 1 : page.Value;
-            var lstsanpham = _db.DanhMucSps.AsNoTracking().Where(x => x.MaViTri == mavitri).OrderBy(x => x.TenSP);
+            var lstsanpham = _db.DanhMucSps.AsNoTracking();/*.Where(x => x.MaViTri == mavitri && x => x.MaChucNang == machucnang)*/
+            if (mavitri != null)
+            {
+                lstsanpham = (IOrderedQueryable<DanhMucSP>)lstsanpham.Where(x => x.MaViTri == mavitri);
+            }
+            if (machucnang != null)
+            {
+                lstsanpham = (IOrderedQueryable<DanhMucSP>)lstsanpham.Where(x => x.MaChucNang == machucnang);
+            }
+            lstsanpham = lstsanpham.OrderBy(x => x.TenSP);
             PagedList<DanhMucSP> lst = new PagedList<DanhMucSP>(lstsanpham, pageNumber, pageSize);
             ViewBag.mavitri = mavitri;
             return View(lst);

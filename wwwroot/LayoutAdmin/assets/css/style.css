@@ -4234,7 +4234,9 @@ textarea.form-control-lg {
       -webkit-transition: none;
       transition: none; } }
   .btn:hover {
-    color: #343a40; }
+    color: #343a40;
+    outline:none;
+  }
   .btn-check:focus + .btn, .btn:focus {
     outline: 0;
     -webkit-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);

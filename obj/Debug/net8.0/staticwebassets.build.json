@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "8CicKl3kWNhoYX0b1Tc/S1eAtu6IOoU69Yv9LyLKs9M=",
+  "Hash": "kt8kvgpgyA4aaD8XGq7xDoqxHzXRqyk0vSbxXqNd2V0=",
   "Source": "Cs-Plantlover",
   "BasePath": "_content/Cs-Plantlover",
   "Mode": "Default",
@@ -1537,6 +1537,25 @@
       "OriginalItemSpec": "wwwroot\\1LayoutPlantlover\\img\\banner\\banner-2.png"
     },
     {
+      "Identity": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\BannerCart.png",
+      "SourceId": "Cs-Plantlover",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\",
+      "BasePath": "_content/Cs-Plantlover",
+      "RelativePath": "1LayoutPlantlover/img/BannerCart.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\1LayoutPlantlover\\img\\BannerCart.png"
+    },
+    {
       "Identity": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\blog\\blog-4.jpg",
       "SourceId": "Cs-Plantlover",
       "SourceType": "Discovered",
@@ -1613,12 +1632,12 @@
       "OriginalItemSpec": "wwwroot\\1LayoutPlantlover\\img\\blog\\caykimtien.png"
     },
     {
-      "Identity": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\blog\\cayngugiabi.jpg",
+      "Identity": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\blog\\cayphatdu2.jpg",
       "SourceId": "Cs-Plantlover",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\",
       "BasePath": "_content/Cs-Plantlover",
-      "RelativePath": "1LayoutPlantlover/img/blog/cayngugiabi.jpg",
+      "RelativePath": "1LayoutPlantlover/img/blog/cayphatdu2.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1629,26 +1648,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\1LayoutPlantlover\\img\\blog\\cayngugiabi.jpg"
-    },
-    {
-      "Identity": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\blog\\cayphatdu1.jpg",
-      "SourceId": "Cs-Plantlover",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\",
-      "BasePath": "_content/Cs-Plantlover",
-      "RelativePath": "1LayoutPlantlover/img/blog/cayphatdu1.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\1LayoutPlantlover\\img\\blog\\cayphatdu1.jpg"
+      "OriginalItemSpec": "wwwroot\\1LayoutPlantlover\\img\\blog\\cayphatdu2.jpg"
     },
     {
       "Identity": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\blog\\details\\details-author.jpg",
@@ -1708,6 +1708,25 @@
       "OriginalItemSpec": "wwwroot\\1LayoutPlantlover\\img\\blog\\details\\details-pic.jpg"
     },
     {
+      "Identity": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\blog\\ngugiabi.jpg",
+      "SourceId": "Cs-Plantlover",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\",
+      "BasePath": "_content/Cs-Plantlover",
+      "RelativePath": "1LayoutPlantlover/img/blog/ngugiabi.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\1LayoutPlantlover\\img\\blog\\ngugiabi.jpg"
+    },
+    {
       "Identity": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\blog\\sidebar\\sr-1.jpg",
       "SourceId": "Cs-Plantlover",
       "SourceType": "Discovered",
@@ -1763,25 +1782,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\1LayoutPlantlover\\img\\blog\\sidebar\\sr-3.jpg"
-    },
-    {
-      "Identity": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\breadcrumb.jpg",
-      "SourceId": "Cs-Plantlover",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\",
-      "BasePath": "_content/Cs-Plantlover",
-      "RelativePath": "1LayoutPlantlover/img/breadcrumb.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\1LayoutPlantlover\\img\\breadcrumb.jpg"
     },
     {
       "Identity": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\cart\\cart-1.jpg",

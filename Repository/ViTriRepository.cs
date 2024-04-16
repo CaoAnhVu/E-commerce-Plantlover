@@ -1,4 +1,6 @@
 ﻿using Cs_Plantlover.Models;
+using Data;
+using Repository.IRepository;
 
 namespace Cs_Plantlover.Repository
 {

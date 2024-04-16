@@ -1,4 +1,6 @@
 ﻿using Cs_Plantlover.Models;
+using Data;
+using Repository.IRepository;
 
 namespace Cs_Plantlover.Repository
 {
@@ -12,7 +14,7 @@ namespace Cs_Plantlover.Repository
 
         public ChucNangSP Add(ChucNangSP chucnangSP)
         {
-            _context.ChucNangSps.Add(chucnangSP);
+            _context.ChiTietSP.Add(chucnangSP);
             _context.SaveChanges();
             return chucnangSP;
         }
@@ -24,13 +26,13 @@ namespace Cs_Plantlover.Repository
 
         public IEnumerable<ChucNangSP> GetAllChucNangSP()
         {
-            return _context.ChucNangSps;
+            return _context.ChiTietSP;
 
         }
 
         public ChucNangSP GetChucNangSP(int machucnangSP)
         {
-            return _context.ChucNangSps.Find(machucnangSP);
+            return _context.ChiTietSP.Find(machucnangSP);
         }
 
         public ChucNangSP Update(ChucNangSP chucnangSP)

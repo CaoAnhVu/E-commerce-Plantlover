@@ -369,6 +369,10 @@
       "PackagePath": "staticwebassets\\1LayoutPlantlover\\fonts\\fontawesome-webfont.woff2"
     },
     {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\BannerCart.png",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\BannerCart.png"
+    },
+    {
       "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\banner\\banner-1.png",
       "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\banner\\banner-1.png"
     },
@@ -393,12 +397,8 @@
       "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\blog\\caykimtien.png"
     },
     {
-      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\blog\\cayngugiabi.jpg",
-      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\blog\\cayngugiabi.jpg"
-    },
-    {
-      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\blog\\cayphatdu1.jpg",
-      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\blog\\cayphatdu1.jpg"
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\blog\\cayphatdu2.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\blog\\cayphatdu2.jpg"
     },
     {
       "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\blog\\details\\details-author.jpg",
@@ -413,6 +413,10 @@
       "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\blog\\details\\details-pic.jpg"
     },
     {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\blog\\ngugiabi.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\blog\\ngugiabi.jpg"
+    },
+    {
       "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\blog\\sidebar\\sr-1.jpg",
       "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\blog\\sidebar\\sr-1.jpg"
     },
@@ -423,10 +427,6 @@
     {
       "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\blog\\sidebar\\sr-3.jpg",
       "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\blog\\sidebar\\sr-3.jpg"
-    },
-    {
-      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\breadcrumb.jpg",
-      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\breadcrumb.jpg"
     },
     {
       "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\cart\\cart-1.jpg",

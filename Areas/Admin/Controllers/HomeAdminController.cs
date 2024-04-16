@@ -1,6 +1,7 @@
 ﻿using Cs_Plantlover.Areas.Admin.Models;
 using Cs_Plantlover.Controllers;
 using Cs_Plantlover.Models;
+using Data;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -88,12 +89,16 @@ namespace Cs_Plantlover.Areas.Admin.Controllers
             }
             var anhSanPhams=_db.ChiTietSps.Where(x=>x.MaSP==maSanPham);
             if (anhSanPhams.Any())_db.RemoveRange(anhSanPhams);
-            _db.Remove(_db.DanhMucSps.Find(maSanPham));
-            _db.SaveChanges();
-            TempData["Message"] = "Sản phẩm đã được xóa thành công";
+            var sanPham = _db.DanhMucSps.Find(maSanPham);
+            if (sanPham != null)
+            {
+                _db.Remove(sanPham);
+                _db.SaveChanges();
+                TempData["Message"] = "Sản phẩm đã được xóa thành công";
+            }
             return RedirectToAction("DanhMucSanPham", "HomeAdmin");
 
-          
+
         }
     }
 }
