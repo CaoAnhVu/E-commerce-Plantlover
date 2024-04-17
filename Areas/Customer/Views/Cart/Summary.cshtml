@@ -1,0 +1,144 @@
+﻿@model Cs_Plantlover.ViewModels.CartViewModel
+@using Microsoft.Extensions.Options
+
+@* @inject IOptions<Cs_Plantlover.Utility.StripeSettings> Stripe *@
+@{
+    ViewData["Title"] = "Thông tin xác nhận";
+    Layout = "~/Views/Shared/_LayoutCheckOut.cshtml";
+}
+
+<form method="post">
+    <br />
+    <section class="checkout spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h6>
+                        <span class="icon_tag_alt"></span> Có phiếu giảm giá? <a href="#">Bấm vào đây</a>để nhập mã của bạn
+                    </h6>
+                </div>
+            </div>
+            <div class="checkout__form">
+                <h4>Chi tiết thanh toán</h4>
+                <form action="#">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-6">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="checkout__input">
+                                        <p>Fist Name<span>*</span></p>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="checkout__input">
+                                        <p>Last Name<span>*</span></p>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="checkout__input">
+                                <p>Quốc tịch<span>*</span></p>
+                                <input type="text">
+                            </div>
+                            <div class="checkout__input">
+                                <p>Địa chỉ<span>*</span></p>
+                                <input type="text" placeholder="Street Address" class="checkout__input__add">
+                                <input type="text" placeholder="Apartment, suite, unite ect (optinal)">
+                            </div>
+                            <div class="checkout__input">
+                                <p>Thị trấn/Thành phố<span>*</span></p>
+                                <input type="text">
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="checkout__input">
+                                        <p>Phone<span>*</span></p>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="checkout__input">
+                                        <p>Email<span>*</span></p>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="checkout__input__checkbox">
+                                <label for="acc">
+                                    Tạo một tài khoản?
+                                    <input type="checkbox" id="acc">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <p>
+                                Tạo một tài khoản bằng cách nhập thông tin dưới đây. Nếu bạn là khách hàng cũ
+                                Xin hãy đăng nhập ở phía trên cùng của trang
+                            </p>
+                            <div class="checkout__input">
+                                <p>Mật khẩu tài khoản<span>*</span></p>
+                                <input type="text">
+                            </div>
+                            <div class="checkout__input__checkbox">
+                                <label for="diff-acc">
+                                    Gửi đến một địa chỉ khác?
+                                    <input type="checkbox" id="diff-acc">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="checkout__input">
+                                <p>Ghi chú đặt hàng<span>*</span></p>
+                                <input type="text"
+                                       placeholder="Ghi chú về đơn đặt hàng của bạn, ví dụ: ghi chú đặc biệt để giao hàng.">
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="checkout__order">
+                                <h4>Đơn hàng của bạn</h4>
+                                <div class="checkout__order__products">Products <span>Total</span></div>
+                                <ul>
+                                    <li>Cây Cau Cảnh<span>239000.00	VNĐ</span></li>
+                                    <li> Cây Bạch Mã Hoàng Tử <span>350000.00 VNĐ</span></li>
+                                    <li>Cây Bằng Lăng Tím<span>1000000.00 VNĐ</span></li>
+                                    <li>Shipping<span>30000 VNĐ</span></li>
+                                </ul>
+                                <div class="checkout__order__subtotal">Subtotal <span>1589000.00 VNĐ</span></div>
+                                <div class="checkout__order__total">Total <span>1619000.00 VNĐ</span></div>
+                                <div class="checkout__input__checkbox">
+                                    <label for="acc-or">
+                                        Tạo một tài khoản?
+                                        <input type="checkbox" id="acc-or">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="checkout__input__checkbox">
+                                    <label for="payment">
+                                        Kiểm tra thanh toán
+                                        <input type="checkbox" id="payment">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="checkout__input__checkbox">
+                                    <label for="paypal">
+                                        Paypal
+                                        <input type="checkbox" id="paypal">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label for="oder">
+                                        Thanh toán khi nhận hàng
+                                        <input type="checkbox" id="paypal">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <button type="submit" class="site-btn">Thanh Toán</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section> 
+</form>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

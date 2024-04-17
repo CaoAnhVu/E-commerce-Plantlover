@@ -15,6 +15,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="/1LayoutPlantlover/img/PlantloverIcon.ico" />
 
     <!-- Css Styles -->
     <link rel="stylesheet" href="~/1LayoutPlantlover/css/bootstrap.min.css" type="text/css">
@@ -63,12 +65,12 @@
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
                 <li class="active"><a href="https://localhost:7216/">Trang chủ</a></li>
-                <li><a href="./shop-grid.html">Cửa hàng</a></li>
+                <li><a asp-area="Customer" asp-controller="ShopGrid" asp-action="Index">Cửa hàng</a></li>
                 <li>
                     <a >Trang</a>
                     <ul class="header__menu__dropdown">
                         <li><a asp-area="Customer" asp-controller="Cart" asp-action="AddToCart">Giỏ Hàng</a></li>
-                        <li><a href="./checkout.html">Thủ Tục Thanh Toán</a></li>
+                        <li><a asp-area="Customer" asp-controller="CheckOut" asp-action="Index">Thủ Tục Thanh Toán</a></li>
                         <li><a href="./blog-details.html">Chi Tiết Blog</a></li>
                     </ul>
                 </li>
@@ -85,7 +87,7 @@
         </div>
         <div class="humberger__menu__contact">
             <ul>
-                <li><i class="fa fa-envelope"></i> hello@colorlib.com</li>
+                <li><i class="fa fa-envelope" id="manage" class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage"></i>Hello @UserManager.GetUserName(User)!</li>
                 <li>Giao hàng miễn phí cho tất cả đơn hàng từ 1 triệu VNĐ</li>
             </ul>
         </div>
@@ -143,12 +145,12 @@
                     <nav class="header__menu">
                         <ul>
                             <li class="active"><a href="https://localhost:7216/">Trang Chủ</a></li>
-                            <li><a href="./shop-grid.html">Cửa Hàng</a></li>
+                            <li><a asp-area="Customer" asp-controller="ShopGrid" asp-action="Index">Cửa Hàng</a></li>
                             <li>
                                 <a >Trang</a>
                                 <ul class="header__menu__dropdown">
                                     <li><a  asp-area="Customer" asp-controller="Cart" asp-action="Index" >Giỏ Hàng</a></li>
-                                    <li><a href="./checkout.html">Thủ Tục Thanh Toán</a></li>
+                                    <li><a asp-area="Customer" asp-controller="CheckOut" asp-action="Index">Thủ Tục Thanh Toán</a></li>
                                     <li><a href="./blog-details.html">Chi Tiết Blog</a></li>
                                 </ul>
                             </li>
@@ -181,13 +183,13 @@
                 <div class="col-lg-9">
                     <div class="hero__search">
                         <div class="hero__search__form">
-                            <form action="#">
+                            <form  asp-controller="Home" asp-action="Search">
                                 <div class="hero__search__categories">
                                     All Categories
                                     <span class="arrow_carrot-down"></span>
                                 </div>
-                                <input type="text" placeholder="Bạn cần tìm kiếm loại cây gì?">
-                                <button type="submit" class="site-btn">Tìm Kiếm</button>
+                                <input type="text" name="keywords" placeholder="Bạn cần tìm kiếm loại cây gì?">
+                                <button  type="submit" class="site-btn">Tìm Kiếm</button>
                             </form>
                         </div>
                         <div class="hero__search__phone">
@@ -317,7 +319,7 @@
                                     </div> 
                                     <div class="latest-product__item__text">
                                         <h6>Cây Phất Dụ</h6>
-                                        <span>350000.00VNĐ</span>
+                                        <span>350000.00 VNĐ</span>
                                     </div>
                                 </a>
                                 <a href="#" class="latest-product__item">
@@ -326,7 +328,7 @@
                                     </div>
                                     <div class="latest-product__item__text">
                                         <h6>Cây Thủy Tùng</h6>
-                                        <span>169000.00VNĐ</span>
+                                        <span>169000.00 VNĐ</span>
                                     </div>
                                 </a>
                                 <a href="#" class="latest-product__item">
@@ -335,7 +337,7 @@
                                     </div>
                                     <div class="latest-product__item__text">
                                         <h6>Cây hồng môn</h6>
-                                        <span>139000.00VNĐ</span>
+                                        <span>139000.00 VNĐ</span>
                                     </div>
                                 </a>
                             </div>
@@ -346,7 +348,7 @@
                                     </div>
                                     <div class="latest-product__item__text">
                                         <h6>Cây Trầu Bà Đế Vương Thủy Sinh</h6>
-                                        <span>129000.00VNĐ</span>
+                                        <span>129000.00 VNĐ</span>
                                     </div>
                                 </a>
                                 <a href="#" class="latest-product__item">
@@ -355,7 +357,7 @@
                                     </div>
                                     <div class="latest-product__item__text">
                                         <h6>Cây Tóc Thần Vệ Nữ</h6>
-                                        <span>150000.00VNĐ</span>
+                                        <span>150000.00 VNĐ</span>
                                     </div>
                                 </a>
                                 <a href="#" class="latest-product__item">
@@ -366,7 +368,7 @@
                                         <h6>
                                             Cây Hoàng Hậu
                                         </h6>
-                                        <span>269000.00VNĐ</span>
+                                        <span>269000.00 VNĐ</span>
                                     </div>
                                 </a>
                             </div>
@@ -384,7 +386,7 @@
                                     </div>
                                     <div class="latest-product__item__text">
                                         <h6>Cây Hạnh Phúc</h6>
-                                        <span>480000.00VNĐ</span>
+                                        <span>480000.00 VNĐ</span>
                                     </div>
                                 </a>
                                 <a href="#" class="latest-product__item">
@@ -393,7 +395,7 @@
                                     </div>
                                     <div class="latest-product__item__text">
                                         <h6>Cây Thiết Mộc Lan</h6>
-                                        <span>$350000.00VNĐ</span>
+                                        <span>$350000.00 VNĐ</span>
                                     </div>
                                 </a>
                                 <a href="#" class="latest-product__item">
@@ -402,7 +404,7 @@
                                     </div>
                                     <div class="latest-product__item__text">
                                         <h6>Cây Trúc Bách Hợp</h6>
-                                        <span>$880000.00VNĐ</span>
+                                        <span>$880000.00 VNĐ</span>
                                     </div>
                                 </a>
                             </div>
@@ -413,7 +415,7 @@
                                     </div>
                                     <div class="latest-product__item__text">
                                         <h6>Cây Cau Cảnh</h6>
-                                        <span>239000.00VNĐ</span>
+                                        <span>239000.00 VNĐ</span>
                                     </div>
                                 </a>
                                 <a href="#" class="latest-product__item">
@@ -422,7 +424,7 @@
                                     </div>
                                     <div class="latest-product__item__text">
                                         <h6>Cây Cọ Nhật</h6>
-                                        <span>150000.00VNĐ</span>
+                                        <span>150000.00 VNĐ</span>
                                     </div>
                                 </a>
                                 <a href="#" class="latest-product__item">
@@ -431,7 +433,7 @@
                                     </div>
                                     <div class="latest-product__item__text">
                                         <h6>Cây Phát Lộc</h6>
-                                        <span>99000.00VNĐ</span>
+                                        <span>99000.00 VNĐ</span>
                                     </div>
                                 </a>
                             </div>
@@ -449,7 +451,7 @@
                                     </div>
                                     <div class="latest-product__item__text">
                                         <h6>Cây Phong Lá Đỏ</h6>
-                                        <span>180000.00VNĐ</span>
+                                        <span>180000.00 VNĐ</span>
                                     </div>
                                 </a>
                                 <a href="#" class="latest-product__item">
@@ -458,7 +460,7 @@
                                     </div>
                                     <div class="latest-product__item__text">
                                         <h6>Cây Chuối Cảnh</h6>
-                                        <span>150000.00VNĐ</span>
+                                        <span>150000.00 VNĐ</span>
                                     </div>
                                 </a>
                                 <a href="#" class="latest-product__item">
@@ -467,7 +469,7 @@
                                     </div>
                                     <div class="latest-product__item__text">
                                         <h6>Cây Lan Ý</h6>
-                                        <span>250000.00VNĐ</span>
+                                        <span>250000.00 VNĐ</span>
                                     </div>
                                 </a>
                             </div>
@@ -478,7 +480,7 @@
                                     </div>
                                     <div class="latest-product__item__text">
                                         <h6>Cây Trầu Bà Đế Vương Xanh</h6>
-                                        <span>349000.00VNĐ</span>
+                                        <span>349000.00 VNĐ</span>
                                     </div>
                                 </a>
                                 <a href="#" class="latest-product__item">
@@ -487,7 +489,7 @@
                                     </div>
                                     <div class="latest-product__item__text">
                                         <h6>Cây Kim Phát Tài</h6>
-                                        <span>700000.00VNĐ</span>
+                                        <span>700000.00 VNĐ</span>
                                     </div>
                                 </a>
                                 <a href="#" class="latest-product__item">
@@ -496,7 +498,7 @@
                                     </div>
                                     <div class="latest-product__item__text">
                                         <h6>Cây Lưỡi Hổ Hoàng Kim</h6>
-                                        <span>150000.00VNĐ</span>
+                                        <span>150000.00 VNĐ</span>
                                     </div>
                                 </a>
                             </div>

@@ -5,7 +5,7 @@
     ViewData["Title"] = "ThemSanPhamMoi";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
-
+<script src="https://cdn.ckeditor.com/ckeditor5/41.3.1/classic/ckeditor.js"></script>
 <h1>ThemSanPhamMoi</h1>
 
 <h4>DanhMucSP</h4>
@@ -69,4 +69,13 @@
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
-
+<script>
+    ClassicEditor
+        .create(document.querySelector('#MoTa'))
+        .then(editor => {
+            console.log(editor);
+        })
+        .catch(error => {
+            console.error(error);
+        });
+</script>

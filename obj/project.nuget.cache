@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "E2CcoCRyGpUigR0ZVvwAJcI/EimEOB9wFXEzxq3jaw1PBMC4uZtOPdCTzoGTdbX4nxLavHVGW+KY4DWKm/g/3Q==",
+  "dgSpecHash": "JD3QaQsGbImtU791snpp6wS8aFBCu2jU1kmP+g14ifHpwm01VMk1KkHuTeXEqrtLzGWtaFjThja0e3J6urTozw==",
   "success": true,
   "projectFilePath": "D:\\Dev web\\Cs-Plantlover\\Cs-Plantlover.csproj",
   "expectedPackageFiles": [
@@ -213,8 +213,20 @@
     "C:\\Users\\admin\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\system.windows.extensions\\7.0.0\\system.windows.extensions.7.0.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\twilio\\7.0.4\\twilio.7.0.4.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\utility\\1.0.0\\utility.1.0.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\x.pagedlist\\9.1.2\\x.pagedlist.9.1.2.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\x.pagedlist.mvc.core\\9.1.2\\x.pagedlist.mvc.core.9.1.2.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Utility 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Utility",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

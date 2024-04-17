@@ -60,11 +60,11 @@
                                     <label asp-for="Input.ConfirmPassword">Confirm Password</label>
                                     <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
                                 </div>
-                                <div class="form-floating">
+                                @* <div class="form-floating">
                                     <select asp-for="Input.Role" asp-items="@Model.Input.RoleList" class="form-control">
                                         <option disabled selected>-Select Role-</option>
                                     </select>
-                                </div>
+                                </div> *@
                                 @* <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button> *@
                                 <div class="mb-4">
                                     <div class="form-check">

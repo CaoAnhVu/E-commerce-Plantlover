@@ -3,40 +3,24 @@
   "WorkspaceRootPath": "D:\\Dev web\\Cs-Plantlover\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\areas\\admin\\views\\homeadmin\\themsanphammoi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:areas\\admin\\views\\homeadmin\\themsanphammoi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\views\\shared\\_layoutshopgrid.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:views\\shared\\_layoutshopgrid.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\views\\shared\\_layoutplantlover.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:views\\shared\\_layoutplantlover.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\viewcomponents\\shopgridchucnangspmenuviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:viewcomponents\\shopgridchucnangspmenuviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\viewcomponents\\chucnangspmenuviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:viewcomponents\\chucnangspmenuviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\viewcomponents\\cartwidget.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:viewcomponents\\cartwidget.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\areas\\customer\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:areas\\customer\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\views\\shared\\components\\cartwidget\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:views\\shared\\components\\cartwidget\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\areas\\customer\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:areas\\customer\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\models\\danhmucsp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:models\\danhmucsp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\infrastructure\\sessionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:infrastructure\\sessionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,21 +30,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Areas\\Customer\\Views\\Cart\\Index.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Customer\\Views\\Cart\\Index.cshtml",
-              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Areas\\Customer\\Views\\Cart\\Index.cshtml",
-              "RelativeToolTip": "Areas\\Customer\\Views\\Cart\\Index.cshtml",
-              "ViewState": "AQIAAFYAAAAAAAAAAAAgwGkAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-13T07:27:40.426Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
@@ -84,104 +55,63 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "_LayoutShopGrid.cshtml",
-              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Views\\Shared\\_LayoutShopGrid.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_LayoutShopGrid.cshtml",
-              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Views\\Shared\\_LayoutShopGrid.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_LayoutShopGrid.cshtml",
-              "ViewState": "AQIAAMUCAAAAAAAAAAAAAPUCAAC0AAAA",
+              "Title": "ThemSanPhamMoi.cshtml",
+              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Areas\\Admin\\Views\\HomeAdmin\\ThemSanPhamMoi.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\HomeAdmin\\ThemSanPhamMoi.cshtml",
+              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Areas\\Admin\\Views\\HomeAdmin\\ThemSanPhamMoi.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\HomeAdmin\\ThemSanPhamMoi.cshtml",
+              "ViewState": "AQIAACYAAAAAAAAAAAAuwEkAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-15T18:22:40.134Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Cart.cs",
-              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Models\\Cart.cs",
-              "RelativeDocumentMoniker": "Models\\Cart.cs",
-              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Models\\Cart.cs",
-              "RelativeToolTip": "Models\\Cart.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAxwA8AAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T17:04:08.484Z",
+              "WhenOpened": "2024-04-17T19:00:25.094Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "ShopGridChucNangSPMenuViewComponent.cs",
+              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\ViewComponents\\ShopGridChucNangSPMenuViewComponent.cs",
+              "RelativeDocumentMoniker": "ViewComponents\\ShopGridChucNangSPMenuViewComponent.cs",
+              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\ViewComponents\\ShopGridChucNangSPMenuViewComponent.cs",
+              "RelativeToolTip": "ViewComponents\\ShopGridChucNangSPMenuViewComponent.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-17T18:44:38.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ChucNangSPMenuViewComponent.cs",
+              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\ViewComponents\\ChucNangSPMenuViewComponent.cs",
+              "RelativeDocumentMoniker": "ViewComponents\\ChucNangSPMenuViewComponent.cs",
+              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\ViewComponents\\ChucNangSPMenuViewComponent.cs",
+              "RelativeToolTip": "ViewComponents\\ChucNangSPMenuViewComponent.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-17T18:44:32.864Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "CartWidget.cs",
               "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\ViewComponents\\CartWidget.cs",
               "RelativeDocumentMoniker": "ViewComponents\\CartWidget.cs",
               "ToolTip": "D:\\Dev web\\Cs-Plantlover\\ViewComponents\\CartWidget.cs",
               "RelativeToolTip": "ViewComponents\\CartWidget.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T16:56:59.981Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-17T18:44:30.921Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "_LayoutPlantlover.cshtml",
-              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Views\\Shared\\_LayoutPlantlover.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_LayoutPlantlover.cshtml",
-              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Views\\Shared\\_LayoutPlantlover.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_LayoutPlantlover.cshtml",
-              "ViewState": "AQIAABkCAAAAAAAAAAAAAEACAAC0AAAA",
+              "Title": "_LayoutShopGrid.cshtml",
+              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Views\\Shared\\_LayoutShopGrid.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_LayoutShopGrid.cshtml",
+              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Views\\Shared\\_LayoutShopGrid.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_LayoutShopGrid.cshtml",
+              "ViewState": "AQIAAEoBAAAAAAAAAAAuwFEBAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-15T16:43:08.8Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Default.cshtml",
-              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Views\\Shared\\Components\\CartWidget\\Default.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\Components\\CartWidget\\Default.cshtml",
-              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Views\\Shared\\Components\\CartWidget\\Default.cshtml",
-              "RelativeToolTip": "Views\\Shared\\Components\\CartWidget\\Default.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-15T16:42:35.931Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "SessionExtensions.cs",
-              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Infrastructure\\SessionExtensions.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\SessionExtensions.cs",
-              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Infrastructure\\SessionExtensions.cs",
-              "RelativeToolTip": "Infrastructure\\SessionExtensions.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T16:40:51.638Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "DanhMucSP.cs",
-              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Models\\DanhMucSP.cs",
-              "RelativeDocumentMoniker": "Models\\DanhMucSP.cs",
-              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Models\\DanhMucSP.cs",
-              "RelativeToolTip": "Models\\DanhMucSP.cs",
-              "ViewState": "AQIAACMAAAAAAAAAAAAswAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T15:39:58.747Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Areas\\Customer\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Areas\\Customer\\Controllers\\HomeController.cs",
-              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Areas\\Customer\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Areas\\Customer\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAAwB8AAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T13:16:39.705Z",
+              "WhenOpened": "2024-04-17T18:26:21.218Z",
               "EditorCaption": ""
             }
           ]

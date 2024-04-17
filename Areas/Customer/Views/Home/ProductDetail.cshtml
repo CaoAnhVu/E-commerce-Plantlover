@@ -1,12 +1,17 @@
 ﻿@model Cs_Plantlover.ViewModels.HomeProductDetailViewModel
+
+
 @using Microsoft.AspNetCore.Identity
 @inject SignInManager<User> SignInManager
 @inject UserManager<User> UserManager
 @{
     ViewData["Title"] = "SanPhamTheoLoai";
     Layout = "~/Views/Shared/_LayoutPlantlover.cshtml";
-
 }
+@{
+    int numOfQuantity = 1;
+}
+
 
 <!-- Product Details Section Begin -->
 <section class="product-details spad">
@@ -48,12 +53,12 @@
                             </div>
                         </div>
                     </div>
-                    <a href="#" class="primary-btn">Thêm Vào Giỏ Hàng</a>
+                    <a asp-area="Customer" asp-controller="Cart" asp-action="AddToCart" asp-route-maSP=@Model.danhMucSP.MaSP asp-route-quantity="@numOfQuantity" class="primary-btn">Thêm Vào Giỏ Hàng</a>
                     <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
                     <ul>
-                        <li><b>Availability</b> <span>In Stock</span></li>
-                        <li><b>Shipping</b> <span>01 day shipping. <samp>Free pickup today</samp></span></li>
-                        <li><b>Weight</b> <span>1.5 kg</span></li>
+                        <li><b>Tình trạng</b> <span>Còn hàng</span></li>
+                        <li><b>Vận chuyển</b> <span><samp>Vận chuyển 01 ngày trong Tp.Hồ Chí Minh </samp></span></li>
+                        <li><b>Trọng lượng</b> <span>1.5 kg</span></li>
                         <li>
                             <b>Share on</b>
                             <div class="share">

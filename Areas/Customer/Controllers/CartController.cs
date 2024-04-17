@@ -1,14 +1,19 @@
-﻿using Cs_Plantlover.Areas.Customer;
+﻿using Cs_Plantlover.Areas.Admin.Models;
+using Cs_Plantlover.Areas.Customer;
 using Cs_Plantlover.Infrastructure;
 using Cs_Plantlover.Models;
 using Cs_Plantlover.ViewModels;
 using Data;
+using Cs_Plantlover.Repository.IRepository;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Nest;
+using Stripe;
 using System.Diagnostics;
+using System.Security.Claims;
 using X.PagedList;
+
 
 namespace Cs_Plantlover.Areas.Customer.Controllers
 {
@@ -52,13 +57,13 @@ namespace Cs_Plantlover.Areas.Customer.Controllers
             return RedirectToAction("Index");
         }
 
-        public IActionResult RemoveFromCart(int productId)
+        public IActionResult RemoveFromCart(int maSP)
         {
             var cart = HttpContext.Session.GetObjectFromJson<Cart>("Cart");
 
             if (cart is not null)
             {
-                cart.RemoveItem(productId);
+                cart.RemoveItem(maSP);
 
                 // Lưu lại giỏ hàng vào Session sau khi đã xóa mục
                 HttpContext.Session.SetObjectAsJson("Cart", cart);
@@ -67,6 +72,26 @@ namespace Cs_Plantlover.Areas.Customer.Controllers
             return RedirectToAction("Index");
         }
         
+       /* public IActionResult OrderConfirmation(int id)
+        {
+            return View(id);
+        }*/
+        public IActionResult OrderConfirmation(int id)
+        {
+            var cart = HttpContext.Session.GetObjectFromJson<Cart>("Cart");
+
+            // Kiểm tra xem giỏ hàng có tồn tại không
+            if (cart != null)
+            {
+                // Clear giỏ hàng sau khi thanh toán
+                cart.ClearAll();
+
+                // Lưu giỏ hàng đã được xóa vào Session
+                HttpContext.Session.SetObjectAsJson("Cart", cart);
+            }
+
+            return View(id);
+        }
 
 
         public IActionResult Clear(int productId)
@@ -114,6 +139,5 @@ namespace Cs_Plantlover.Areas.Customer.Controllers
             // Redirect back to the index page to reflect changes
             return RedirectToAction("Index");
         }
-
     }
 }

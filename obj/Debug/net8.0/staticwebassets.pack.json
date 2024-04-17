@@ -373,6 +373,10 @@
       "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\BannerCart.png"
     },
     {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\PlantloverIcon.ico",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\PlantloverIcon.ico"
+    },
+    {
       "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\banner\\banner-1.png",
       "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\banner\\banner-1.png"
     },
@@ -821,28 +825,56 @@
       "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\details\\thumb-4.jpg"
     },
     {
-      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\discount\\pd-1.jpg",
-      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\discount\\pd-1.jpg"
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\discount\\cayhongmon.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\discount\\cayhongmon.jpg"
     },
     {
-      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\discount\\pd-2.jpg",
-      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\discount\\pd-2.jpg"
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\discount\\cayhuongthao.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\discount\\cayhuongthao.jpg"
     },
     {
-      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\discount\\pd-3.jpg",
-      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\discount\\pd-3.jpg"
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\discount\\caykimtien.png",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\discount\\caykimtien.png"
     },
     {
-      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\discount\\pd-4.jpg",
-      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\discount\\pd-4.jpg"
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\discount\\caylany.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\discount\\caylany.jpg"
     },
     {
-      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\discount\\pd-5.jpg",
-      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\discount\\pd-5.jpg"
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\discount\\caylocvung.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\discount\\caylocvung.jpg"
     },
     {
-      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\discount\\pd-6.jpg",
-      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\discount\\pd-6.jpg"
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\discount\\cayluoihohoangkim.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\discount\\cayluoihohoangkim.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\discount\\cayphatdu.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\discount\\cayphatdu.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\discount\\cayphatloc.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\discount\\cayphatloc.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\discount\\cayphatlochoa.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\discount\\cayphatlochoa.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\discount\\cayphonglado.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\discount\\cayphonglado.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\discount\\cayphuong.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\discount\\cayphuong.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\discount\\cayphuquytrongnuoc.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\discount\\cayphuquytrongnuoc.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\discount\\product-4.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\product\\discount\\product-4.jpg"
     },
     {
       "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\product\\product-1.jpg",
@@ -1021,6 +1053,10 @@
       "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\fonts\\Ubuntu\\Ubuntu-Regular.woff2"
     },
     {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\LayoutAdmin\\assets\\images\\PlantloverIcon.ico",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\PlantloverIcon.ico"
+    },
+    {
       "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\LayoutAdmin\\assets\\images\\background.png",
       "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\background.png"
     },
@@ -1175,10 +1211,6 @@
     {
       "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\LayoutAdmin\\assets\\images\\faces\\face9.jpg",
       "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\faces\\face9.jpg"
-    },
-    {
-      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\LayoutAdmin\\assets\\images\\favicon.ico",
-      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\favicon.ico"
     },
     {
       "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\LayoutAdmin\\assets\\images\\favicon.png",

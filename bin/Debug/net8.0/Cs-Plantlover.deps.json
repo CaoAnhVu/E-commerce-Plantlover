@@ -53,6 +53,7 @@
           "NEST": "7.17.5",
           "Stripe.net": "44.0.0",
           "Twilio": "7.0.4",
+          "Utility": "1.0.0",
           "X.PagedList": "9.1.2",
           "X.PagedList.Mvc.Core": "9.1.2",
           "Microsoft.AspNetCore.Antiforgery": "8.0.0.0",
@@ -3041,6 +3042,7 @@
           "lib/net6.0/Twilio.dll": {}
         }
       },
+      "Utility/1.0.0": {},
       "X.PagedList/9.1.2": {
         "runtime": {
           "lib/net8.0/X.PagedList.dll": {
@@ -6342,6 +6344,13 @@
       "sha512": "sha512-1ekY2+q+gMArUJCVGv6bjxCrC/x2vXqvCdnb+MfaJTjQEhPyc1VGsYUhJ/eJKv6zNmGmULJGIzUon1EjvxJh/w==",
       "path": "twilio/7.0.4",
       "hashPath": "twilio.7.0.4.nupkg.sha512"
+    },
+    "Utility/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tcVaZO0Id/qjASr/ggRROpbw26kxI67ms75ScqOhi2dkeq6zirkt75DI9cOidY+1m04Xoicn2tK91d6vH5VRUw==",
+      "path": "utility/1.0.0",
+      "hashPath": "utility.1.0.0.nupkg.sha512"
     },
     "X.PagedList/9.1.2": {
       "type": "package",

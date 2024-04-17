@@ -3634,6 +3634,15 @@
           }
         }
       },
+      "Utility/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        }
+      },
       "X.PagedList/9.1.2": {
         "type": "package",
         "compile": {
@@ -10607,6 +10616,19 @@
         "twilio.nuspec"
       ]
     },
+    "Utility/1.0.0": {
+      "sha512": "tcVaZO0Id/qjASr/ggRROpbw26kxI67ms75ScqOhi2dkeq6zirkt75DI9cOidY+1m04Xoicn2tK91d6vH5VRUw==",
+      "type": "package",
+      "path": "utility/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/Nagarro.Framework.Logging.dll",
+        "lib/net45/_._",
+        "utility.1.0.0.nupkg.sha512",
+        "utility.nuspec"
+      ]
+    },
     "X.PagedList/9.1.2": {
       "sha512": "qePK/lt+Y8PeQM9E/DkWY/AIyxDVEMX0XFCU5CfLP1+Y9SUThFyaY8/QgldOg9uOJLvse1i3oAQDJOrhb3usdw==",
       "type": "package",
@@ -10659,6 +10681,7 @@
       "NEST >= 7.17.5",
       "Stripe.net >= 44.0.0",
       "Twilio >= 7.0.4",
+      "Utility >= 1.0.0",
       "X.PagedList >= 9.1.2",
       "X.PagedList.Mvc.Core >= 9.1.2"
     ]
@@ -10783,6 +10806,10 @@
             "target": "Package",
             "version": "[7.0.4, )"
           },
+          "Utility": {
+            "target": "Package",
+            "version": "[1.0.0, )"
+          },
           "X.PagedList": {
             "target": "Package",
             "version": "[9.1.2, )"
@@ -10814,5 +10841,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Utility 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Utility",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

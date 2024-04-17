@@ -120,6 +120,10 @@
               "target": "Package",
               "version": "[7.0.4, )"
             },
+            "Utility": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
             "X.PagedList": {
               "target": "Package",
               "version": "[9.1.2, )"

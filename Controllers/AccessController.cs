@@ -32,7 +32,7 @@ namespace Cs_Plantlover.Controllers
         {
             if (HttpContext.Session.GetString("UserName") == null)
             {
-                var u = _db.Users.FirstOrDefault(x => x.UserName == user.UserName && x.PassWord == user.PassWord);
+                var u = _db.Users.FirstOrDefault(x => x.UserName == user.UserName && x.Password == user.Password);
                 if (u != null)
                 {
                     HttpContext.Session.SetString("UserName", u.UserName);
@@ -47,7 +47,7 @@ namespace Cs_Plantlover.Controllers
             return View();
         }*/
 
-        /*public IActionResult Register()
+        public IActionResult Register()
         {
             return View();
         }
@@ -70,7 +70,7 @@ namespace Cs_Plantlover.Controllers
                 }
             }
             return View(user);
-        }*/
+        }
 
 
         public IActionResult Logout()
@@ -79,14 +79,14 @@ namespace Cs_Plantlover.Controllers
             return RedirectToAction("Login", "Access");
         }
 
-        public IActionResult Home()
+       /* public IActionResult Home()
         {
             if (HttpContext.Session.GetString("UserRole") == "Admin")
             {
                 return RedirectToAction("HomeAdmin", "Admin");
             }
             return RedirectToAction("Index", "Home");
-        }
+        }*/
     }
 }
 

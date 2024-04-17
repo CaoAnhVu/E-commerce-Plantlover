@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_LayoutShopGrid.cshtml";
+}
+@using X.PagedList.Mvc.Core;
+@model X.PagedList.IPagedList<DanhMucSP>
+@foreach(var item in Model)
+{
+    @await Html.PartialAsync("PartialProductShopGrid", item)
+}
+<div class="product__pagination">
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page=page }))
+</div>

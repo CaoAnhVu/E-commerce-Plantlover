@@ -1,4 +1,4 @@
-using Cs_Plantlover.Areas.Admin.Models;
+﻿using Cs_Plantlover.Areas.Admin.Models;
 using Cs_Plantlover.Models;
 /*using Cs_Plantlover.Models.Authentication;*/
 using Cs_Plantlover.ViewModels;
@@ -90,6 +90,33 @@ namespace Cs_Plantlover.Areas.Customer.Controllers
             var anhSanPham = _db.ChiTietSps.Where(x => x.MaSP == maSP).ToList();
             var homeProductDetailViewModel = new HomeProductDetailViewModel { danhMucSP = sanPham, chiTietSP = anhSanPham };
             return View(homeProductDetailViewModel);
+        }
+        [HttpPost]
+        public async Task<IActionResult> Search(string keywords, int? page)
+        {
+            int pageSize = 8;
+            int pageNumber = page ?? 1;
+
+            IQueryable<DanhMucSP> lstsanpham;
+
+            if (string.IsNullOrEmpty(keywords))
+            {
+                // Nếu từ khóa tìm kiếm không được cung cấp, hiển thị tất cả sản phẩm
+                lstsanpham = _db.DanhMucSps.AsNoTracking().OrderBy(x => x.TenSP);
+            }
+            else
+            {
+                // Nếu có từ khóa tìm kiếm, lấy danh sách các sản phẩm phù hợp
+                lstsanpham = _db.DanhMucSps.AsNoTracking()
+            .Where(x => x.TenSP.Contains(keywords) || x.MoTa.Contains(keywords) || x.MaChucNang.ToString().Contains(keywords))
+            .OrderBy(x => x.TenSP);
+
+
+            }
+
+            PagedList<DanhMucSP> lst = new PagedList<DanhMucSP>(lstsanpham, pageNumber, pageSize);
+
+            return View("SanPhamTheoLoai", lst);
         }
 
         public IActionResult Privacy()
