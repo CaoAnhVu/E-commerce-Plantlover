@@ -40,6 +40,7 @@ namespace Data
         public DbSet<User> User { get; set; }
 
         public DbSet<ViTri> ViTris { get; set; }
+        public DbSet<LeaveMessenger> LeaveMessengers { get; set; }
 
         /*public DbSet<Cart> Carts { get; set; }*/
         public DbSet<OrderDetails> OrderDetails { get; set; }

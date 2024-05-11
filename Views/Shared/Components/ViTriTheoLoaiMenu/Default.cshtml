@@ -9,8 +9,7 @@
 
             @foreach (var item in Model)
             {
-                <li asp-area="Customer" asp-controller="Home" asp-action="SanPhamTheoViTri" asp-route-machucnang="@item.MaViTri">@item.TenViTri</li>
-       
+                <li><a asp-area="Customer" asp-controller="Home" asp-action="SanPhamTheoViTri" asp-route-mavitri="@item.MaViTri">@item.TenViTri</a></li>
             }
             </ul>
         

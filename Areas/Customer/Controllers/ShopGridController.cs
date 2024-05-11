@@ -44,24 +44,7 @@ namespace Cs_Plantlover.Areas.Customer.Controllers
             return View(lst);
         }
         [Route("Sanphamtheovitri")]
-        public IActionResult SanPhamTheoViTri(int? mavitri, int? machucnang, int? page)
-        {
-            int pageSize = 6;
-            int pageNumber = page == null || page < 0 ? 1 : page.Value;
-            var lstsanpham = _db.DanhMucSps.AsNoTracking();/*.Where(x => x.MaViTri == mavitri && x => x.MaChucNang == machucnang)*/
-            if (mavitri != null)
-            {
-                lstsanpham = (IOrderedQueryable<DanhMucSP>)lstsanpham.Where(x => x.MaViTri == mavitri);
-            }
-            if (machucnang != null)
-            {
-                lstsanpham = (IOrderedQueryable<DanhMucSP>)lstsanpham.Where(x => x.MaChucNang == machucnang);
-            }
-            lstsanpham = lstsanpham.OrderBy(x => x.TenSP);
-            PagedList<DanhMucSP> lst = new PagedList<DanhMucSP>(lstsanpham, pageNumber, pageSize);
-            ViewBag.mavitri = mavitri;
-            return View(lst);
-        }
+      
 
       
         public IActionResult Privacy()

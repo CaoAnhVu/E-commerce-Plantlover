@@ -3532,7 +3532,7 @@ progress {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border-radius: 2px;
+  border-radius: 12px;
   -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -11568,7 +11568,9 @@ code {
 .template-demo .editable-form > .form-group {
   border-bottom: 1px solid #ebedf2;
   padding-bottom: 0.8rem;
-  margin-bottom: 0.8rem; }
+  margin-bottom: 0.8rem; 
+  border-radius: 12px;
+}
 
 .template-demo .circle-progress {
   padding: 15px; }
@@ -12270,6 +12272,7 @@ code {
   .btn-outline-reddit:hover {
     background: #ff4500;
     color: #ffffff; }
+
 
 /* inverse buttons */
 .btn-inverse-primary {
@@ -13284,7 +13287,8 @@ code {
 
 /* Forms */
 .form-group {
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem;
+}
 
 .input-group-append,
 .input-group-prepend {
@@ -13300,7 +13304,8 @@ code {
 .form-control {
   border: 1px solid #ebedf2;
   font-family: "ubuntu-regular", sans-serif;
-  font-size: 0.8125rem; }
+  font-size: 0.8125rem;
+}
   .form-control:focus {
     background-color: #ffffff;
     color: #000000;

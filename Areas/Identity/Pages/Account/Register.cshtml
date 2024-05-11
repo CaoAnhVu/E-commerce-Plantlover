@@ -36,7 +36,6 @@
                             </div>
                             <h4>Tạo mới của bạn ở đây.</h4>
                             <h6 class="font-weight-light">Đăng ký rất dễ dàng. Chỉ mất vài bước</h6>
-
                             <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
                                 <hr />
                                 <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
@@ -51,6 +50,35 @@
                                     <span asp-validation-for="Input.Email" class="text-danger"></span>
                                 </div>
                                 <div class="form-floating mb-3">
+                                    <input asp-for="Input.PhoneNumber" type="text" placeholder="Nhập số điện thoại" class="form-control" />
+                                    <label asp-for="Input.PhoneNumber">Nhập số điện thoại</label>
+                                    <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input asp-for="Input.Address" placeholder="Nhập số nhà, đường, ấp" class="form-control" />
+                                    <label asp-for="Input.Address">Nhập địa chỉ của bạn</label>
+                                    <span asp-validation-for="Input.Address" class="text-danger"></span>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input asp-for="Input.Village" placeholder="Nhập xã" class="form-control" />
+                                    <label asp-for="Input.Village">Nhập (Xã, Phường) </label>
+                                    <span asp-validation-for="Input.Village" class="text-danger"></span>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <div class="form-floating mb-3">
+                                        <input asp-for="Input.District" placeholder="Nhập huyện" class="form-control" />
+                                        <label asp-for="Input.District">Nhập (Quận, Huyện)</label>
+                                        <span asp-validation-for="Input.District" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <input asp-for="Input.City" placeholder="Nhập thành phố" class="form-control" />
+                                        <label asp-for="Input.City">Nhập thành phố</label>
+                                        <span asp-validation-for="Input.City" class="text-danger"></span>
+                                    </div>
+
+                                </div>
+
+                                <div class="form-floating mb-3">
                                     <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
                                     <label asp-for="Input.Password">Password</label>
                                     <span asp-validation-for="Input.Password" class="text-danger"></span>
@@ -60,12 +88,11 @@
                                     <label asp-for="Input.ConfirmPassword">Confirm Password</label>
                                     <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
                                 </div>
-                                @* <div class="form-floating">
+                                <div class="form-floating mb-3">
                                     <select asp-for="Input.Role" asp-items="@Model.Input.RoleList" class="form-control">
-                                        <option disabled selected>-Select Role-</option>
+                                        <option disabled selected>Select Role</option>
                                     </select>
-                                </div> *@
-                                @* <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button> *@
+                                </div>
                                 <div class="mb-4">
                                     <div class="form-check">
                                         <label class="form-check-label text-muted">
@@ -77,7 +104,7 @@
                                     <button class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn" type="submit">SIGN UP</button>
                                 </div>
                                 <div class="text-center mt-4 font-weight-light">
-                                    Tôi đồng ý với tất cả các Điều khoản và Điều kiện <a href="@Url.Action("Login", "Access")" class="text-primary">Login</a>
+                                    <a href="@Url.Action("Login", "Account")" class="text-primary">Login</a>
                                 </div>
                             </form>
                         </div>

@@ -22,6 +22,8 @@ builder.Services.AddDbContext<DoAnWebDbContext>(options =>
 
 var connectionString = builder.Configuration.GetConnectionString("DoAnWebDbContext");
 builder.Services.AddDbContext<DoAnWebDbContext>(x => x.UseSqlServer(connectionString));
+
+builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IChucNangSPRepository, ChucNangSPRepository>();
 builder.Services.AddScoped<IViTriRepository, ViTriRepository>();
 
@@ -29,6 +31,7 @@ builder.Services.AddIdentity <User, IdentityRole> ()
 .AddDefaultTokenProviders()
 .AddDefaultUI()
 .AddEntityFrameworkStores <DoAnWebDbContext> ();
+builder.Services.AddRazorPages();
 
 builder.Services.ConfigureApplicationCookie(options =>
 {
@@ -38,9 +41,13 @@ builder.Services.ConfigureApplicationCookie(options =>
 }
 ) ;
 
-builder.Services.AddRazorPages();
 // Add services to the container.
+
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<IChucNangSPRepository, ChucNangSPRepository>();
+builder.Services.AddScoped<IViTriRepository, ViTriRepository>();
+
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession();
 
@@ -58,15 +65,13 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseSession();
-
 app.UseRouting();
-
 app.UseAuthorization();
 
 app.UseEndpoints(endpoints => 
 {
     endpoints.MapControllerRoute("default", "{area=Customer}/{controller=Home}/{action=Index}/{id?}");
-    endpoints.MapControllerRoute("Admin", "{area=exits}/{controller=Home}/{action=Index}/{id?}");
+
     app.MapRazorPages();
 });
 

@@ -22,6 +22,5 @@ namespace Cs_Plantlover.Models
 
         public virtual ICollection<HoaDon> HoaDons { get; set; } = new List<HoaDon>();
 
-       /* public virtual User? UserNameNavigation { get; set; }*/
     }
 }

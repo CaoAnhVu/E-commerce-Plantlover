@@ -82,22 +82,25 @@ namespace Cs_Plantlover.Areas.Identity.Pages.Account
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
             [Required]
-            public string FullName {  get; set; } 
+            public string FullName {  get; set; }
             [Required]
             [EmailAddress]
             [Display(Name = "Email")]
             public string Email { get; set; }
-
+            public string Address { get; set; }
+            public string Village { get; set; }
+            public string District { get; set; }
+            public string City { get; set; }
+            public string PhoneNumber { get; set; }
             /// <summary>
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
             [Required]
             [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
-            [DataType(DataType.Password)]
+            [DataType(DataType.Password)] 
             [Display(Name = "Password")]
             public string Password { get; set; }
-
             /// <summary>
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
@@ -143,6 +146,12 @@ namespace Cs_Plantlover.Areas.Identity.Pages.Account
                 var user = CreateUser();
 
                 user.FullName = Input.FullName;
+                user.Address = Input.Address;
+                user.Village = Input.Village;
+                user.District = Input.District;
+                user.City = Input.City;
+                user.PhoneNumber = Input.PhoneNumber;
+                user.Email = Input.Email;
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
                 var result = await _userManager.CreateAsync(user, Input.Password);

@@ -9,7 +9,7 @@ namespace Cs_Plantlover.Models
         [Required]
         public int MaSP { get; set; }
         [Required, StringLength(500)]
-        public String? HinhAnh { get; set; }
+        public string? HinhAnh { get; set; }
         [Required, Range(17,2)]
         public decimal DonGiaBan { get; set; }
         [Range(2,1)]
@@ -21,7 +21,6 @@ namespace Cs_Plantlover.Models
         [Range(1, 10000, ErrorMessage = "Nhập số kg trong khoảng 1 đến 10000")]
         public int SoLuong {  get; set; }
         public virtual ICollection<ChiTietHoaDon> ChiTietHoaDons { get; set; } = new List<ChiTietHoaDon>();
-        public virtual ICollection<AnhChiTietSP> AnhChiTietSPs { get; set; } = new List<AnhChiTietSP>();
         public virtual DanhMucSP? MaSpNavigation { get; set; }
 
        

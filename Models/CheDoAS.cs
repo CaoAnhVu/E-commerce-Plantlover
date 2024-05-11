@@ -8,7 +8,7 @@ namespace Cs_Plantlover.Models
         public int MaCheDoAS {  get; set; }
 
         [Required,StringLength(150)]
-        public String? TenCheDoAS { get; set; }
+        public string? TenCheDoAS { get; set; }
         public virtual ICollection<DanhMucSP> DanhMucSPs { get; set; } = new List<DanhMucSP>();
     }
 }

@@ -11,8 +11,8 @@ using X.PagedList;
 namespace Cs_Plantlover.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Route("admin")]
-    /*[Authorize(Roles = SD.Role_Admin)]*/
+    [Route("admin/homeadmin")]
+ /*   [Authorize(Roles = SD.Role_Admin)]*/
     public class HomeAdminController : Controller
     {
         private readonly DoAnWebDbContext _db;
@@ -23,7 +23,6 @@ namespace Cs_Plantlover.Areas.Admin.Controllers
             _logger = logger;
         }
         [Route("")]
-        [Route("index")]
         public IActionResult Index()
         {
             return View();

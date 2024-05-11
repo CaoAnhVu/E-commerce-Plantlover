@@ -12,7 +12,7 @@ namespace Cs_Plantlover.Models
 
         [Required(ErrorMessage = "Không được để tên trống"), StringLength(200)]
         [Display(Name = "Tên cây")]
-        public String? TenSP { get; set; }
+        public string? TenSP { get; set; }
 
         [Required(ErrorMessage = "Không được để trống")]
         [Display(Name = "Mã chức năng cây")]
@@ -37,11 +37,11 @@ namespace Cs_Plantlover.Models
         [Display(Name = "Thông tin chi tiết về cây")]
 
         [Required, StringLength(4000)]
-        public String? MoTa { get; set; }
+        public string? MoTa { get; set; }
 
         [Required, StringLength(500)]
         [Display(Name = "Hình ảnh")]
-        public String? AnhDaiDien { get; set; }
+        public string? AnhDaiDien { get; set; }
 
         [Display(Name = "Giá")]
         [Required(ErrorMessage = "Nhập giá sản phẩm")]

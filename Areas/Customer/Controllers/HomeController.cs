@@ -44,12 +44,21 @@ namespace Cs_Plantlover.Areas.Customer.Controllers
             ViewBag.machucnang = machucnang;
             return View(lst);
         }
-        [Route("Sanphamtheovitri")]
-        public IActionResult SanPhamTheoViTri(int? mavitri, int? machucnang, int? page)
+        /*[Route("SanPhamTheoViTri")]*/
+        public IActionResult SanPhamTheoViTri(int? mavitri, int? page)
         {
             int pageSize = 8;
             int pageNumber = page == null || page < 0 ? 1 : page.Value;
-            var lstsanpham = _db.DanhMucSps.AsNoTracking();/*.Where(x => x.MaViTri == mavitri && x => x.MaChucNang == machucnang)*/
+            List<DanhMucSP> lstsanpham=_db.DanhMucSps.Where(x =>x.MaViTri==mavitri).OrderBy(x=> x.TenSP).ToList();
+            PagedList<DanhMucSP> lst = new PagedList<DanhMucSP>(lstsanpham, pageNumber, pageSize);
+            ViewBag.mavitri = mavitri;
+            return View(lst);
+        }
+        /*public IActionResult SanPhamTheoViTri(int? mavitri, int? machucnang, int? page)
+        {
+            int pageSize = 8;
+            int pageNumber = page == null || page < 0 ? 1 : page.Value;
+            var lstsanpham = _db.DanhMucSps.AsNoTracking();*//*.Where(x => x.MaViTri == mavitri && x => x.MaChucNang == machucnang)*//*
             if (mavitri != null)
             {
                 lstsanpham = (IOrderedQueryable<DanhMucSP>)lstsanpham.Where(x => x.MaViTri == mavitri);
@@ -62,8 +71,8 @@ namespace Cs_Plantlover.Areas.Customer.Controllers
             PagedList<DanhMucSP> lst = new PagedList<DanhMucSP>(lstsanpham, pageNumber, pageSize);
             ViewBag.mavitri = mavitri;
             return View(lst);
-        }
-        
+        }*/
+
         [Route("Chitietsanpham")]
         public IActionResult ChiTietSanPham(int maSP)
         {

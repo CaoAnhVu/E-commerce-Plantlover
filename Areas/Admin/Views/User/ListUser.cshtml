@@ -1,0 +1,122 @@
+﻿@using Cs_Plantlover.Models
+@using X.PagedList.Mvc.Core;
+@model X.PagedList.IPagedList<User>
+@{
+    ViewData["Title"] = "ListUser";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+
+    var btnDanger = "cancel btn btn-danger";
+    var btnSucess = "cancel btn btn-success";
+}
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<h1>Danh sách người dùng</h1>
+
+<p>
+    <a class="btn btn-primary" asp-area="Identity" asp-page="/Account/Register"><i class="fas fa-plus"></i> &nbsp; Create New User</a>
+</p>
+<p>@TempData["Message"]</p>
+<table class="table">
+    <thead>
+        <tr class="table-warning"> 
+            <th>Tên người dùng</th>
+            <th>Email</th>
+            <th>Địa chỉ</th>
+            <th>PhoneNumber</th>
+            <th>Role</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr class="table-success">
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td class="address-info">
+                @Html.DisplayFor(modelItem => item.Address),
+                @Html.DisplayFor(modelItem => item.Village),
+                @Html.DisplayFor(modelItem => item.District),
+                @Html.DisplayFor(modelItem => item.City) 
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Role)
+            </td>
+            <td>
+
+                    @if(@item.LockoutEnd > DateTimeOffset.Now){
+                        <form asp-action="LockAccount" method="post" asp-route-id="@item.Id">
+                            <button type="submit" formnovalidate
+                                    class="@btnDanger">
+                                Unlock
+                            </button>
+                        </form>
+                    }else{
+                        <form asp-action="LockAccount" method="post" asp-route-id="@item.Id">
+                            <button type="submit" formnovalidate
+                                    class="@btnSucess">
+                                Lock
+                            </button>
+                        </form>
+                    }
+                    
+                
+                <span class="lock-success-msg text-success" style="display: none;">Đã khóa</span>
+                <span class="lock-error-msg text-danger" style="display: none;">Khóa không thành công. Vui lòng thử lại sau.</span>
+            </td>
+                <td>
+                    <form asp-action="DeleteUser" method="post">
+                        <input type="hidden" name="Id" value="@item.Id" />
+                        <button type="submit" >Delete</button>
+                    </form>
+                </td>
+
+        </tr>
+}
+    </tbody>
+</table>
+
+<script>
+    $(document).ready(function () {
+        $('#confirmLockBtn').click(function () {
+            var form = $('.lock-user-form');
+            var button = form.find('.lock-user-btn');
+            var row = form.closest('tr');
+
+            // Gửi yêu cầu khóa người dùng
+            $.post(form.attr('action'), form.serialize())
+                .done(function () {
+                    // Sau khi yêu cầu được hoàn thành, thay đổi văn bản và trạng thái của nút
+                    button.text('Đã khóa').removeClass('btn-danger').addClass('btn-secondary').prop('disabled', true);
+                    form.find('.lock-success-msg').show();
+                    form.find('.lock-error-msg').hide();
+
+                    // Thêm lớp 'locked-user' cho hàng
+                    row.addClass('locked-user');
+                })
+                .fail(function () {
+                    // Xử lý lỗi
+                    form.find('.lock-success-msg').hide();
+                    form.find('.lock-error-msg').show();
+                });
+
+            // Đóng modal
+            $('#confirmLockModal').modal('hide');
+
+            // Ngăn chặn gửi yêu cầu mặc định của form
+            return false;
+        });
+    });
+
+</script>
+
+@Html.PagedListPager(Model, page => Url.Action("ListUser", new { page = page }), new PagedListRenderOptions()
+{
+        LiElementClasses = new List<string> { "page-item" }, 
+        PageClasses = new List<string> { "page-link" } 
+ })

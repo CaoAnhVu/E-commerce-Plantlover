@@ -1,4 +1,7 @@
 ﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers 
+@using Cs_Plantlover.Areas.Admin.Models;
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,8 +27,8 @@
         <!-- partial:../../partials/_navbar.html -->
         <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
             <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-                <a class="navbar-brand brand-logo" href="../../index.html"><img src="../../LayoutAdmin/assets/images/plantloverlogo.png" alt="logo" /></a>
-                <a class="navbar-brand brand-logo-mini" href="../../index.html"><img src="../../LayoutAdmin/assets/images/plantloverlogo.png" alt="logo" /></a>
+                <a class="navbar-brand brand-logo" href="https://localhost:7216/admin"><img src="../../LayoutAdmin/assets/images/plantloverlogo.png" alt="logo" /></a>
+                <a class="navbar-brand brand-logo-mini" href="https://localhost:7216/admin"><img src="../../LayoutAdmin/assets/images/plantloverlogo.png" alt="logo" /></a>
             </div>
             <div class="navbar-menu-wrapper d-flex align-items-stretch">
                 <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -191,12 +194,6 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../../index.html">
-                            <span class="menu-title">Dashboard</span>
-                            <i class="mdi mdi-home menu-icon"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                             <span class="menu-title">Quản lý sản phẩm</span>
                             <i class="menu-arrow"></i>
@@ -204,17 +201,24 @@
                         </a>
                         <div class="collapse" id="ui-basic">
                             <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" asp-area="admin" asp-controller="HomeAdmin" asp-action="DanhMucSanPham">Danh mục sản phẩm</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/typography.html">Typography</a></li>
+                                <li class="nav-item"><a class="nav-link" asp-area="admin" asp-controller="HomeAdmin" asp-action="DanhMucSanPham">Danh mục sản phẩm</a></li>
                             </ul>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../../pages/icons/mdi.html">
-                            <span class="menu-title">Icons</span>
+                        <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+
+                            <span class="menu-title">Quản lý người dùng</span>
+                            <i class="menu-arrow"></i>
                             <i class="mdi mdi-contacts menu-icon"></i>
                         </a>
+                        <div class="collapse" id="ui-basic">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item"><a class="nav-link" asp-area="admin" asp-controller="User" asp-action="ListUser">Danh sách người dùng</a></li>
+                            </ul>
+                        </div>
                     </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link" href="../../pages/forms/basic_elements.html">
                             <span class="menu-title">Forms</span>
@@ -249,23 +253,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="nav-item sidebar-actions">
-                        <span class="nav-link">
-                            <div class="border-bottom">
-                                <h6 class="font-weight-normal mb-3">Projects</h6>
-                            </div>
-                            <button class="btn btn-block btn-lg btn-gradient-primary mt-4">+ Add a project</button>
-                            <div class="mt-4">
-                                <div class="border-bottom">
-                                    <p class="text-secondary">Categories</p>
-                                </div>
-                                <ul class="gradient-bullet-list mt-4">
-                                    <li>Free</li>
-                                    <li>Pro</li>
-                                </ul>
-                            </div>
-                        </span>
-                    </li>
+                    
                 </ul>
             </nav>
             <!-- partial -->
@@ -287,6 +275,17 @@
         </div>
         <!-- page-body-wrapper ends -->
     </div>
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.3.1/classic/ckeditor.js"></script>
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#MoTa'))
+            .then(editor => {
+                console.log(editor);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
     <!-- container-scroller -->
     <!-- plugins:js -->
     <script src="../../LayoutAdmin/assets/vendors/js/vendor.bundle.base.js"></script>

@@ -12,6 +12,6 @@ namespace Cs_Plantlover.Models
 
         [Required]
         [Display(Name="Tên đơn vị tính")]
-        public string Name { get; set; }
+        public string? Name { get; set; }
     }
 }
