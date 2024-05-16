@@ -1,15 +1,15 @@
 ﻿@using Cs_Plantlover.Models
 @using X.PagedList.Mvc.Core;
 @model X.PagedList.IPagedList<DanhMucSP>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
     ViewData["Title"] = "DanhMucSanPham";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
-@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-<h1>Danh mục các sản phẩm</h1>
-
+<h1 class="text-center">Danh Mục Các Sản Phẩm</h1>
+<hr />
 <p>
-    <a asp-action="ThemSanPhamMoi">Create New</a>
+    <a class="btn btn-primary" asp-action="ThemSanPhamMoi"><i class="fas fa-plus"></i> &nbsp; Create New Product</a>
 </p>
 <p>@TempData["Message"]</p>
 <table class="table">
@@ -17,6 +17,9 @@
         <tr class="table-warning"> 
             <th>
                 Tên sản phẩm
+            </th>
+            <th>
+                Hình ảnh
             </th>
             <th>
                 Mã chức năng
@@ -33,7 +36,6 @@
             <th>
                 Giá bán
             </th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -41,6 +43,10 @@
         <tr class="table-success">
             <td>
                 @Html.DisplayFor(modelItem => item.TenSP)
+            </td>
+            <td>
+                <img src="@item.AnhDaiDien" alt="Hinh Anh San Pham" style="width: 100px; height: 100px;" />
+                  
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.MaChucNang)
@@ -58,9 +64,8 @@
                 @Html.DisplayFor(modelItem => item.GiaBan)
             </td>
             <td>
-                <a asp-action="SuaSanPham" asp-route-maSanPham="@item.MaSP">Edit</a> | 
-                <a asp-action="Details" asp-route-id="@item.MaSP">Details</a> |
-                <a asp-action="XoaSanPham" asp-route-maSanPham="@item.MaSP">Delete</a>
+                    <a asp-action="SuaSanPham" asp-route-maSanPham="@item.MaSP"><i class="fa-solid fa-pen-to-square"></i></a> |
+                    <a asp-action="XoaSanPham" asp-route-maSanPham="@item.MaSP"><i class="fa-solid fa-trash-can"></i></a>
             </td>
         </tr>
 }

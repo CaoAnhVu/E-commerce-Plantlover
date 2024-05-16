@@ -6,6 +6,7 @@ using Data;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using X.PagedList;
 
@@ -13,20 +14,27 @@ namespace Cs_Plantlover.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Route("admin/user")]
-   /* [Authorize(Roles = SD.Role_Admin + "," + SD.Role_Customer)]*/
+    /*[Authorize(Roles = SD.Role_Admin)]*/
     public class UserController : Controller
     {
         private readonly DoAnWebDbContext _db;
         private readonly ILogger<UserController> _logger;
-        public UserController(DoAnWebDbContext db, ILogger<UserController> logger)
+        private readonly SignInManager<User> _signInManager;
+        private readonly UserManager<User> _userManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
+        public UserController(DoAnWebDbContext db, ILogger<UserController> logger, UserManager<User> userManager, SignInManager<User> signInManager, RoleManager<IdentityRole> roleManager)
         {
             _db = db;
             _logger = logger;
+            _userManager = userManager;
+            _signInManager = signInManager;
+            _roleManager = roleManager;
         }
         [Route("")]
         [Route("index")]
         public IActionResult Index()
         {
+           
             return View();
         }
         [Route("ListUser")]
@@ -34,8 +42,15 @@ namespace Cs_Plantlover.Areas.Admin.Controllers
         {
             int pageSize = 10;
             int pageNumber = page == null || page < 0 ? 1 : page.Value;
-            var lstuser = _db.User .AsNoTracking().OrderBy(x => x.FullName);
-            PagedList<User> lst = new PagedList<User>(lstuser, pageNumber, pageSize);
+            IEnumerable<User> userList = _db.User.ToList();
+            PagedList<User> lst = new PagedList<User>(userList, pageNumber, pageSize);
+            var userRole = _db.UserRoles.ToList();
+            var roles = _db.Roles.ToList();
+            foreach (var user in lst)
+            {
+                var roleId = userRole.FirstOrDefault(u => u.UserId == user.Id).RoleId;
+                user.Role = roles.FirstOrDefault(u => u.Id == roleId).Name;
+            }
             return View(lst);
         }
         [HttpPost]

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "osfcvkdTlnVtizqrupUDSYkRxHP4IVZr2WdDgO3nAdc=",
+  "Hash": "1Ft5ebU5diljZ6XLZ32dTGDovuSH5NnRJ1z9BO5bU58=",
   "Source": "Cs-Plantlover",
   "BasePath": "_content/Cs-Plantlover",
   "Mode": "Default",
@@ -6154,6 +6154,25 @@
       "OriginalItemSpec": "wwwroot\\LayoutAdmin\\assets\\images\\background.png"
     },
     {
+      "Identity": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\LayoutAdmin\\assets\\images\\banner1.png",
+      "SourceId": "Cs-Plantlover",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\",
+      "BasePath": "_content/Cs-Plantlover",
+      "RelativePath": "LayoutAdmin/assets/images/banner1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\LayoutAdmin\\assets\\images\\banner1.png"
+    },
+    {
       "Identity": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\LayoutAdmin\\assets\\images\\dashboard\\circle.png",
       "SourceId": "Cs-Plantlover",
       "SourceType": "Discovered",
@@ -6893,6 +6912,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\LayoutAdmin\\assets\\images\\favicon.png"
+    },
+    {
+      "Identity": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\LayoutAdmin\\assets\\images\\IMG_20221209_012517 (2).jpg",
+      "SourceId": "Cs-Plantlover",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\",
+      "BasePath": "_content/Cs-Plantlover",
+      "RelativePath": "LayoutAdmin/assets/images/IMG_20221209_012517 (2).jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\LayoutAdmin\\assets\\images\\IMG_20221209_012517 (2).jpg"
     },
     {
       "Identity": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\LayoutAdmin\\assets\\images\\logo-mini.svg",

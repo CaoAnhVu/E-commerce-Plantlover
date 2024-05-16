@@ -1,0 +1,49 @@
+﻿@model X.PagedList.IPagedList<ViTri>
+@using Cs_Plantlover.Models
+@using X.PagedList.Mvc.Core;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    ViewData["Title"] = "ViTriSanPham";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1 class="text-center">Vị Trí Các Sản Phẩm</h1>
+<hr />
+<p>
+    <a class="btn btn-primary" asp-action="ThemViTri"><i class="fas fa-plus"></i> &nbsp; Create New Location</a>
+</p>
+<p>@TempData["Message"]</p>
+<table class="table">
+    <thead>
+        <tr class="table-warning">
+            <th>
+                Mã vị trí
+            </th>
+            <th>
+                Tên vị trí
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr class="table-success">
+           <td>
+               @Html.DisplayFor(modelItem => item.MaViTri)
+           </td>
+           <td>
+               @Html.DisplayFor(modelItem => item.TenViTri)
+           </td>
+            <td>
+                    <a asp-action="SuaViTri" asp-route-maViTri="@item.MaViTri"><i class="fa-solid fa-pen-to-square"></i></a> |
+                    <a asp-action="XoaViTri" asp-route-maViTri="@item.MaViTri"><i class="fa-solid fa-trash-can"></i></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+@Html.PagedListPager(Model, page => Url.Action("ViTriSanPham", new { page = page }), new PagedListRenderOptions()
+{
+    LiElementClasses = new List<string> { "page-item" },
+    PageClasses = new List<string> { "page-link" }
+})

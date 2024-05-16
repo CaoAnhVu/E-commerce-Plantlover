@@ -71,7 +71,7 @@ app.UseAuthorization();
 app.UseEndpoints(endpoints => 
 {
     endpoints.MapControllerRoute("default", "{area=Customer}/{controller=Home}/{action=Index}/{id?}");
-
+    endpoints.MapControllerRoute("Admin", "{area=exists}/{controller=Home}/{action=Index}/{id?}");
     app.MapRazorPages();
 });
 

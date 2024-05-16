@@ -10,7 +10,7 @@ namespace Cs_Plantlover.Models
         [Key,Required]
         public int MaSP {  get; set; }
 
-        [Required(ErrorMessage = "Không được để tên trống"), StringLength(200)]
+        [Required(ErrorMessage = "Không được để tên trống"), StringLength(4000)]
         [Display(Name = "Tên cây")]
         public string? TenSP { get; set; }
 

@@ -1053,12 +1053,20 @@
       "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\fonts\\Ubuntu\\Ubuntu-Regular.woff2"
     },
     {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\LayoutAdmin\\assets\\images\\IMG_20221209_012517 (2).jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\IMG_20221209_012517 (2).jpg"
+    },
+    {
       "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\LayoutAdmin\\assets\\images\\PlantloverIcon.ico",
       "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\PlantloverIcon.ico"
     },
     {
       "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\LayoutAdmin\\assets\\images\\background.png",
       "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\background.png"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\LayoutAdmin\\assets\\images\\banner1.png",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\images\\banner1.png"
     },
     {
       "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\LayoutAdmin\\assets\\images\\dashboard\\circle.png",

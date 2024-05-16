@@ -26,6 +26,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = D:\Dev web\Cs-Plantlover
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/Dev web/Cs-Plantlover/Areas/Admin/Views/HomeAdmin/ChiTietSanPham.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXENoaVRpZXRTYW5QaGFtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Dev web/Cs-Plantlover/Areas/Admin/Views/HomeAdmin/ChucNangSanPham.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXENodWNOYW5nU2FuUGhhbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Dev web/Cs-Plantlover/Areas/Admin/Views/HomeAdmin/DanhMucSanPham.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXERhbmhNdWNTYW5QaGFtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -34,12 +42,40 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Dev web/Cs-Plantlover/Areas/Admin/Views/HomeAdmin/SuaChiTietSanPham.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXFN1YUNoaVRpZXRTYW5QaGFtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Dev web/Cs-Plantlover/Areas/Admin/Views/HomeAdmin/SuaChucNang.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXFN1YUNodWNOYW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Dev web/Cs-Plantlover/Areas/Admin/Views/HomeAdmin/SuaSanPham.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXFN1YVNhblBoYW0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Dev web/Cs-Plantlover/Areas/Admin/Views/HomeAdmin/SuaViTri.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXFN1YVZpVHJpLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Dev web/Cs-Plantlover/Areas/Admin/Views/HomeAdmin/ThemChiTietSanPham.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXFRoZW1DaGlUaWV0U2FuUGhhbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Dev web/Cs-Plantlover/Areas/Admin/Views/HomeAdmin/ThemChucNang.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXFRoZW1DaHVjTmFuZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Dev web/Cs-Plantlover/Areas/Admin/Views/HomeAdmin/ThemSanPhamMoi.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXFRoZW1TYW5QaGFtTW9pLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Dev web/Cs-Plantlover/Areas/Admin/Views/HomeAdmin/ThemViTri.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXFRoZW1WaVRyaS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Dev web/Cs-Plantlover/Areas/Admin/Views/HomeAdmin/ViTriSanPham.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXFZpVHJpU2FuUGhhbS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Dev web/Cs-Plantlover/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml]

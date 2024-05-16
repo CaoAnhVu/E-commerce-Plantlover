@@ -52,14 +52,16 @@
                     @if(@item.LockoutEnd > DateTimeOffset.Now){
                         <form asp-action="LockAccount" method="post" asp-route-id="@item.Id">
                             <button type="submit" formnovalidate
-                                    class="@btnDanger">
+                                    class="@btnDanger button-lock">
+                                <i class="fa-solid fa-lock"></i>
                                 Unlock
                             </button>
                         </form>
                     }else{
                         <form asp-action="LockAccount" method="post" asp-route-id="@item.Id">
                             <button type="submit" formnovalidate
-                                    class="@btnSucess">
+                                    class="@btnSucess button-lock">
+                                <i class="fa-solid fa-lock-open"></i>
                                 Lock
                             </button>
                         </form>
@@ -72,9 +74,27 @@
                 <td>
                     <form asp-action="DeleteUser" method="post">
                         <input type="hidden" name="Id" value="@item.Id" />
-                        <button type="submit" >Delete</button>
+                        <button type="submit" class="button-icon">
+                            <i class="fa-solid fa-trash-can"></i>
                     </form>
                 </td>
+                <style>
+                    .button-icon {
+                        background: none;
+                        border: none;
+                        padding: 0;
+                        cursor: pointer;
+                        font-size: inherit;
+                        color: red;
+                    }
+                    .btn{
+                        padding: 0.875rem 1.5rem;
+                    }
+                    .button-lock {
+                        
+                        cursor: pointer;
+                    }
+                </style>
 
         </tr>
 }

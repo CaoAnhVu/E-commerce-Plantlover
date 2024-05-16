@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Cs-Plantlover")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b4df22bc9e378260016db7e9f78742a1309a1c00")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c19f651a4dbe6c2a6898be20ee46abce62289944")]
 [assembly: System.Reflection.AssemblyProductAttribute("Cs-Plantlover")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Cs-Plantlover")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

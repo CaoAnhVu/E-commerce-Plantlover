@@ -1,0 +1,31 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model Cs_Plantlover.Models.ViTri
+
+@{
+    ViewData["Title"] = "ThemViTri";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1 class="text-center">Thêm Vị Trí Cho Sản Phẩm</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form method="post" asp-action="ThemViTri">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TenViTri" class="control-label"></label>
+                <input asp-for="TenViTri" class="form-control" />
+                <span asp-validation-for="TenViTri" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="ViTriSanPham" class="btn btn-primary">Trở lại danh sách</a>
+</div>
+

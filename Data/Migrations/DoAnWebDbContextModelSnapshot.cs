@@ -124,6 +124,9 @@ namespace CsPlantlover.Migrations
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
+                    b.Property<string>("HinhAnhs")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("MaSP")
                         .HasColumnType("int");
 
@@ -211,8 +214,8 @@ namespace CsPlantlover.Migrations
 
                     b.Property<string>("TenSP")
                         .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
+                        .HasMaxLength(4000)
+                        .HasColumnType("nvarchar(4000)");
 
                     b.HasKey("MaSP");
 

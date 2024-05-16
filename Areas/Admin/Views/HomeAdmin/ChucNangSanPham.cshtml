@@ -1,0 +1,49 @@
+﻿@model X.PagedList.IPagedList<ChucNangSP>
+@using Cs_Plantlover.Models
+@using X.PagedList.Mvc.Core;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "ChucNangSanPham";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<h1 class="text-center">Danh Sách Chức Năng Sản Phẩm</h1>
+<hr />
+<p>
+    <a class="btn btn-primary" asp-action="ThemChucNang"><i class="fas fa-plus"></i> &nbsp; Create New Function </a>
+</p>
+<p>@TempData["Message"]</p>
+<table class="table">
+    <thead>
+        <tr class="table-warning">
+            <th>
+                Mã chức năng
+            </th>
+            <th>
+                Tên chức năng
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+            <tr class="table-success">
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.MaChucNang)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenChucNang)
+            </td>
+            <td>
+                    <a asp-action="SuaChucNang" asp-route-maChucNang="@item.MaChucNang"><i class="fa-solid fa-pen-to-square"></i></a> |
+                    <a asp-action="XoaChucNang" asp-route-maChucNang="@item.MaChucNang"><i class="fa-solid fa-trash-can"></i></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+@Html.PagedListPager(Model, page => Url.Action("ChucNangSanPham", new { page = page }), new PagedListRenderOptions()
+{
+    LiElementClasses = new List<string> { "page-item" },
+    PageClasses = new List<string> { "page-link" }
+})

@@ -76,7 +76,7 @@
                     </ul>
                 </li>
                 <li><a href="./blog.html">Blog</a></li>
-                <li><a href="./contact.html">Liên Hệ</a></li>
+                <li><a asp-area ="Customer" asp-controller="Contact" asp-action="Index">Liên Hệ</a></li>
             </ul>
         </nav>
         <div id="mobile-menu-wrap"></div>
@@ -151,12 +151,12 @@
                                 <a>Trang</a>
                                 <ul class="header__menu__dropdown">
                                     <li><a asp-area="Customer" asp-controller="Cart" asp-action="Index">Giỏ Hàng</a></li>
-                                    <li><a href="./checkout.html">Thủ Tục Thanh Toán</a></li>
+                                    <li><a asp-area="Customer" asp-controller="CheckOut" asp-action="Index">Thủ Tục Thanh Toán</a></li>
                                     <li><a href="./blog-details.html">Chi Tiết Blog</a></li>
                                 </ul>
                             </li>
                             <li><a href="./blog.html">Blog</a></li>
-                            <li><a href="./contact.html">Liên Hệ</a></li>
+                            <li><a asp-area="Customer" asp-controller="Contact" asp-action="Index">Liên Hệ</a></li>
                         </ul>
                     </nav>
                 </div>

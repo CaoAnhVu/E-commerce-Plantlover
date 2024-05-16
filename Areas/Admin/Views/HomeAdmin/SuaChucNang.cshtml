@@ -1,0 +1,32 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model Cs_Plantlover.Models.ChucNangSP
+
+@{
+    ViewData["Title"] = "SuaChucNang";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1 class="text-center">Sửa Chức Năng Sản Phẩm</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form method="post" asp-action="SuaChucNang">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="MaChucNang" />
+            <div class="form-group">
+                <label asp-for="TenChucNang" class="control-label"></label>
+                <input asp-for="TenChucNang" class="form-control" />
+                <span asp-validation-for="TenChucNang" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="ChucNangSanPham" class="btn btn-primary">Trở lại danh sách</a>
+</div>
+

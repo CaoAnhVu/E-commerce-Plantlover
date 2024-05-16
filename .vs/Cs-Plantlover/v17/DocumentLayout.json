@@ -1,56 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Dev web\\Cs-Plantlover\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\areas\\admin\\controllers\\homeadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:areas\\admin\\controllers\\homeadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\areas\\admin\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:areas\\admin\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\areas\\admin\\models\\sd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:areas\\admin\\models\\sd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\areas\\admin\\views\\user\\listuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:areas\\admin\\views\\user\\listuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\areas\\admin\\views\\homeadmin\\danhmucsanpham.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:areas\\admin\\views\\homeadmin\\danhmucsanpham.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\wwwroot\\layoutadmin\\assets\\scss\\components\\_tables.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}",
-      "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:wwwroot\\layoutadmin\\assets\\scss\\components\\_tables.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\wwwroot\\layoutadmin\\assets\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:wwwroot\\layoutadmin\\assets\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|d:\\dev web\\cs-plantlover\\data\\migrations\\doanwebdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7220E487-F5B6-44E3-AB0C-5443BD46B10F}|Cs-Plantlover.csproj|solutionrelative:data\\migrations\\doanwebdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -58,8 +9,16 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": -1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
@@ -79,162 +38,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ListUser.cshtml",
-              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Areas\\Admin\\Views\\User\\ListUser.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\User\\ListUser.cshtml",
-              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Areas\\Admin\\Views\\User\\ListUser.cshtml",
-              "RelativeToolTip": "Areas\\Admin\\Views\\User\\ListUser.cshtml",
-              "ViewState": "AQIAACEAAAAAAAAAAAAAAB4AAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-10T16:25:13.127Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DanhMucSanPham.cshtml",
-              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Areas\\Admin\\Views\\HomeAdmin\\DanhMucSanPham.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\HomeAdmin\\DanhMucSanPham.cshtml",
-              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Areas\\Admin\\Views\\HomeAdmin\\DanhMucSanPham.cshtml",
-              "RelativeToolTip": "Areas\\Admin\\Views\\HomeAdmin\\DanhMucSanPham.cshtml",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAAAEEAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-11T12:01:18.963Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "style.css",
-              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\LayoutAdmin\\assets\\css\\style.css",
-              "RelativeDocumentMoniker": "wwwroot\\LayoutAdmin\\assets\\css\\style.css",
-              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\LayoutAdmin\\assets\\css\\style.css",
-              "RelativeToolTip": "wwwroot\\LayoutAdmin\\assets\\css\\style.css",
-              "ViewState": "AQIAAOgvAAAAAAAAAAAAAPMvAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-05-11T06:18:21.424Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HomeAdminController.cs",
-              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Areas\\Admin\\Controllers\\HomeAdminController.cs",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\HomeAdminController.cs",
-              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Areas\\Admin\\Controllers\\HomeAdminController.cs",
-              "RelativeToolTip": "Areas\\Admin\\Controllers\\HomeAdminController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T06:01:41.869Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Models\\User.cs",
-              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Models\\User.cs",
-              "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T05:53:41.824Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAC4AAAAAAAAAAAAAAEUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T16:44:53.24Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ViewState": "AQIAADkAAAAAAAAAAAAQwEoAAABCAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-10T16:22:59.414Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Register.cshtml.cs",
-              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "ViewState": "AQIAAJUAAAAAAAAAAAAUwKMAAABMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T14:07:03.379Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Areas\\Admin\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\UserController.cs",
-              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Areas\\Admin\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Areas\\Admin\\Controllers\\UserController.cs",
-              "ViewState": "AQIAACkAAAAAAAAAAAAUwA8AAABDAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T17:29:19.419Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "_tables.scss",
-              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\LayoutAdmin\\assets\\scss\\components\\_tables.scss",
-              "RelativeDocumentMoniker": "wwwroot\\LayoutAdmin\\assets\\scss\\components\\_tables.scss",
-              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\LayoutAdmin\\assets\\scss\\components\\_tables.scss",
-              "RelativeToolTip": "wwwroot\\LayoutAdmin\\assets\\scss\\components\\_tables.scss",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAAADEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002663|",
-              "WhenOpened": "2024-05-11T06:26:14.319Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SD.cs",
-              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Areas\\Admin\\Models\\SD.cs",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Models\\SD.cs",
-              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Areas\\Admin\\Models\\SD.cs",
-              "RelativeToolTip": "Areas\\Admin\\Models\\SD.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-09T01:48:14.55Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "DoAnWebDbContextModelSnapshot.cs",
-              "DocumentMoniker": "D:\\Dev web\\Cs-Plantlover\\Data\\Migrations\\DoAnWebDbContextModelSnapshot.cs",
-              "RelativeDocumentMoniker": "Data\\Migrations\\DoAnWebDbContextModelSnapshot.cs",
-              "ToolTip": "D:\\Dev web\\Cs-Plantlover\\Data\\Migrations\\DoAnWebDbContextModelSnapshot.cs",
-              "RelativeToolTip": "Data\\Migrations\\DoAnWebDbContextModelSnapshot.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T16:16:28.594Z"
             }
           ]
         }
