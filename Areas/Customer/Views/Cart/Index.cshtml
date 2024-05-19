@@ -107,7 +107,18 @@
                                 <li>Tổng tiền<span>@total VNĐ</span></li>
 
                             </ul>
-                            <a asp-action="Index" asp-controller="Checkout" asp-area="Customer" class="primary-btn">Xác Nhận Giỏ Hàng</a>
+                            @{
+                                var returnUrl = Url.Action("Index", "Cart", new { area = "Customer" });
+                            }
+
+                            @if (User.Identity?.IsAuthenticated ?? false)
+                            {
+                                <a asp-action="Index" asp-controller="Checkout" asp-area="Customer" class="primary-btn">Xác Nhận Giỏ Hàng</a>
+                            }
+                            else
+                            {
+                                <li><a id="login" asp-area="Identity" asp-page="/Account/Login" asp-route-returnUrl="@returnUrl">Bạn phải đăng nhập để tiến hành thanh toán</a></li>
+                            }
                         </div>
                     </div>
                 </div>
@@ -121,6 +132,7 @@
     }
 </form>
 <!-- Shoping Cart Section End -->
+
 <script>
     function removeFromCart(maSP) {
         $.ajax({

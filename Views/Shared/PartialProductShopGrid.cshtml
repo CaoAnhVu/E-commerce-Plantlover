@@ -1,14 +1,15 @@
 ﻿@model DanhMucSP
 @{
     int numOfQuantity = 1;
+    var currentUrl = Context.Request.Path + Context.Request.QueryString;
 }
 <div class="col-lg-4 col-md-6 col-sm-6">
     <div class="product__item">
-        <div class="product__item__pic set-bg" data-setbg="@Url.Content(@Model.AnhDaiDien)" style="background-image: url(&quot;img/product/product-1.jpg&quot;);">
+        <div class="product__item__pic set-bg" data-setbg="@Url.Content(@Model.AnhDaiDien)" style="background-image: url('@Model.AnhDaiDien');">
             <ul class="product__item__pic__hover">
                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                <li><a asp-area="Customer" asp-controller="Cart" asp-action="AddToCart" asp-route-maSP=@Model.MaSP asp-route-quantity="@numOfQuantity"><i class="fa fa-shopping-cart"></i></a></li>
+                <li><a asp-area="Customer" asp-controller="Cart" asp-action="AddToCart" asp-route-maSP=@Model.MaSP asp-route-quantity="@numOfQuantity" asp-route-returnUrl="@currentUrl"><i class="fa fa-shopping-cart"></i></a></li>
             </ul>
         </div>
         <div class="product__item__text">

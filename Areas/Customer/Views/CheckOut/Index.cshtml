@@ -1,4 +1,121 @@
-﻿@model Cs_Plantlover.Models.Cart
+﻿@using Microsoft.AspNetCore.Identity
+@model Cs_Plantlover.ViewModels.CheckoutViewModel
+@{
+    ViewData["Title"] = "Thủ Tục Thanh Toán";
+    Layout = "~/Views/Shared/_LayoutCheckOut.cshtml";
+
+}
+
+<form method="post" asp-action="PlaceOrder" asp-controller="Cart">
+    <br />
+    <section class="checkout spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h6><span class="icon_tag_alt"></span> Có phiếu giảm giá? <a href="#">Bấm vào đây</a> để nhập mã của bạn</h6>
+                </div>
+            </div>
+            <div class="checkout__form">
+                <h4>Chi tiết thanh toán</h4>
+                <div class="row">
+                    <div class="col-lg-8 col-md-6">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="checkout__input">
+                                    <p>First Name<span>*</span></p>
+                                    <input type="text" name="FirstName" value="@Model.User?.FullName?.Split(' ')[0]" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="checkout__input">
+                                    <p>Last Name<span>*</span></p>
+                                    <input type="text" name="LastName" value="@Model.User?.FullName?.Split(' ').Last()" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="checkout__input">
+                            <p>Địa chỉ<span>*</span></p>
+                            <input type="text" name="StreetAddress" placeholder="Street Address" class="checkout__input__add" value="@Model.User?.Address" required>
+                        </div>
+                        <div class="checkout__input">
+                            <p>Phường/Xã<span>*</span></p>
+                            <input type="text" name="Village" placeholder="Village" class="checkout__input__add" value="@Model.User?.Village" required>
+                        </div>
+                        <div class="checkout__input">
+                            <p>Quận/Huyện<span>*</span></p>
+                            <input type="text" name="District" placeholder="District" class="checkout__input__add" value="@Model.User?.District" required>
+                        </div>
+                        <div class="checkout__input">
+                            <p>Tỉnh/Thành phố<span>*</span></p>
+                            <input type="text" name="City" value="@Model.User?.City" required>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="checkout__input">
+                                    <p>Số điện thoại<span>*</span></p>
+                                    <input type="text" name="PhoneNumber" value="@Model.User?.PhoneNumber" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="checkout__input">
+                                    <p>Email<span>*</span></p>
+                                    <input type="email" name="Email" value="@Model.User?.Email" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="checkout__input__checkbox">
+                            <label for="diff-acc">
+                                Gửi đến một địa chỉ khác?
+                                <input type="checkbox" id="diff-acc" name="ShipToDifferentAddress">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="checkout__input">
+                            <p>Ghi chú đặt hàng<span>*</span></p>
+                            <input type="text" name="OrderNotes" placeholder="Ghi chú về đơn đặt hàng của bạn, ví dụ: ghi chú đặc biệt để giao hàng.">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="checkout__order">
+                            <h4>Đơn hàng của bạn</h4>
+                            <div class="checkout__order__products">Sản phẩm <span>Giá</span></div>
+                            <ul>
+                                @foreach (var item in Model.Cart.Items)
+                                {
+                                    <li>@item.DanhMucSP.TenSP <span>@(item.DanhMucSP.GiaBan * item.SoLuong) VNĐ</span></li>
+                                }
+                            </ul>
+                            <div class="checkout__order__subtotal">Subtotal <span>@Model.Cart.Items.Sum(p => p.DanhMucSP.GiaBan * p.SoLuong) VNĐ</span></div>
+                            <div class="checkout__order__total">Total <span>@(Model.Cart.Items.Sum(p => p.DanhMucSP.GiaBan * p.SoLuong) + 30000) VNĐ</span></div>
+                            <div class="checkout__input__checkbox">
+                                <label for="payment">
+                                    Kiểm tra thanh toán
+                                    <input type="checkbox" id="payment" name="PaymentMethod" value="CheckPayment">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="checkout__input__checkbox">
+                                <label for="paypal">
+                                    Thanh toán khi nhận hàng
+                                    <input type="checkbox" id="paypal" name="PaymentMethod" value="CashOnDelivery">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <button type="submit" class="site-btn">Thanh Toán</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</form>
+@* 
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+} *@
+
+
+@* @model Cs_Plantlover.Models.Cart
 @{
     ViewData["Title"] = "Thủ Tục Thanh Toán";
     Layout = "~/Views/Shared/_LayoutCheckOut.cshtml";
@@ -27,17 +144,14 @@
                                             <input type="text">
                                         </div>
                                     </div>
-                                    <div class="col-lg-6">
-                                        <div class="checkout__input">
-                                            <p>Last Name<span>*</span></p>
-                                            <input type="text">
+                                        <div class="col-lg-6">
+                                            <div class="checkout__input">
+                                                <p>Last Name<span>*</span></p>
+                                                <input type="text">
+                                            </div>
                                         </div>
-                                    </div>
                                 </div>
-                                <div class="checkout__input">
-                                    <p>Quốc tịch<span>*</span></p>
-                                    <input type="text">
-                                </div>
+                               
                                 <div class="checkout__input">
                                     <p>Địa chỉ<span>*</span></p>
                                     <input type="text" placeholder="Street Address" class="checkout__input__add">
@@ -92,7 +206,7 @@
                             <div class="col-lg-4 col-md-6">
                                 <div class="checkout__order">
                                     <h4>Đơn hàng của bạn</h4>
-                                    <div class="checkout__order__products">Products <span>Total</span></div>
+                                    <div class="checkout__order__products">Sản phẩm <span>Giá</span></div>
                                     <ul>
 
                                     @foreach(var item in Model.Items)
@@ -102,13 +216,6 @@
                                     </ul>
                                     <div class="checkout__order__subtotal">Subtotal <span>@Model.Items.Sum(p => p.DanhMucSP.GiaBan * p.SoLuong) VNĐ</span></div>
                                 <div class="checkout__order__total">Total <span>@(Model.Items.Sum(p => p.DanhMucSP.GiaBan * p.SoLuong) + 30000) VNĐ</span></div>
-                                    <div class="checkout__input__checkbox">
-                                        <label for="acc-or">
-                                            Tạo một tài khoản?
-                                            <input type="checkbox" id="acc-or">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
                                     <div class="checkout__input__checkbox">
                                         <label for="payment">
                                             Kiểm tra thanh toán
@@ -134,3 +241,6 @@
         <!-- Checkout Section End -->
 </form>
 <!-- Shoping Cart Section End -->
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+} *@

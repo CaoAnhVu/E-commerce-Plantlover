@@ -22,14 +22,13 @@ namespace Cs_Plantlover.Areas.Admin.Controllers
         private readonly ILogger<HomeAdminController> _logger;
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
-        private readonly RoleManager<IdentityRole> _roleManager;
-        public HomeAdminController(DoAnWebDbContext db, ILogger<HomeAdminController> logger, UserManager<User> userManager, SignInManager<User> signInManager, RoleManager<IdentityRole> roleManager)
+        public HomeAdminController(DoAnWebDbContext db, ILogger<HomeAdminController> logger, UserManager<User> userManager, SignInManager<User> signInManager )
         {
             _db = db;
             _logger = logger;
             _userManager = userManager;
             _signInManager = signInManager;
-            _roleManager = roleManager;
+            
         }
         [Route("")]
         public IActionResult Index()

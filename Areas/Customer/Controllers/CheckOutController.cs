@@ -18,19 +18,29 @@ namespace Cs_Plantlover.Areas.Customer.Controllers
         public OrderHeader? OrderHeader { get; set; }
         private readonly DoAnWebDbContext _db;
         private readonly ILogger<HomeController> _logger;
+        private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
 
-        public CheckOutController(DoAnWebDbContext db, ILogger<HomeController> logger, SignInManager<User> signInManager)
+        public CheckOutController(DoAnWebDbContext db, ILogger<HomeController> logger, UserManager<User> userManager, SignInManager<User> signInManager)
         {
             _db = db;
             _logger = logger;
             _signInManager = signInManager;
+            _userManager = userManager;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
+            var user = await _userManager.GetUserAsync(User);
             var cart = HttpContext.Session.GetObjectFromJson<Cart>("Cart") ?? new Cart();
-            return View(cart);
+
+            var model = new CheckoutViewModel
+            {
+                Cart = cart,
+                User = user
+            };
+
+            return View(model);
         }
     }
 }

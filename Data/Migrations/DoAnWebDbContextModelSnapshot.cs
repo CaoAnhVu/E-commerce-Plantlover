@@ -45,7 +45,7 @@ namespace CsPlantlover.Migrations
 
                     b.HasIndex("MaSP");
 
-                    b.ToTable("AnhSP");
+                    b.ToTable("AnhSP", (string)null);
                 });
 
             modelBuilder.Entity("Cs_Plantlover.Models.CheDoAS", b =>
@@ -63,7 +63,7 @@ namespace CsPlantlover.Migrations
 
                     b.HasKey("MaCheDoAS");
 
-                    b.ToTable("CheDoAs");
+                    b.ToTable("CheDoAs", (string)null);
                 });
 
             modelBuilder.Entity("Cs_Plantlover.Models.ChiTietHoaDon", b =>
@@ -99,7 +99,7 @@ namespace CsPlantlover.Migrations
 
                     b.HasIndex("MaHoaDonNavigationMaHoaDon");
 
-                    b.ToTable("ChiTietHoaDons");
+                    b.ToTable("ChiTietHoaDons", (string)null);
                 });
 
             modelBuilder.Entity("Cs_Plantlover.Models.ChiTietSP", b =>
@@ -140,7 +140,7 @@ namespace CsPlantlover.Migrations
 
                     b.HasIndex("MaSpNavigationMaSP");
 
-                    b.ToTable("ChiTietSps");
+                    b.ToTable("ChiTietSps", (string)null);
                 });
 
             modelBuilder.Entity("Cs_Plantlover.Models.ChucNangSP", b =>
@@ -158,7 +158,7 @@ namespace CsPlantlover.Migrations
 
                     b.HasKey("MaChucNang");
 
-                    b.ToTable("ChiTietSP");
+                    b.ToTable("ChiTietSP", (string)null);
                 });
 
             modelBuilder.Entity("Cs_Plantlover.Models.DanhMucSP", b =>
@@ -229,7 +229,7 @@ namespace CsPlantlover.Migrations
 
                     b.HasIndex("MaViTriNavigationMaViTri");
 
-                    b.ToTable("DanhMucSps");
+                    b.ToTable("DanhMucSps", (string)null);
                 });
 
             modelBuilder.Entity("Cs_Plantlover.Models.HoaDon", b =>
@@ -271,7 +271,7 @@ namespace CsPlantlover.Migrations
 
                     b.HasIndex("MaNhanVienNavigationMaNhanVien");
 
-                    b.ToTable("HoaDons");
+                    b.ToTable("HoaDons", (string)null);
                 });
 
             modelBuilder.Entity("Cs_Plantlover.Models.KhachHang", b =>
@@ -310,7 +310,7 @@ namespace CsPlantlover.Migrations
 
                     b.HasKey("MaKhachHang");
 
-                    b.ToTable("KhachHangs");
+                    b.ToTable("KhachHangs", (string)null);
                 });
 
             modelBuilder.Entity("Cs_Plantlover.Models.KichThuocSP", b =>
@@ -328,7 +328,7 @@ namespace CsPlantlover.Migrations
 
                     b.HasKey("MaKichThuoc");
 
-                    b.ToTable("KichThuocSps");
+                    b.ToTable("KichThuocSps", (string)null);
                 });
 
             modelBuilder.Entity("Cs_Plantlover.Models.LeaveMessenger", b =>
@@ -353,7 +353,7 @@ namespace CsPlantlover.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("LeaveMessengers");
+                    b.ToTable("LeaveMessengers", (string)null);
                 });
 
             modelBuilder.Entity("Cs_Plantlover.Models.MoiTruongSongSP", b =>
@@ -371,7 +371,7 @@ namespace CsPlantlover.Migrations
 
                     b.HasKey("MaMoiTruongSong");
 
-                    b.ToTable("MoiTruongSongSps");
+                    b.ToTable("MoiTruongSongSps", (string)null);
                 });
 
             modelBuilder.Entity("Cs_Plantlover.Models.NhanVien", b =>
@@ -413,7 +413,7 @@ namespace CsPlantlover.Migrations
 
                     b.HasKey("MaNhanVien");
 
-                    b.ToTable("NhanViens");
+                    b.ToTable("NhanViens", (string)null);
                 });
 
             modelBuilder.Entity("Cs_Plantlover.Models.OrderDetails", b =>
@@ -442,7 +442,7 @@ namespace CsPlantlover.Migrations
 
                     b.HasIndex("OrderId");
 
-                    b.ToTable("OrderDetails");
+                    b.ToTable("OrderDetails", (string)null);
                 });
 
             modelBuilder.Entity("Cs_Plantlover.Models.OrderHeader", b =>
@@ -457,10 +457,6 @@ namespace CsPlantlover.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("City")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("District")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -506,15 +502,11 @@ namespace CsPlantlover.Migrations
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("Village")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("Id");
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("OrderHeaders");
+                    b.ToTable("OrderHeaders", (string)null);
                 });
 
             modelBuilder.Entity("Cs_Plantlover.Models.Unit", b =>
@@ -531,7 +523,7 @@ namespace CsPlantlover.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Units");
+                    b.ToTable("Units", (string)null);
                 });
 
             modelBuilder.Entity("Cs_Plantlover.Models.User", b =>
@@ -630,7 +622,7 @@ namespace CsPlantlover.Migrations
 
                     b.HasKey("MaViTri");
 
-                    b.ToTable("ViTris");
+                    b.ToTable("ViTris", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -862,7 +854,7 @@ namespace CsPlantlover.Migrations
                         .IsRequired();
 
                     b.HasOne("Cs_Plantlover.Models.OrderHeader", "OrderHeader")
-                        .WithMany()
+                        .WithMany("OrderDetails")
                         .HasForeignKey("OrderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -977,6 +969,11 @@ namespace CsPlantlover.Migrations
             modelBuilder.Entity("Cs_Plantlover.Models.NhanVien", b =>
                 {
                     b.Navigation("HoaDons");
+                });
+
+            modelBuilder.Entity("Cs_Plantlover.Models.OrderHeader", b =>
+                {
+                    b.Navigation("OrderDetails");
                 });
 
             modelBuilder.Entity("Cs_Plantlover.Models.ViTri", b =>

@@ -13,7 +13,8 @@ using Stripe;
 using System.Diagnostics;
 using System.Security.Claims;
 using X.PagedList;
-
+using System.Threading.Tasks;
+using System.Linq;
 
 namespace Cs_Plantlover.Areas.Customer.Controllers
 {
@@ -23,12 +24,14 @@ namespace Cs_Plantlover.Areas.Customer.Controllers
         public Cart? Cart { get; set; }
         private readonly DoAnWebDbContext _db;
         private readonly ILogger<HomeController> _logger;
+        private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
 
-        public CartController(DoAnWebDbContext db, ILogger<HomeController> logger, SignInManager<User> signInManager)
+        public CartController(DoAnWebDbContext db, ILogger<HomeController> logger, UserManager<User> userManager, SignInManager<User> signInManager)
         {
             _db = db;
             _logger = logger;
+            _userManager = userManager;
             _signInManager = signInManager;
         }
 
@@ -38,14 +41,12 @@ namespace Cs_Plantlover.Areas.Customer.Controllers
             return View(cart);
         }
 
-        public async Task<IActionResult> AddToCart(int maSP, int quantity)
+        public async Task<IActionResult> AddToCart(int maSP, int quantity, string returnUrl)
         {
-            // Giả sử bạn có phương thức lấy thông tin sản phẩm từ maSP
             var danhMucSP = await _db.DanhMucSps.Include(p => p.ChiTietSPs).FirstOrDefaultAsync(p => p.MaSP == maSP);
-
             var cartItem = new CartItem
             {
-                DanhMucSP= danhMucSP,
+                DanhMucSP = danhMucSP,
                 SoLuong = quantity,
             };
 
@@ -54,7 +55,7 @@ namespace Cs_Plantlover.Areas.Customer.Controllers
 
             HttpContext.Session.SetObjectAsJson("Cart", cart);
 
-            return RedirectToAction("Index");
+            return Redirect(returnUrl);
         }
 
         public IActionResult RemoveFromCart(int maSP)
@@ -64,35 +65,11 @@ namespace Cs_Plantlover.Areas.Customer.Controllers
             if (cart is not null)
             {
                 cart.RemoveItem(maSP);
-
-                // Lưu lại giỏ hàng vào Session sau khi đã xóa mục
                 HttpContext.Session.SetObjectAsJson("Cart", cart);
             }
 
             return RedirectToAction("Index");
         }
-        
-       /* public IActionResult OrderConfirmation(int id)
-        {
-            return View(id);
-        }*/
-        public IActionResult OrderConfirmation(int id)
-        {
-            var cart = HttpContext.Session.GetObjectFromJson<Cart>("Cart");
-
-            // Kiểm tra xem giỏ hàng có tồn tại không
-            if (cart != null)
-            {
-                // Clear giỏ hàng sau khi thanh toán
-                cart.ClearAll();
-
-                // Lưu giỏ hàng đã được xóa vào Session
-                HttpContext.Session.SetObjectAsJson("Cart", cart);
-            }
-
-            return View(id);
-        }
-
 
         public IActionResult Clear(int productId)
         {
@@ -101,8 +78,6 @@ namespace Cs_Plantlover.Areas.Customer.Controllers
             if (cart is not null)
             {
                 cart.ClearAll();
-
-                // Lưu lại giỏ hàng vào Session sau khi đã xóa mục
                 HttpContext.Session.SetObjectAsJson("Cart", cart);
             }
 
@@ -116,8 +91,6 @@ namespace Cs_Plantlover.Areas.Customer.Controllers
             if (cart is not null)
             {
                 cart.IncreaseOrDecreased(true, productId);
-
-                // Lưu lại giỏ hàng vào Session sau khi đã xóa mục
                 HttpContext.Session.SetObjectAsJson("Cart", cart);
             }
 
@@ -131,13 +104,83 @@ namespace Cs_Plantlover.Areas.Customer.Controllers
             if (cart != null)
             {
                 cart.IncreaseOrDecreased(false, productId);
-
-                // Save the updated cart back to session
                 HttpContext.Session.SetObjectAsJson("Cart", cart);
             }
 
-            // Redirect back to the index page to reflect changes
             return RedirectToAction("Index");
+        }
+
+        public async Task<IActionResult> Checkout()
+        {
+            var user = await _userManager.GetUserAsync(User);
+            var cart = HttpContext.Session.GetObjectFromJson<Cart>("Cart") ?? new Cart();
+
+            var model = new CheckoutViewModel
+            {
+                Cart = cart,
+                User = user
+            };
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> PlaceOrder(string FirstName, string LastName, string StreetAddress, string City, string PhoneNumber, string Email, string OrderNotes, string PaymentMethod)
+        {
+            var user = await _userManager.GetUserAsync(User);
+            var cart = HttpContext.Session.GetObjectFromJson<Cart>("Cart");
+
+            if (cart == null || !cart.Items.Any())
+            {
+                return RedirectToAction("Index");
+            }
+
+            var orderHeader = new OrderHeader
+            {   
+                UserId = user.Id,
+                OrderDate = DateTime.Now,
+                ShippingDate = DateTime.Now.AddDays(3),
+                OrderTotal = (long)(cart.Items.Sum(i => i.DanhMucSP.GiaBan * i.SoLuong) + 30000), // Adding a fixed shipping cost
+                OrderStatus = "Pending",
+                PaymentStatus = PaymentMethod == "CheckPayment" ? "Pending" : "Completed",
+                PhoneNumber = PhoneNumber,
+                Name = $"{FirstName} {LastName}",
+                StreetAddress = StreetAddress,
+                City = City
+            };
+
+            _db.OrderHeaders.Add(orderHeader);
+            await _db.SaveChangesAsync();
+
+            foreach (var item in cart.Items)
+            {
+                var orderDetails = new OrderDetails
+                {
+                    OrderId = orderHeader.Id,
+                    MaSP = item.DanhMucSP.MaSP,
+                    Count = item.SoLuong,
+                    Price = (long)item.DanhMucSP.GiaBan
+                };
+
+                _db.OrderDetails.Add(orderDetails);
+            }
+
+            await _db.SaveChangesAsync();
+
+            cart.ClearAll();
+            HttpContext.Session.SetObjectAsJson("Cart", cart);
+
+            return RedirectToAction("OrderConfirmation", new { id = orderHeader.Id });
+        }
+
+        public IActionResult OrderConfirmation(int id)
+        {
+            var order = _db.OrderHeaders
+                .Include(o => o.OrderDetails)
+                .ThenInclude(od => od.DanhMucSP)
+                .FirstOrDefault(o => o.Id == id);
+
+            return View(id);
         }
     }
 }

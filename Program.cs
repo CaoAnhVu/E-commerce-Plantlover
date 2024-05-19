@@ -9,6 +9,7 @@ using Cs_Plantlover.Repository;
 using Microsoft.AspNetCore.Identity;
 using Data;
 using Repository.IRepository;
+using Cs_Plantlover.Repository.IRepository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,6 +28,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IChucNangSPRepository, ChucNangSPRepository>();
 builder.Services.AddScoped<IViTriRepository, ViTriRepository>();
 
+//add Identity
 builder.Services.AddIdentity <User, IdentityRole> ()
 .AddDefaultTokenProviders()
 .AddDefaultUI()
@@ -66,6 +68,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseSession();
 app.UseRouting();
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.UseEndpoints(endpoints => 
