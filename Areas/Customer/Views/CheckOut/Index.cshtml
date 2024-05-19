@@ -70,10 +70,7 @@
                                 <span class="checkmark"></span>
                             </label>
                         </div>
-                        <div class="checkout__input">
-                            <p>Ghi chú đặt hàng<span>*</span></p>
-                            <input type="text" name="OrderNotes" placeholder="Ghi chú về đơn đặt hàng của bạn, ví dụ: ghi chú đặc biệt để giao hàng.">
-                        </div>
+                       
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="checkout__order">
@@ -83,10 +80,13 @@
                                 @foreach (var item in Model.Cart.Items)
                                 {
                                     <li>@item.DanhMucSP.TenSP <span>@(item.DanhMucSP.GiaBan * item.SoLuong) VNĐ</span></li>
+                                    <small class="text-muted">Số Lượng: @item.SoLuong</small>
+
                                 }
                             </ul>
                             <div class="checkout__order__subtotal">Subtotal <span>@Model.Cart.Items.Sum(p => p.DanhMucSP.GiaBan * p.SoLuong) VNĐ</span></div>
                             <div class="checkout__order__total">Total <span>@(Model.Cart.Items.Sum(p => p.DanhMucSP.GiaBan * p.SoLuong) + 30000) VNĐ</span></div>
+                            <p style="color:maroon; font-size:14px;">Ngày giao dự kiến: @DateTime.Now.AddDays(7).ToShortDateString() - @DateTime.Now.AddDays(14).ToShortDateString()</p>
                             <div class="checkout__input__checkbox">
                                 <label for="payment">
                                     Kiểm tra thanh toán

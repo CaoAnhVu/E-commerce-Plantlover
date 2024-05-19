@@ -54,9 +54,9 @@
                                             </td>
                                            
                                             <td class="shoping__cart__quantity">
-                                                <a class="btn " asp-area="Customer" asp-controller="Cart" asp-action="AddToCart" asp-route-maSP=@line?.DanhMucSP?.MaSP asp-route-quantity="-1"> - </a>
+                                                <a class="btn " asp-area="Customer" asp-controller="Cart" asp-action="AddToCart" asp-route-maSP=@line?.DanhMucSP?.MaSP asp-route-quantity="-1" asp-route-returnUrl="@Context.Request.Path"> - </a>
                                                 <input type="text" class="text-center" name="quantity" value="@line.SoLuong" autocomplete="off" size="2">
-                                                <a class="btn " asp-area="Customer" asp-controller="Cart" asp-action="AddToCart" asp-route-maSP=@line?.DanhMucSP?.MaSP asp-route-quantity="1"> + </a>
+                                                <a class="btn " asp-area="Customer" asp-controller="Cart" asp-action="AddToCart" asp-route-maSP=@line?.DanhMucSP?.MaSP asp-route-quantity="1" asp-route-returnUrl="@Context.Request.Path"> + </a>
                                             </td>
                                             <td class="shoping__cart__total">
                                                 @(line?.SoLuong * line?.DanhMucSP?.GiaBan)

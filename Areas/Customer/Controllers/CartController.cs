@@ -55,6 +55,12 @@ namespace Cs_Plantlover.Areas.Customer.Controllers
 
             HttpContext.Session.SetObjectAsJson("Cart", cart);
 
+            if (!User.Identity.IsAuthenticated)
+            {
+                // Chuyển hướng đến trang đăng nhập, với returnUrl
+                return RedirectToAction("Login", "Account", new {area = "Identity", returnUrl });
+            }
+            // Chuyển đến returnUrl sau khi thêm vào giỏ hàng
             return Redirect(returnUrl);
         }
 
@@ -125,7 +131,7 @@ namespace Cs_Plantlover.Areas.Customer.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> PlaceOrder(string FirstName, string LastName, string StreetAddress, string City, string PhoneNumber, string Email, string OrderNotes, string PaymentMethod)
+        public async Task<IActionResult> PlaceOrder(string FirstName, string LastName, string StreetAddress, string City, string PhoneNumber, string Village,string District, string Email, string OrderNotes, string PaymentMethod)
         {
             var user = await _userManager.GetUserAsync(User);
             var cart = HttpContext.Session.GetObjectFromJson<Cart>("Cart");
@@ -146,6 +152,8 @@ namespace Cs_Plantlover.Areas.Customer.Controllers
                 PhoneNumber = PhoneNumber,
                 Name = $"{FirstName} {LastName}",
                 StreetAddress = StreetAddress,
+                Village= Village,
+                District = District,
                 City = City
             };
 

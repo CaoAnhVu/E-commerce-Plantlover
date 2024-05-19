@@ -35,11 +35,11 @@ namespace Cs_Plantlover.Models
         [Required(ErrorMessage = "Nhập số nhà, tên đường")]
         public string? StreetAddress { get; set; }
 
-     /*   [Required(ErrorMessage = "Nhập Phường/Xã")]
+        [Required(ErrorMessage = "Nhập Phường/Xã")]
         public string? Village { get; set; }
 
         [Required(ErrorMessage = "Nhập Quận/Huyện")]
-        public string? District { get; set; }*/
+        public string? District { get; set; }
 
         [Required(ErrorMessage = "Nhập tên tỉnh (thành phố)")]
         public string? City { get; set; }
