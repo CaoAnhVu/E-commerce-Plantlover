@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Identity;
 using Data;
 using Repository.IRepository;
 using Cs_Plantlover.Repository.IRepository;
+using Cs_Plantlover.Models.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -53,6 +54,7 @@ builder.Services.AddScoped<IViTriRepository, ViTriRepository>();
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession();
 
+builder.Services.AddSingleton<IVnPayService, VnPayService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -8,5 +8,8 @@ namespace Cs_Plantlover.ViewModels
     {
         public Cart Cart { get; set; }
         public User User { get; set; }
+        // Thêm thuộc tính cho phương thức thanh toán
+        public string PaymentMethod { get; set; }
+
     }
 }

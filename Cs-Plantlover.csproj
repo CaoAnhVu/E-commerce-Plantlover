@@ -27,6 +27,16 @@
     <None Include="wwwroot\1LayoutPlantlover\js\main.js" />
     <None Include="wwwroot\1LayoutPlantlover\js\mixitup.min.js" />
     <None Include="wwwroot\1LayoutPlantlover\js\owl.carousel.min.js" />
+    <None Include="wwwroot\Assets\js\bootstrap.bundle.min.js" />
+    <None Include="wwwroot\Assets\js\e19c476714.js" />
+    <None Include="wwwroot\Assets\js\ellipsis.js" />
+    <None Include="wwwroot\Assets\js\jquery-2.0.0.min.js" />
+    <None Include="wwwroot\Assets\js\jquery-ui.min.js" />
+    <None Include="wwwroot\Assets\js\jquery.dataTables.min.js" />
+    <None Include="wwwroot\Assets\js\jquery.min.js" />
+    <None Include="wwwroot\Assets\js\script.js" />
+    <None Include="wwwroot\Assets\js\sweetalert.min.js" />
+    <None Include="wwwroot\Assets\js\toastr.min.js" />
     <None Include="wwwroot\LayoutAdmin\.DS_Store" />
     <None Include="wwwroot\LayoutAdmin\assets\css\style.css.map" />
     <None Include="wwwroot\LayoutAdmin\assets\fonts\Ubuntu\Ubuntu-Bold.woff2" />

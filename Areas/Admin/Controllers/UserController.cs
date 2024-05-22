@@ -14,7 +14,7 @@ namespace Cs_Plantlover.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Route("admin/user")]
-    /*[Authorize(Roles = SD.Role_Admin)]*/
+   /* [Authorize(Roles = SD.Role_Admin)]*/
     public class UserController : Controller
     {
         private readonly DoAnWebDbContext _db;

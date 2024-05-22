@@ -1,0 +1,31 @@
+﻿@model Cs_Plantlover.Models.OrderHeader
+@{
+    ViewData["Title"] = "Success";
+    Layout = "~/Views/Shared/_LayoutCheckOut.cshtml";
+}
+<style>
+    .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<div class="center">
+    <div class="container row">
+        <div class="col-12" style="text-align:center;">
+            <div style="text-align:center; color: #7eae37; font-size:46px;">Bạn đã đặt hàng thành công!</div>
+            <div style="text-align:center; color: #bf0015; font-size:30px;">@TempData["Message"]</div>
+            <img src="/1LayoutPlantlover/img/logo.png" width="20%" />
+        </div>
+        <div class="col-12 text-center" style="color:#bf0015">
+            <br />
+            Cảm ơn bạn đã đặt hàng!
+            <br />
+            Chúng tôi đã nhận được đơn đặt hàng của bạn và sẽ gửi email đến bạn!
+            <br />
+            Quý khách vui lòng chờ đợi và lắng nghe điện thoại để nhận hàng nhé
+            <p>Đây là mã đơn hàng của bạn: <strong>129.@Model.Id</strong></p>
+        </div>
+    </div>
+</div>

@@ -961,6 +961,46 @@
       "PackagePath": "staticwebassets\\1LayoutPlantlover\\js\\owl.carousel.min.js"
     },
     {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\Assets\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\Assets\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\Assets\\js\\e19c476714.js",
+      "PackagePath": "staticwebassets\\Assets\\js\\e19c476714.js"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\Assets\\js\\ellipsis.js",
+      "PackagePath": "staticwebassets\\Assets\\js\\ellipsis.js"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\Assets\\js\\jquery-2.0.0.min.js",
+      "PackagePath": "staticwebassets\\Assets\\js\\jquery-2.0.0.min.js"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\Assets\\js\\jquery-ui.min.js",
+      "PackagePath": "staticwebassets\\Assets\\js\\jquery-ui.min.js"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\Assets\\js\\jquery.dataTables.min.js",
+      "PackagePath": "staticwebassets\\Assets\\js\\jquery.dataTables.min.js"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\Assets\\js\\jquery.min.js",
+      "PackagePath": "staticwebassets\\Assets\\js\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\Assets\\js\\script.js",
+      "PackagePath": "staticwebassets\\Assets\\js\\script.js"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\Assets\\js\\sweetalert.min.js",
+      "PackagePath": "staticwebassets\\Assets\\js\\sweetalert.min.js"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\Assets\\js\\toastr.min.js",
+      "PackagePath": "staticwebassets\\Assets\\js\\toastr.min.js"
+    },
+    {
       "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\LayoutAdmin\\.gitignore",
       "PackagePath": "staticwebassets\\LayoutAdmin\\.gitignore"
     },
@@ -1595,6 +1635,10 @@
     {
       "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\js\\order.js",
+      "PackagePath": "staticwebassets\\js\\order.js"
     },
     {
       "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\js\\site.js",

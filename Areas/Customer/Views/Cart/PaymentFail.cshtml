@@ -1,0 +1,23 @@
+﻿@model int
+@{
+    ViewData["Title"] = "PaymentFail";
+    Layout = "~/Views/Shared/_LayoutCheckOut.cshtml";
+}
+<style>
+    .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+</style>
+
+<div class="center">
+    <div class="container row">
+        <div class="col-12" style="text-align:center;">
+            <div style="text-align:center; color: #bf0015; font-size:46px;">@TempData["Message"]</div>
+            <img src="/1LayoutPlantlover/img/logo.png" width="20%" />
+        </div>
+        
+    </div>
+</div>

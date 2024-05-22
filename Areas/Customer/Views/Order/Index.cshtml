@@ -1,0 +1,186 @@
+﻿@* @model IPagedList<Cs_Plantlover.Models.OrderDetails> *@
+@using Cs_Plantlover.Models
+@using X.PagedList.Mvc.Core;
+@model X.PagedList.IPagedList<OrderDetails>
+
+<main class="col-md-10 offset-md-1">
+    <header class="my-3">
+        @{
+            ViewData["Title"] = "Index";
+            Layout = "~/Views/Shared/_LayoutCheckOut.cshtml";
+            var status = Context.Request.Query["status"].ToString();
+
+            var pending = "text-dark";
+            var all = "text-dark";
+            var inprocess = "text-dark";
+            var completed = "text-dark";
+            var rejected = "text-dark";
+
+            switch (status)
+            {
+                case "pending":
+                    pending = "active text-white";
+                    break;
+                case "inprocess":
+                    inprocess = "active text-white";
+                    break;
+                case "completed":
+                    completed = "active text-white";
+                    break;
+                case "rejected":
+                    rejected = "active text-white";
+                    break;
+                default:
+                    all = "active text-white";
+                    break;
+            }
+        }
+    </header>
+    <div class="border p-3 bg-light">
+        <div class="d-flex justify-content-between mb-3">
+            <div class="p-2">
+                <h2 class="text-dark">Danh sách hóa đơn</h2>
+            </div>
+            <div class="p-2">
+                <ul class="list-group list-group-horizontal-sm">
+                    <a style="text-decoration:none;" asp-controller="Order" asp-action="Index" asp-route-status="pending">
+                    <li class="list-group-item @pending">Chưa xử lý</li>
+                    </a>
+                    <a style="text-decoration:none;" asp-controller="Order" asp-action="Index" asp-route-status="inprocess">
+                    <li class="list-group-item @inprocess">Đang chờ</li>
+                    </a>
+                    <a style="text-decoration:none;" asp-controller="Order" asp-action="Index" asp-route-status="completed">
+                    <li class="list-group-item @completed">Hoàn thành</li>
+                    </a>
+                    <a style="text-decoration:none;" asp-controller="Order" asp-action="Index" asp-route-status="rejected">
+                    <li class="list-group-item @rejected">Đơn bị hủy</li>
+                    </a>
+                    <a style="text-decoration:none;" asp-controller="Order" asp-action="Index" asp-route-status="all">
+                    <li class="list-group-item @all">Tất cả</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <hr class="my-4">
+    @foreach (var order in Model.GroupBy(o => o.OrderId))
+    {
+        var orderHeader = order.First().OrderHeader;
+        <article class="card card-product-list mb-3">
+            <div class="card-body bg-light">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <div class="info-main">
+                            <h5>Mã hóa đơn: @orderHeader.Id</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="info-main">
+                            <h5>@orderHeader.OrderStatus</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="info-main">
+                            <h5>Tổng tiền: @orderHeader.OrderTotal.ToString("C0", System.Globalization.CultureInfo.GetCultureInfo("vi-VN"))</h5>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-3">
+                @foreach (var item in order)
+                {
+                    <div class="row no-gutters">
+                        <aside class="col-md-3">
+                            <a href="#" class="img-wrap">
+                                <img src="@item.DanhMucSP.AnhDaiDien" style="width: 100px; height: 100px;" alt="@item.DanhMucSP.TenSP">
+                            </a>
+                        </aside>
+                        <div class="col-md-6">
+                            <div class="info-main">
+                                <a class="h5 title" style="padding-left: 55px;">@item.DanhMucSP.TenSP</a>
+                                @* <p>@Html.Raw(item.DanhMucSP.MoTa)</p> *@
+                            </div>
+                        </div>
+                        <hr class="my-3">
+                        <aside class="col-sm-3">
+                            <div class="info-aside">
+                                <div class="price-wrap mb-2">
+                                    <span class="h6 price">Số lượng: @item.Count</span>
+                                </div>
+                                <div class="price-wrap mb-2">
+                                    <span class="h6 price">Giá tiền: @item.DanhMucSP.GiaBan.ToString("C0", System.Globalization.CultureInfo.GetCultureInfo("vi-VN"))</span>
+                                </div>
+                                <div class="price-wrap mb-2">
+                                    <span class="h6 price">Ngày đặt: @orderHeader.OrderDate.ToString("dd/MM/yyyy")</span>
+                                </div>
+                                <div class="price-wrap">
+                                    <span class="h6 price">Ngày giao: @orderHeader.OrderDate.AddDays(7).ToString("dd/MM/yyyy")</span>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                }
+            </div>
+        </article>
+    }
+    <div class="d-flex justify-content-center">
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { page, status = Context.Request.Query["status"] }), new PagedListRenderOptions
+   {
+       UlElementClasses = new[] { "pagination" },
+       LiElementClasses = new[] { "page-item" },
+       PageClasses = new[] { "page-link" },
+   })
+    </div>
+</main>
+
+<style>
+    .list-group-item {
+        color: black;
+        cursor: pointer;
+    }
+
+    .list-group-item.active {
+        background-color: #7fad39 !important;
+        color: white !important;
+        border-color: #7fad39 !important;
+    }
+    .card-product-list {
+        background-color: #f8f9fa; /* Light gray background */
+    }
+
+    .info-main, .info-aside {
+        padding: 10px;
+    }
+
+    hr {
+        border: 0;
+        border-top: 1px solid #dee2e6;
+        margin: 1rem 0;
+    }
+
+    .pagination {
+        justify-content: center;
+    }
+
+    .page-item {
+        margin: 0 0.2rem;
+    }
+
+    .page-link {
+        color: black;
+    }
+
+        .page-link:hover {
+            color: black;
+            
+        }
+
+    .page-item .page-link {
+        color: black; /* Màu chữ đen cho các trang */
+    }
+
+    .page-item.active .page-link {
+        background-color: #7fad39 !important; /* Nền màu #7fad39 khi được kích hoạt */
+        color: white !important; /* Màu chữ trắng khi được kích hoạt */
+        border-color: #7fad39 !important; /* Màu viền khi được kích hoạt */
+    }
+</style>

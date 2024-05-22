@@ -10,6 +10,7 @@
 }
 @{
     int numOfQuantity = 1;
+    var currentUrl = Context.Request.Path + Context.Request.QueryString;
 }
 
 
@@ -53,7 +54,7 @@
                             </div>
                         </div>
                     </div>
-                    <a asp-area="Customer" asp-controller="Cart" asp-action="AddToCart" asp-route-maSP=@Model.danhMucSP.MaSP asp-route-quantity="@numOfQuantity" class="primary-btn">Thêm Vào Giỏ Hàng</a>
+                    <a asp-area="Customer" asp-controller="Cart" asp-action="AddToCart" asp-route-maSP=@Model.danhMucSP.MaSP asp-route-quantity="@numOfQuantity" asp-route-returnUrl="@currentUrl" class="primary-btn">Thêm Vào Giỏ Hàng</a>
                     <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
                     <ul>
                         <li><b>Tình trạng</b> <span>Còn hàng</span></li>

@@ -63,14 +63,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="checkout__input__checkbox">
-                            <label for="diff-acc">
-                                Gửi đến một địa chỉ khác?
-                                <input type="checkbox" id="diff-acc" name="ShipToDifferentAddress">
-                                <span class="checkmark"></span>
-                            </label>
-                        </div>
-                       
+                        
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="checkout__order">
@@ -86,20 +79,14 @@
                             </ul>
                             <div class="checkout__order__subtotal">Subtotal <span>@Model.Cart.Items.Sum(p => p.DanhMucSP.GiaBan * p.SoLuong) VNĐ</span></div>
                             <div class="checkout__order__total">Total <span>@(Model.Cart.Items.Sum(p => p.DanhMucSP.GiaBan * p.SoLuong) + 30000) VNĐ</span></div>
-                            <p style="color:maroon; font-size:14px;">Ngày giao dự kiến: @DateTime.Now.AddDays(7).ToShortDateString() - @DateTime.Now.AddDays(14).ToShortDateString()</p>
-                            <div class="checkout__input__checkbox">
-                                <label for="payment">
-                                    Kiểm tra thanh toán
-                                    <input type="checkbox" id="payment" name="PaymentMethod" value="CheckPayment">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </div>
-                            <div class="checkout__input__checkbox">
-                                <label for="paypal">
-                                    Thanh toán khi nhận hàng
-                                    <input type="checkbox" id="paypal" name="PaymentMethod" value="CashOnDelivery">
-                                    <span class="checkmark"></span>
-                                </label>
+                            <p style="color:maroon; font-size:14px;">Ngày giao dự kiến: @DateTime.Now.AddDays(2).ToShortDateString() - @DateTime.Now.AddDays(7).ToShortDateString()</p>
+                            <div class="checkout__input">
+                                <p>Phương thức thanh toán<span>*</span></p>
+                                <select name="PaymentMethod" required>
+                                    <option value="CashOnDelivery">Thanh toán khi nhận hàng</option>
+                                    <option value="Momo">Momo</option>
+                                    <option value="VNPay">VNPay</option>
+                                </select>
                             </div>
                             <button type="submit" class="site-btn">Thanh Toán</button>
                         </div>
