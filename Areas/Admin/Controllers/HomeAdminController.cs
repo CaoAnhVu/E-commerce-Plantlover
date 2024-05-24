@@ -1,5 +1,4 @@
 ﻿using Cs_Plantlover.Areas.Admin.Models;
-using Cs_Plantlover.Controllers;
 using Cs_Plantlover.Migrations;
 using Cs_Plantlover.Models;
 using Data;
@@ -15,8 +14,8 @@ namespace Cs_Plantlover.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Route("admin/homeadmin")]
-/*    [Authorize(Roles = SD.Role_Admin)]*/
-    
+   /* [Authorize(Roles = SD.Role_Admin)]*/
+
     public class HomeAdminController : Controller
     {
         private readonly DoAnWebDbContext _db;
@@ -329,5 +328,53 @@ namespace Cs_Plantlover.Areas.Admin.Controllers
             return RedirectToAction("ChiTietSanPham", "HomeAdmin");
         }
 
+        //Tin nhắn khách hàng
+        [Route("LeaveMessenger")]
+        public IActionResult LeaveMessenger(int? page)
+        {
+            int pageSize = 10;
+            int pageNumber = page == null || page < 0 ? 1 : page.Value;
+            var lstmessenger = _db.LeaveMessengers.AsNoTracking().OrderBy(x => x.Id);
+            PagedList<LeaveMessenger> lst = new PagedList<LeaveMessenger>(lstmessenger, pageNumber, pageSize);
+            return View(lst);
+        }
+        
+
+        [Route("DetailLeaveMessenger")]
+        [HttpGet]
+        public IActionResult DetailLeaveMessenger(int id)
+        {
+            var messenger = _db.LeaveMessengers.Find(id);
+            return View(messenger);
+        }
+
+        [Route("DetailLeaveMessenger")]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult DetailLeaveMessenger(LeaveMessenger messenger)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.Entry(messenger).State = EntityState.Modified;
+                _db.SaveChanges();
+                return RedirectToAction("LeaveMessenger", "HomeAdmin");
+            }
+            return View(messenger);
+        }
+
+        [Route("XoaLeaveMessenger")]
+        [HttpGet]
+        public IActionResult XoaLeaveMessenger(int id)
+        {
+
+            var messenger = _db.LeaveMessengers.Find(id);
+            if (messenger != null)
+            {
+                _db.Remove(messenger);
+                _db.SaveChanges();
+                TempData["Message"] = "Tin nhắn đã được xóa thành công";
+            }
+            return RedirectToAction("LeaveMessenger", "HomeAdmin");
+        }
     }
 }

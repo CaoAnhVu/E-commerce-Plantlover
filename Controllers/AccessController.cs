@@ -1,8 +1,8 @@
-﻿using Cs_Plantlover.Areas.Admin.Controllers;
+﻿/*using Cs_Plantlover.Areas.Admin.Controllers;
 using Cs_Plantlover.Models;
 using Data;
 
-/*using Cs_Plantlover.Models.Authentication;*/
+*//*using Cs_Plantlover.Models.Authentication;*//*
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -28,7 +28,7 @@ namespace Cs_Plantlover.Controllers
                 return View();
         }
         [HttpPost]
-        /*public IActionResult Login(User user)
+        public IActionResult Login(User user)
         {
             if (HttpContext.Session.GetString("UserName") == null)
             {
@@ -45,7 +45,7 @@ namespace Cs_Plantlover.Controllers
                 }
             }
             return View();
-        }*/
+        }
 
         public IActionResult Register()
         {
@@ -79,14 +79,15 @@ namespace Cs_Plantlover.Controllers
             return RedirectToAction("Login", "Access");
         }
 
-       /* public IActionResult Home()
+        public IActionResult Home()
         {
             if (HttpContext.Session.GetString("UserRole") == "Admin")
             {
                 return RedirectToAction("HomeAdmin", "Admin");
             }
             return RedirectToAction("Index", "Home");
-        }*/
+        }
     }
 }
 
+*/

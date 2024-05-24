@@ -5,89 +5,114 @@
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+ 
 }
 
 <h1 class="text-center">Danh Sách Đơn Hàng</h1>
 
-<hr />
 
 <p>@TempData["Message"]</p>
-<table class="table">
-    <thead>
-        <tr class="table-dark">
-            <th>
-                Mã đơn
-            </th>
-            <th>
-                Tên
-            </th>
-            <th>
-                Ngày đặt 
-            </th>
+<hr />
+<div class="order-details common-card">
+    <table  class="table table-striped">
+        <thead>
+            <tr class="card-header">
+                <th>
+                    Mã đơn
+                </th>
+                <th>
+                    Tên
+                </th>
+                <th>
+                    Ngày đặt 
+                </th>
             
-            <th>
-                Giá
-            </th>
-            <th>
-                Trạng thái
-            </th>
-            <th>
-                Thanh toán
-            </th>
+                <th>
+                    Giá
+                </th>
+                <th>
+                    Trạng thái
+                </th>
+                <th>
+                    Thanh toán
+                </th>
             
-            <th>
-                Số điện thoại
-            </th>
-            <th>
-                Địa chỉ
-            </th>
+                <th>
+                    Số điện thoại
+                </th>
+                <th>
+                    Địa chỉ
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model) {
+            <tr class="table-secondary">
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderDate)
+                </td>
             
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-            <tr class="table-success">
-            <td>
-                @Html.DisplayFor(modelItem => item.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OrderDate)
-            </td>
-            
-            <td>
-                @Html.DisplayFor(modelItem => item.OrderTotal)
-            </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderTotal)
+                </td>
           
-            <td>
-                @Html.DisplayFor(modelItem => item.OrderStatus)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PaymentStatus)
-            </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderStatus)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PaymentStatus)
+                </td>
            
-            <td>
-                @Html.DisplayFor(modelItem => item.PhoneNumber)
-            </td>
-            <td class="address-info">
-                @Html.DisplayFor(modelItem => item.StreetAddress),
-                @Html.DisplayFor(modelItem => item.Village),
-                @Html.DisplayFor(modelItem => item.District),
-                @Html.DisplayFor(modelItem => item.City) 
-            </td>
-            <td>
-                    @* <a asp-action="Details" asp-route-id="@item.Id"><i class="fa-solid fa-pen-to-square"></i></a> | *@
-                    <a asp-action="DeleteOrder" asp-route-id="@item.Id"><i class="fa-solid fa-trash-can"></i></a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PhoneNumber)
+                </td>
+                <td class="address-info">
+                    @Html.DisplayFor(modelItem => item.StreetAddress),
+                    @Html.DisplayFor(modelItem => item.Village),
+                    @Html.DisplayFor(modelItem => item.District),
+                    @Html.DisplayFor(modelItem => item.City) 
+                </td>
+                <td>
+                        <a asp-action="Details" asp-route-id="@item.Id"><i class="fa-solid fa-pen-to-square"></i></a> |
+                        <a asp-action="DeleteOrder" asp-route-id="@item.Id"><i class="fa-solid fa-trash-can"></i></a>
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>
+</div>
+
 @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }), new PagedListRenderOptions()
 {
     LiElementClasses = new List<string> { "page-item" },
     PageClasses = new List<string> { "page-link" }
 })
+<style>
+
+
+    .common-card {
+        border: 1px solid #dee2e6;
+        border-radius: 0.25rem;
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+        margin-bottom: 20px;
+    }
+
+    .card-header {
+        background-color: #7eae37;
+        color: white;
+    }
+
+
+    .order-details table {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+</style>

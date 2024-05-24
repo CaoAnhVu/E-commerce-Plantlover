@@ -7,11 +7,12 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Nest;
 using Stripe;
+using System;
+using System.Linq;
 using System.Security.Claims;
+using System.Threading.Tasks;
 using X.PagedList;
-
 namespace Cs_Plantlover.Areas.Admin.Controllers
 {
     [Area("Admin")]
@@ -49,54 +50,29 @@ namespace Cs_Plantlover.Areas.Admin.Controllers
         {
             orderVM = new OrderDetailsViewModel()
             {
-                orderHeader = _db.OrderHeaders.Where(u => u.Id == id).Include("User").FirstOrDefault(),
-                orderDetails = _db.OrderDetails.Where(o => o.OrderId == id).Include("DanhMucSP").ToList()
+                orderHeader = _db.OrderHeaders.Include(u => u.User).FirstOrDefault(u => u.Id == id),
+                orderDetails = _db.OrderDetails.Include(o => o.DanhMucSP).Where(o => o.OrderId == id).ToList()
             };
             return View(orderVM);
         }
-       
-        //details pay
+
+
+        // Details pay
         [HttpPost]
         [ValidateAntiForgeryToken]
         [ActionName("Details")]
         public IActionResult Details(string stripeToken)
         {
-            OrderHeader orderHeader = _db.OrderHeaders.Where(u => u.Id == orderVM.orderHeader.Id).Include("User").FirstOrDefault();
-
-
-            if (stripeToken != null)
+            OrderHeader orderHeader = _db.OrderHeaders.Include(u => u.User).FirstOrDefault(u => u.Id == orderVM.orderHeader.Id);
+            if (orderHeader == null)
             {
-                //process the payment
-                var options = new ChargeCreateOptions
-                {
-                    Amount = Convert.ToInt32(orderHeader.OrderTotal),
-                    Currency = "usd",
-                    Description = "Order ID : " + orderHeader.Id,
-                    Source = stripeToken
-                };
-
-                var service = new ChargeService();
-                Charge charge = service.Create(options);
-
-                if (charge.Id == null)
-                {
-                    orderHeader.PaymentStatus = SD.PaymentStatusRejected;
-                }
-                else
-                {
-                    orderHeader.TransactionId = charge.Id;
-                }
-                if (charge.Status.ToLower() == "succeeded")
-                {
-                    orderHeader.PaymentStatus = SD.PaymentStatusApproved;
-
-                    orderHeader.PaymentDate = DateTime.Now;
-                }
-
-                _db.SaveChanges();
-
+                return NotFound();
             }
-            return RedirectToAction("Details", "Order", new { id = orderHeader.Id });
+
+            // Assuming some other business logic needs to be done, otherwise just save the changes
+            _db.SaveChanges();
+
+            return RedirectToAction("Details", new { id = orderHeader.Id });
         }
         public IActionResult DeleteOrder(int id)
         {

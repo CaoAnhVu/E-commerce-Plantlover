@@ -3,6 +3,7 @@ using Cs_Plantlover.Models;
 /*using Cs_Plantlover.Models.Authentication;*/
 using Cs_Plantlover.ViewModels;
 using Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -12,6 +13,7 @@ using X.PagedList;
 namespace Cs_Plantlover.Areas.Customer.Controllers
 {
     [Area("Customer")]
+    /*[Authorize(Roles = SD.Role_Customer)]*/
     public class HomeController : Controller
     {
         private readonly DoAnWebDbContext _db;

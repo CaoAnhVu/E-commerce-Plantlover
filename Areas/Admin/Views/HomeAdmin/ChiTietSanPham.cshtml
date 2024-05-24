@@ -14,61 +14,85 @@
     <a class="btn btn-primary" asp-action="ThemChiTietSanPham"><i class="fas fa-plus"></i> &nbsp; Create New Product</a>
 </p>
 <p>@TempData["Message"]</p>
-<table class="table">
-    <thead>
-        <tr class="table-warning">
-            <th>
-                Mã sản phẩm
-            </th>
-            <th>
-                Hình ảnh
-            </th>
-            <th>
-                Đơn giá bán
-            </th>
-            <th>
-                Giảm giá
-            <th>
-                Giá bán
-            </th>
-            <th>
-                Số lượng
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-            <tr class="table-success">
-            <td>
-                @Html.DisplayFor(modelItem => item.MaSP)
-            </td>
-            <td>
-                <img src="@item.HinhAnh" alt="Hinh Anh San Pham" style="width: 100px; height: 100px;" />
+<div class="order-details common-card">
+    <table  class="table table-striped">
+        <thead>
+            <tr class="card-header">
+                <th>
+                    Mã sản phẩm
+                </th>
+                <th>
+                    Hình ảnh
+                </th>
+                <th>
+                    Đơn giá bán
+                </th>
+                <th>
+                    Giảm giá
+                <th>
+                    Giá bán
+                </th>
+                <th>
+                    Số lượng
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model) {
+                <tr class="table-secondary">
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaSP)
+                </td>
+                <td>
+                    <img src="@item.HinhAnh" alt="Hinh Anh San Pham" style="width: 100px; height: 100px;" />
                   
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DonGiaBan)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GiamGia)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GiaBan)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SoLuong)
-            </td>
-            <td>
-                    <a asp-action="SuaChiTietSanPham" asp-route-maChiTietSP="@item.MaChiTietSP">Edit</a> |
-                    <a asp-action="XoaChiTietSanPham" asp-route-maChiTietSP="@item.MaChiTietSP">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DonGiaBan)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GiamGia)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GiaBan)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SoLuong)
+                </td>
+                <td>
+                        <a asp-action="SuaChiTietSanPham" asp-route-maChiTietSP="@item.MaChiTietSP">Edit</a> |
+                        <a asp-action="XoaChiTietSanPham" asp-route-maChiTietSP="@item.MaChiTietSP">Delete</a>
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>
+</div>
 @Html.PagedListPager(Model, page => Url.Action("ChiTietSanPham", new { page = page }), new PagedListRenderOptions()
 {
     LiElementClasses = new List<string> { "page-item" },
     PageClasses = new List<string> { "page-link" }
 })
+<style>
+
+
+    .common-card {
+        border: 1px solid #dee2e6;
+        border-radius: 0.25rem;
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+        margin-bottom: 20px;
+    }
+
+    .card-header {
+        background-color: #7eae37;
+        color: white;
+    }
+
+
+    .order-details table {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+</style>

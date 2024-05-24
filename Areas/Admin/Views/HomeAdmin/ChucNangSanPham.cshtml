@@ -12,38 +12,62 @@
     <a class="btn btn-primary" asp-action="ThemChucNang"><i class="fas fa-plus"></i> &nbsp; Create New Function </a>
 </p>
 <p>@TempData["Message"]</p>
-<table class="table">
-    <thead>
-        <tr class="table-warning">
-            <th>
-                Mã chức năng
-            </th>
-            <th>
-                Tên chức năng
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-            <tr class="table-success">
+<div class="order-details common-card">
+    <table class="table table-striped">
+        <thead>
+            <tr class="card-header">
+                <th>
+                    Mã chức năng
+                </th>
+                <th>
+                    Tên chức năng
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model) {
+                <tr class="table-secondary">
             
-            <td>
-                @Html.DisplayFor(modelItem => item.MaChucNang)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TenChucNang)
-            </td>
-            <td>
-                    <a asp-action="SuaChucNang" asp-route-maChucNang="@item.MaChucNang"><i class="fa-solid fa-pen-to-square"></i></a> |
-                    <a asp-action="XoaChucNang" asp-route-maChucNang="@item.MaChucNang"><i class="fa-solid fa-trash-can"></i></a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaChucNang)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenChucNang)
+                </td>
+                <td>
+                        <a asp-action="SuaChucNang" asp-route-maChucNang="@item.MaChucNang"><i class="fa-solid fa-pen-to-square"></i></a> |
+                        <a asp-action="XoaChucNang" asp-route-maChucNang="@item.MaChucNang"><i class="fa-solid fa-trash-can"></i></a>
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>
+</div>
 @Html.PagedListPager(Model, page => Url.Action("ChucNangSanPham", new { page = page }), new PagedListRenderOptions()
 {
     LiElementClasses = new List<string> { "page-item" },
     PageClasses = new List<string> { "page-link" }
 })
+<style>
+
+
+    .common-card {
+        border: 1px solid #dee2e6;
+        border-radius: 0.25rem;
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+        margin-bottom: 20px;
+    }
+
+    .card-header {
+        background-color: #7eae37;
+        color: white;
+    }
+
+
+    .order-details table {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+</style>
