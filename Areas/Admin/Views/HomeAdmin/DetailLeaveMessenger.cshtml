@@ -14,7 +14,7 @@
         <div class="card-body">
             <p><strong>Tên khách hàng:</strong> @Model.FullName ---*****</p>
             <p><strong>Email: </strong> @Model.Email ---*****</p>
-            <p><strong>Tin nhắn: </strong> @Model.Messenger ---*****</p>
+            <p><strong>Tin nhắn: </strong> @Html.Raw(Model.Messenger) </p>
         </div>
     </div>
 </div>

@@ -147,7 +147,7 @@ namespace Cs_Plantlover.Areas.Admin.Controllers
             orderHEaderFromDb.Name = orderVM.orderHeader.Name;
             orderHEaderFromDb.PhoneNumber = orderVM.orderHeader.PhoneNumber;
             orderHEaderFromDb.StreetAddress = orderVM.orderHeader.StreetAddress;
-            orderHEaderFromDb.District = orderVM.orderHeader.District;
+            orderHEaderFromDb.Quan = orderVM.orderHeader.User.District;
             orderHEaderFromDb.City = orderVM.orderHeader.City;
             if (orderVM.orderHeader.Carrier != null)
             {

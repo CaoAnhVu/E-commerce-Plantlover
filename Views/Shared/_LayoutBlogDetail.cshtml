@@ -1,0 +1,460 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<User> SignInManager
+@inject UserManager<User> UserManager
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Plantlover">
+    <meta name="keywords" content="Plantlover, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cs_Plantlover</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/1LayoutPlantlover/img/PlantloverIcon.ico" />
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="~/1LayoutPlantlover/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="~/1LayoutPlantlover/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="~/1LayoutPlantlover/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="~/1LayoutPlantlover/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="~/1LayoutPlantlover/css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="~/1LayoutPlantlover/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="~/1LayoutPlantlover/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="~/1LayoutPlantlover/css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Humberger Begin -->
+    <div class="humberger__menu__overlay"></div>
+    <div class="humberger__menu__wrapper">
+        <div class="humberger__menu__logo">
+            <a href="#"><img src="~/1LayoutPlantlover/img/logo.png" alt="" style="max-width: 200px; max-height: 100px;margin-left:50px;"></a>
+        </div>
+        <div class="humberger__menu__cart">
+            <ul>
+                <li><a href="#"><i class="fa fa-heart"></i> <span>0</span></a></li>
+
+            </ul>
+            @await Component.InvokeAsync("CartWidget")
+            <div class="header__cart__price">item: <span>0đ</span></div>
+        </div>
+        <div class="humberger__menu__widget">
+            <div class="header__top__right__language">
+                <div>Việt Nam</div>
+                <span class="arrow_carrot-down"></span>
+                <ul>
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">Việt Nam</a></li>
+                </ul>
+            </div>
+            <div class="header__top__right__auth">
+                <a asp-controller="Access" asp-action="Logout"><i class="fa fa-user"></i>Logout</a>
+                @* <a href="#"><i class="fa fa-user"></i> Đăng nhập</a> *@
+            </div>
+        </div>
+        <nav class="humberger__menu__nav mobile-menu">
+            <ul>
+                <li class="active"><a href="https://localhost:7216/">Trang chủ</a></li>
+                <li><a asp-area="Customer" asp-controller="ShopGrid" asp-action="Index">Cửa hàng</a></li>
+                <li>
+                    <a>Trang</a>
+                    <ul class="header__menu__dropdown">
+                        <li><a asp-area="Customer" asp-controller="Cart" asp-action="AddToCart">Giỏ Hàng</a></li>
+                        <li><a asp-area="Customer" asp-controller="CheckOut" asp-action="Index">Thủ Tục Thanh Toán</a></li>
+                        <li><a asp-area="Customer" asp-controller="Order" asp-action="Index">Đơn Hàng</a></li>
+                    </ul>
+                </li>
+                <li><a asp-area="Customer" asp-controller="Blog" asp-action="Index">Blog</a></li>
+                <li><a asp-area="Customer" asp-controller="Contact" asp-action="Index">Liên Hệ</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+        <div class="header__top__right__social">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-pinterest-p"></i></a>
+        </div>
+        <div class="humberger__menu__contact">
+            <ul>
+                <li><i class="fa fa-envelope" id="manage" class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage"></i>Hello @UserManager.GetUserName(User)!</li>
+                <li>Giao hàng miễn phí cho tất cả đơn hàng từ 1 triệu VNĐ</li>
+            </ul>
+        </div>
+    </div>
+    <!-- Humberger End -->
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="header__top__left">
+                            <ul>
+                                <li><i class="fa fa-envelope" id="manage" class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage"></i>Hello @UserManager.GetUserName(User)!</li>
+                                @* <a id="manage" class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @UserManager.GetUserName(User)!</a> *@
+                                <li>Hỗ trợ miễn phí ship cho tất cả đơn hàng từ 1 triệu đồng</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="header__top__right">
+                            <div class="header__top__right__social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                                <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                            </div>
+                            <div class="header__top__right__language">
+                                <img src="~/1LayoutPlantlover/img/vietnam1.png" alt="">
+                                <div>Việt Nam</div>
+                                <span class="arrow_carrot-down"></span>
+                                <ul>
+                                    <li><a href="#">English</a></li>
+                                    <li><a href="#">Việt Nam</a></li>
+                                </ul>
+                            </div>
+                            <div class="header__top__right__auth">
+
+                                <partial name="_LoginPartial"></partial>
+                                @* <a href="#"><i class="fa fa-user"></i> Đăng Nhập</a> *@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="header__logo ">
+                        <a href="https://localhost:7216/"><img src="~/1LayoutPlantlover/img/logo.png" alt="" style="max-width: 250px; max-height: 150px; margin-left:50px;"></a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <nav class="header__menu">
+                        <ul>
+                            <li class="active"><a href="https://localhost:7216/">Trang Chủ</a></li>
+                            <li><a asp-area="Customer" asp-controller="ShopGrid" asp-action="Index">Cửa hàng</a></li>
+                            <li>
+                                <a>Trang</a>
+                                <ul class="header__menu__dropdown">
+                                    <li><a asp-area="Customer" asp-controller="Cart" asp-action="Index">Giỏ Hàng</a></li>
+                                    <li><a asp-area="Customer" asp-controller="CheckOut" asp-action="Index">Thủ Tục Thanh Toán</a></li>
+                                    <li><a asp-area="Customer" asp-controller="Order" asp-action="Index">Đơn Hàng</a></li>
+                                </ul>
+                            </li>
+                            <li><a asp-area="Customer" asp-controller="Blog" asp-action="Index">Blog</a></li>
+                            <li><a asp-area="Customer" asp-controller="Contact" asp-action="Index">Liên Hệ</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                    <div class="header__cart">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-heart"></i> <span>0</span></a></li>
+                        </ul>
+                        @await Component.InvokeAsync("CartWidget")
+                        <div class="header__cart__price">item: <span>0đ</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="humberger__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+    <!-- Hero Section Begin -->
+    <section class="hero hero-normal">
+        <div class="container">
+            <div class="row">
+                @await Component.InvokeAsync("ChucNangSPMenu")
+                <div class="col-lg-9">
+                    <div class="hero__search">
+                        <div class="hero__search__form">
+                            <form asp-controller="Home" asp-action="Search">
+                                <div class="hero__search__categories">
+                                    All Categories
+                                    <span class="arrow_carrot-down"></span>
+                                </div>
+                                <input type="text" name="keywords" placeholder="Bạn cần tìm kiếm loại cây gì?">
+                                <button type="submit" class="site-btn">Tìm Kiếm</button>
+                            </form>
+                        </div>
+                        <div class="hero__search__phone">
+                            <div class="hero__search__phone__icon">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <div class="hero__search__phone__text">
+                                <h5>+84 33.789.789</h5>
+                                <span>Hỗ trợ 24/7</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+    <!-- Breadcrumb Section Begin -->
+    <!-- Blog Details Hero Begin -->
+    <section class="blog-details-hero set-bg" data-setbg="@Url.Content(@Model.blogDetail.HinhAnh)">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="blog__details__hero__text">
+                        <h2>@Model.blogDetail.Title</h2>
+                        <ul>
+                            <li>By @Model.blogDetail.User</li>
+                            <li>@Model.blogDetail.CreateAt</li>
+                            @* <li>@Model.blogDetail.UpdatedAt</li> *@
+                            <li>8 Comments</li>
+                        </ul>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Details Hero End -->
+    <!-- Breadcrumb Section End -->
+    <!-- Blog Section Begin -->
+    <section class="blog spad">
+        <div class="container">
+            <div class="row">
+                @* @await Component.InvokeAsync("BlogMenu") *@
+                <div class="col-lg-4 col-md-5">
+                    <div class="blog__sidebar">
+                        <div class="blog__sidebar__search">
+                            <form action="#">
+                                <input type="text" placeholder="Search...">
+                                <button type="submit"><span class="icon_search"></span></button>
+                            </form>
+                        </div>
+                        <div class="blog__sidebar__item">
+                            <h4>Categories</h4>
+                            <ul>
+                                <li><a href="#">All</a></li>
+                                <li><a href="#">Chăm sóc cây (20)</a></li>
+                                <li><a href="#">Cây đẹp (5)</a></li>
+                                <li><a href="#">Cây sen đá (9)</a></li>
+                                <li><a href="#">Cây cảnh (10)</a></li>
+                            </ul>
+                        </div>
+                        <div class="blog__sidebar__item">
+                            <h4>Recent News</h4>
+                            <div class="blog__sidebar__recent">
+                                <a href="#" class="blog__sidebar__recent__item">
+                                    <div class="blog__sidebar__recent__item__pic" style="width:100px; height:100px;">
+                                        <img src="~/1LayoutPlantlover/img/latest-product/cayphatdu.jpg" alt="">
+                                    </div>
+                                    <div class="blog__sidebar__recent__item__text">
+                                        <h6>Cách chăm sóc cây phất dụ<br /> </h6>
+                                        <span>MAR 02, 2024</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="blog__sidebar__recent__item">
+                                    <div class="blog__sidebar__recent__item__pic">
+                                        <img src="~/BlogImages/Images/cay-kim-tien-3-842-400x400.jpg" style="width:100px; height:100px;" alt="">
+                                    </div>
+                                    <div class="blog__sidebar__recent__item__text">
+                                        <h6>Cây bóng mát<br /> </h6>
+                                        <span>MAR 05, 2024</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="blog__sidebar__recent__item">
+                                    <div class="blog__sidebar__recent__item__pic">
+                                        <img src="~/BlogImages/Images/cay-kim-ngan-thuy-sinh-400x349.png" style="width:100px; height:100px;" alt="">
+                                    </div>
+                                    <div class="blog__sidebar__recent__item__text">
+                                        <h6>Các cây phong thủy<br /></h6>
+                                        <span>MAR 05, 2019</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="blog__sidebar__item">
+                            <h4>Search By</h4>
+                            <div class="blog__sidebar__item__tags">
+                                <a href="#">Cây cảnh</a>
+                                <a href="#">Chăm sóc cây</a>
+                                <a href="#">Cây sen đá</a>
+                                <a href="#">Cây đẹp</a>
+                                <a href="#">Cây bóng mát</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @RenderBody()
+            </div>
+        </div>
+    </section>
+    <!-- Blog Section End -->
+    <!-- Blog Details Section End -->
+    <section class="from-blog spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title from-blog__title">
+                        <h2>From The Blog</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="blog__item">
+                        <div class="blog__item__pic">
+                            <img src="~/1LayoutPlantlover/img/blog/cayphatdu2.jpg" alt="">
+                        </div>
+                        <div class="blog__item__text">
+                            <ul>
+                                <li><i class="fa fa-calendar-o"></i> May 1,2023</li>
+                                <li><i class="fa fa-comment-o"></i>10</li>
+                            </ul>
+                            <h5><a href="#">Cách chăm sóc cây cảnh trong nhà</a></h5>
+                            <p>Một trong những điều được nhiều người quan tâm nhất sau khi đã sở hữu cây cảnh trong nhà, văn phòng, cây phong thủy hay cây để bàn làm việc đó chính là cách chăm sóc. Vậy chăm sóc cây cảnh văn phòng như thế nào? Để cho cây phát triển tốt, lá luôn xanh và tươi, những sai lầm thường hay mắc phải khiến cây chết là gì? Nếu bạn đang quan tâm những điều đó thì hãy theo dõi bài viết dưới đây...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="blog__item">
+                        <div class="blog__item__pic">
+                            <img src="~/1LayoutPlantlover/img/blog/caykimtien.png" alt="">
+                        </div>
+                        <div class="blog__item__text">
+                            <ul>
+                                <li><i class="fa fa-calendar-o"></i> May 9,2023</li>
+                                <li><i class="fa fa-comment-o"></i>15</li>
+                            </ul>
+                            <h5><a href="#">Tác dụng của cây kim tiền</a></h5>
+                            <p>Cây kim tiền vốn là một loại cây cảnh phổ biến trên thị trường. Vì xét về mặt phong thủy thì cây kim tiền mang ý nghĩa hút lộc, hút tiền về cho gia chủ. Tuy nhiên vẫn còn một số ý kiến về loại cây phong thủy này có độc, có gây hại sức khỏe khi đặt loại cây này trong nhà. Chính vì vậy hôm nay hãy cùng tìm hiểu về tác dụng của cây kim tiền nhé...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="blog__item">
+                        <div class="blog__item__pic">
+                            <img src="~/1LayoutPlantlover/img/blog/ngugiabi.jpg" alt="">
+                        </div>
+                        <div class="blog__item__text">
+                            <ul>
+                                <li><i class="fa fa-calendar-o"></i> May 3,2024</li>
+                                <li><i class="fa fa-comment-o"></i>36</li>
+                            </ul>
+                            <h5><a href="#">5 bài thuốc từ cây ngũ gia bì</a></h5>
+                            <p>Cây ngũ da bì hay còn gọi là cây chân vịt. Loại cây cảnh được rất nhiều người ưa thích bởi vẻ đẹp xanh mát của mình. Ngoài tác dụng để trang trí và làm cảnh cây ngũ da bì còn có công dụng khác chính là làm dược liệu đông y để chữa bệnh. Vì vậy hãy tìm hiểu cây ngũ da bì trị bệnh gì nhé... </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section Begin -->
+    <footer class="footer spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer__about">
+                        <div class="footer__about__logo">
+                            <a href="https://localhost:7216/"><img src="~/1LayoutPlantlover/img/logo.png" alt="" style="max-width: 250px; max-height: 150px; margin-left:20px;"></a>
+                        </div>
+                        <ul>
+                            <li>Địa chỉ: 82, Đường Sư Vạn Hạnh, TP.Hồ Chí Minh</li>
+                            <li>Phone: +84 33.789.789</li>
+                            <li>Email: hello@plantlover.com</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
+                    <div class="footer__widget">
+                        <h6>Tất Cả Các Liên Kết Hữu Ích</h6>
+                            <ul>
+                                <li><a href="#">Về chúng tôi</a></li>
+                            <li><a href="#">Về cửa hàng</a></li>
+                            <li><a href="#">Mua sắm an toàn</a></li>
+                            <li><a href="#">Thông tin giao hàng</a></li>
+                            <li><a href="#">Chính sách bảo mật</a></li>
+                            </ul>
+                            <ul>
+                            <li><a href="#">Chúng ta là ai</a></li>
+                            <li><a href="#">Dịch vụ</a></li>
+                            <li><a href="#">Dự án</a></li>
+                            <li><a href="#">Liên hệ</a></li>
+                            <li><a href="#">Sự đổi mới</a></li>
+                            </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="footer__widget">
+                        <h6>Tham Gia Tin Tức Của Chúng Tôi Ngay Bây Giờ</h6>
+                        <p>Nhận thông tin cập nhật qua Email về cửa hàng mới nhất của chúng tôi và các ưu đãi đặc biệt.</p>
+                        <form action="#">
+                            <input type="text" placeholder="Email của bạn">
+                            <button type="submit" class="site-btn">Đăng Ký</button>
+                        </form>
+                        <div class="footer__widget__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer__copyright">
+                        <div class="footer__copyright__text">
+                            <p>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;
+                                <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://github.com/CaoAnhVu" target="_blank">AndyVu Coder</a>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </p>
+                        </div>
+                        <div class="footer__copyright__payment"><img src="~/1LayoutPlantlover/img/payment-item.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+    <!-- Js Plugins -->
+    <script src="~/1LayoutPlantlover/js/jquery-3.3.1.min.js"></script>
+    <script src="~/1LayoutPlantlover/js/bootstrap.min.js"></script>
+    <script src="~/1LayoutPlantlover/js/jquery.nice-select.min.js"></script>
+    <script src="~/1LayoutPlantlover/js/jquery-ui.min.js"></script>
+    <script src="~/1LayoutPlantlover/js/jquery.slicknav.js"></script>
+    <script src="~/1LayoutPlantlover/js/mixitup.min.js"></script>
+    <script src="~/1LayoutPlantlover/js/owl.carousel.min.js"></script>
+    <script src="~/1LayoutPlantlover/js/main.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+
+
+</body>
+
+</html>
+
+<script src="https://cdn.ckeditor.com/ckeditor5/41.3.1/classic/ckeditor.js"></script>
+<script>
+    ClassicEditor
+        .create(document.querySelector('#MoTa'))
+        .then(editor => {
+            console.log(editor);
+        })
+        .catch(error => {
+            console.error(error);
+        });
+</script>

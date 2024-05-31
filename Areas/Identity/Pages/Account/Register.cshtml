@@ -29,70 +29,67 @@
         <div class="container-fluid page-body-wrapper full-page-wrapper">
             <div class="content-wrapper d-flex align-items-center auth">
                 <div class="row flex-grow">
-                    <div class="col-lg-4 mx-auto">
+                    <div class="col-lg-12 mx-auto">
                         <div class="auth-form-light text-left p-5">
                             <div class="brand-logo">
                                 <img src="../../LayoutAdmin/assets/images/plantloverlogo.png">
                             </div>
-                            <h4>Tạo mới của bạn ở đây.</h4>
+                            <h4 style="font-size:30px; text-align: center;">Tạo mới của bạn ở đây.</h4>
                             <h6 class="font-weight-light">Đăng ký rất dễ dàng. Chỉ mất vài bước</h6>
                             <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
                                 <hr />
                                 <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
-                                <div class="form-floating mb-3">
-                                    <input asp-for="Input.FullName" class="form-control" autocomplete="fullname" aria-required="true" />
-                                    <label asp-for="Input.FullName">FullName</label>
-                                    <span asp-validation-for="Input.FullName" class="text-danger"></span>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
-                                    <label asp-for="Input.Email">Email</label>
-                                    <span asp-validation-for="Input.Email" class="text-danger"></span>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input asp-for="Input.PhoneNumber" type="text" placeholder="Nhập số điện thoại" class="form-control" />
-                                    <label asp-for="Input.PhoneNumber">Nhập số điện thoại</label>
-                                    <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input asp-for="Input.Address" placeholder="Nhập số nhà, đường, ấp" class="form-control" />
-                                    <label asp-for="Input.Address">Nhập địa chỉ của bạn</label>
-                                    <span asp-validation-for="Input.Address" class="text-danger"></span>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input asp-for="Input.Village" placeholder="Nhập xã" class="form-control" />
-                                    <label asp-for="Input.Village">Nhập (Xã, Phường) </label>
-                                    <span asp-validation-for="Input.Village" class="text-danger"></span>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <div class="form-floating mb-3">
-                                        <input asp-for="Input.District" placeholder="Nhập huyện" class="form-control" />
-                                        <label asp-for="Input.District">Nhập (Quận, Huyện)</label>
-                                        <span asp-validation-for="Input.District" class="text-danger"></span>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-floating mb-3">
+                                            <input asp-for="Input.FullName" class="form-control" autocomplete="fullname" aria-required="true" />
+                                            <label asp-for="Input.FullName">FullName</label>
+                                            <span asp-validation-for="Input.FullName" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
+                                            <label asp-for="Input.Email">Email</label>
+                                            <span asp-validation-for="Input.Email" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <input asp-for="Input.PhoneNumber" type="text" placeholder="Nhập số điện thoại" class="form-control" />
+                                            <label asp-for="Input.PhoneNumber">Nhập số điện thoại</label>
+                                            <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <input asp-for="Input.Address" placeholder="Nhập số nhà, đường, ấp" class="form-control" />
+                                            <label asp-for="Input.Address">Nhập địa chỉ của bạn</label>
+                                            <span asp-validation-for="Input.Address" class="text-danger"></span>
+                                        </div>
                                     </div>
-                                    <div class="form-floating mb-3">
-                                        <input asp-for="Input.City" placeholder="Nhập thành phố" class="form-control" />
-                                        <label asp-for="Input.City">Nhập thành phố</label>
-                                        <span asp-validation-for="Input.City" class="text-danger"></span>
+                                    <div class="col-md-6">
+                                        <div class="form-floating mb-3">
+                                            <input asp-for="Input.Village" placeholder="Nhập xã" class="form-control" />
+                                            <label asp-for="Input.Village">Nhập (Xã, Phường)</label>
+                                            <span asp-validation-for="Input.Village" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <input asp-for="Input.District" placeholder="Nhập huyện" class="form-control" />
+                                            <label asp-for="Input.District">Nhập (Quận, Huyện)</label>
+                                            <span asp-validation-for="Input.District" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <input asp-for="Input.City" placeholder="Nhập thành phố" class="form-control" />
+                                            <label asp-for="Input.City">Nhập thành phố</label>
+                                            <span asp-validation-for="Input.City" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
+                                            <label asp-for="Input.Password">Password</label>
+                                            <span asp-validation-for="Input.Password" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
+                                            <label asp-for="Input.ConfirmPassword">Confirm Password</label>
+                                            <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                                        </div>
                                     </div>
-
                                 </div>
-
-                                <div class="form-floating mb-3">
-                                    <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
-                                    <label asp-for="Input.Password">Password</label>
-                                    <span asp-validation-for="Input.Password" class="text-danger"></span>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
-                                    <label asp-for="Input.ConfirmPassword">Confirm Password</label>
-                                    <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
-                                </div>
-                                @* <div class="form-floating mb-3">
-                                    <select asp-for="Input.Role" asp-items="@Model.Input.RoleList" class="form-control">
-                                        <option disabled selected>Select Role</option>
-                                    </select>
-                                </div> *@
                                 <div class="mb-4">
                                     <div class="form-check">
                                         <label class="form-check-label text-muted">
@@ -101,10 +98,10 @@
                                     </div>
                                 </div>
                                 <div class="mt-3">
-                                    <button class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn" type="submit">SIGN UP</button>
+                                    <button class="btn btn-gradient-primary btn-lg font-weight-medium auth-form-btn mx-auto d-block" type="submit" style="width:50rem; height:50px;">SIGN UP</button>
                                 </div>
                                 <div class="text-center mt-4 font-weight-light">
-                                    <a href="@Url.Action("Login", "Account")" class="text-primary">Login</a>
+                                    <a href="@Url.Action("Login", "Account")" class="custom-link" style="text-decoration:none; color:black;">Login</a>
                                 </div>
                             </form>
                         </div>
@@ -129,5 +126,3 @@
     <!-- endinject -->
 </body>
 </html>
-
-    

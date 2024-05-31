@@ -1,0 +1,112 @@
+﻿@model X.PagedList.IPagedList<BlogDetail>
+@using Cs_Plantlover.Models
+@using X.PagedList.Mvc.Core;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    ViewData["Title"] = "Danh Muc Blog";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1 class="text-center">Danh Mục Blog</h1>
+<hr />
+<p>
+    <a class="btn btn-primary" asp-action="AddBlog"><i class="fas fa-plus"></i> Tạo Blog</a>
+</p>
+<p>@TempData["Message"]</p>
+<div class="order-details common-card">
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr class="card-header">
+                    <th>Tiêu đề</th>
+                    <th>Hình ảnh</th>
+                    <th>Nội dung</th>
+                    <th>Ngày tạo</th>
+                    <th>Ngày chỉnh sửa</th>
+                    <th>Người viết</th>
+                    <th>Chuyên mục</th>
+                    <th>Vị trí</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+        @foreach (var item in Model) {
+                <tr class="table-secondary">
+                    <td>@Html.DisplayFor(modelItem => item.Title)</td>
+                    <td><img src="@item.HinhAnh" alt="Hinh Anh San Pham" style="width: 100px; height: 100px;" /></td>
+                        <td style="max-width: 100px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">@Html.Raw(Truncate(item.Description, 100))</td>
+                    <td>@Html.DisplayFor(modelItem => item.CreateAt)</td>
+                    <td>@Html.DisplayFor(modelItem => item.UpdatedAt)</td>
+                    <td>@Html.DisplayFor(modelItem => item.User.FullName)</td>
+                    <td>@Html.DisplayFor(modelItem => item.MaChucNang)</td>
+                    <td>@Html.DisplayFor(modelItem => item.MaViTri)</td>
+                    <td>
+                            <a asp-action="EditBlog" asp-route-id="@item.Id"><i class="fa-solid fa-pen-to-square"></i></a>|
+                        <a asp-action="DeleteBlog" asp-route-id="@item.Id"><i class="fa-solid fa-trash-can"></i></a>
+                    </td>
+                </tr>
+        }
+            </tbody>
+        </table>
+    </div>
+</div>
+@functions {
+    private string Truncate(string value, int maxLength)
+    {
+        if (string.IsNullOrEmpty(value)) return value;
+        return value.Length <= maxLength ? value : value.Substring(0, maxLength) + "...";
+    }
+}
+@Html.PagedListPager(Model, page => Url.Action("DanhMucBlog", new { page = page }), new PagedListRenderOptions()
+{
+    LiElementClasses = new List<string> { "page-item" },
+    PageClasses = new List<string> { "page-link" }
+})
+<style>
+    .common-card {
+        border: 1px solid #dee2e6;
+        border-radius: 0.25rem;
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+        margin-bottom: 20px;
+    }
+
+    .card-header {
+        background-color: #7eae37;
+        color: white;
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+        width: 100%;
+    }
+
+    .order-details table {
+        width: 100%;
+        margin-top: 20px;
+        border-collapse: separate;
+    }
+
+    .order-details thead th {
+        position: sticky;
+        top: 0;
+        background-color: #7eae37;
+        z-index: 2;
+    }
+
+    .table-responsive::-webkit-scrollbar {
+        height: 12px;
+    }
+
+    .table-responsive::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    .table-responsive::-webkit-scrollbar-thumb {
+        background: #7eae37;
+    }
+
+    .table-responsive::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+</style>

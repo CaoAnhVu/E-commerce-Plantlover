@@ -39,7 +39,8 @@ namespace Cs_Plantlover.Models
         public string? Village { get; set; }
 
         [Required(ErrorMessage = "Nhập Quận/Huyện")]
-        public string? District { get; set; }
+        public string? Quan { get; set; }
+
 
         [Required(ErrorMessage = "Nhập tên tỉnh (thành phố)")]
         public string? City { get; set; }

@@ -735,3 +735,4 @@ D:\Dev web\Cs-Plantlover\bin\Debug\net8.0\refs\Microsoft.Extensions.Identity.Sto
 D:\Dev web\Cs-Plantlover\bin\Debug\net8.0\Elasticsearch.Net.dll
 D:\Dev web\Cs-Plantlover\bin\Debug\net8.0\Nest.dll
 D:\Dev web\Cs-Plantlover\bin\Debug\net8.0\Dapper.dll
+D:\Dev web\Cs-Plantlover\bin\Debug\net8.0\RestSharp.dll

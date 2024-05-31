@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Cs_Plantlover.ViewModels.DashboardVM
+@{
     ViewData["Title"] = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
@@ -10,9 +11,9 @@
                     <div class="card-body">
                         <img src="/LayoutAdmin/assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
                         <h4 class="font-weight-normal mb-3">
-                            Sản Phẩm Hiện Có <i class="fa-solid fa-list mdi-24px float-right" style="font-size:30px;"></i>
+                            Sản Phẩm Hiện Có<i class="fa-solid fa-list mdi-24px float-right" style="font-size:30px;"></i>
                         </h4>
-                        <h2 class="mb-5">185 Sản phẩm</h2>
+                        <h2 class="mb-5">@Model.SoSanPham Sản phẩm</h2>
                     </div>
                 </div>
             </div>
@@ -23,7 +24,7 @@
                         <h4 class="font-weight-normal mb-3">
                             Đơn Hàng Hiện Có <i class="fa-solid fa-cart-flatbed-suitcase mdi-24px float-right" style="font-size:30px;"></i>
                         </h4>
-                        <h2 class="mb-5">10 Đơn hàng</h2>
+                        <h2 class="mb-5">@Model.SoDonHang Đơn hàng</h2>
                     </div>
                 </div>
             </div>
@@ -34,7 +35,7 @@
                         <h4 class="font-weight-normal mb-3">
                             Người Dùng <i class="fa-solid fa-users mdi-24px float-right" style="font-size:30px;"></i>
                         </h4>
-                        <h2 class="mb-5">3 User</h2>
+                        <h2 class="mb-5">@Model.SoNguoiDung User</h2>
                     </div>
                 </div>
             </div>
@@ -45,7 +46,7 @@
                         <h4 class="font-weight-normal mb-3">
                             Tin Nhắn Khách Hàng <i class="fa-brands fa-facebook-messenger mdi-24px float-right" style="font-size:30px;"></i>
                         </h4>
-                        <h2 class="mb-5">3 Tin nhắn</h2>
+                        <h2 class="mb-5">@Model.SoTinNhan Tin nhắn</h2>
                     </div>
                 </div>
             </div>
@@ -56,18 +57,19 @@
                         <h4 class="font-weight-normal mb-3">
                             Chức Năng Hiện Có <i class="fa-solid fa-layer-group mdi-24px float-right" style="font-size:30px;" ></i>
                         </h4>
-                        <h2 class="mb-5">7 chức năng</h2>
+                        <h2 class="mb-5">@Model.SoChucNang Chức năng</h2>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 stretch-card grid-margin">
-                <div class="card bg-gradient-secondary card-img-holder text-white">
+        <div class="card card-img-holder text-white" style=" background: rgb(210,126,115);
+background: linear-gradient(117deg, rgba(210,126,115,1) 31%, rgba(203,32,87,1) 73%);">
                     <div class="card-body">
                         <img src="/LayoutAdmin/assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
                         <h4 class="font-weight-normal mb-3">
-                            Visitors Online <i class="mdi mdi-diamond mdi-24px float-right"></i>
+                            Bài viết hiện có <i class="mdi mdi-diamond mdi-24px float-right"></i>
                         </h4>
-                        <h2 class="mb-5">95,5741</h2>
+                        <h2 class="mb-5">@Model.SoBlog Bài viết</h2>
                     </div>
                 </div>
             </div>

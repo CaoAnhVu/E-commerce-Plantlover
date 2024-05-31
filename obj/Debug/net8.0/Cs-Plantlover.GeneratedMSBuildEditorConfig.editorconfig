@@ -26,6 +26,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = D:\Dev web\Cs-Plantlover
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/Dev web/Cs-Plantlover/Areas/Admin/Views/HomeAdmin/AddBlog.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXEFkZEJsb2cuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Dev web/Cs-Plantlover/Areas/Admin/Views/HomeAdmin/ChiTietSanPham.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXENoaVRpZXRTYW5QaGFtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -34,12 +38,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXENodWNOYW5nU2FuUGhhbS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Dev web/Cs-Plantlover/Areas/Admin/Views/HomeAdmin/DanhMucBlog.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXERhbmhNdWNCbG9nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Dev web/Cs-Plantlover/Areas/Admin/Views/HomeAdmin/DanhMucSanPham.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXERhbmhNdWNTYW5QaGFtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Dev web/Cs-Plantlover/Areas/Admin/Views/HomeAdmin/DetailLeaveMessenger.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXERldGFpbExlYXZlTWVzc2VuZ2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Dev web/Cs-Plantlover/Areas/Admin/Views/HomeAdmin/EditBlog.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXEVkaXRCbG9nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Dev web/Cs-Plantlover/Areas/Admin/Views/HomeAdmin/Index.cshtml]
@@ -106,6 +118,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlclxMaXN0VXNlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Dev web/Cs-Plantlover/Areas/Customer/Views/Blog/BlogDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcQmxvZ1xCbG9nRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Dev web/Cs-Plantlover/Areas/Customer/Views/Blog/ChiTietBlog.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcQmxvZ1xDaGlUaWV0QmxvZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Dev web/Cs-Plantlover/Areas/Customer/Views/Blog/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcQmxvZ1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Dev web/Cs-Plantlover/Areas/Customer/Views/Cart/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcQ2FydFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -148,6 +172,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Dev web/Cs-Plantlover/Areas/Customer/Views/Home/ProductDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcSG9tZVxQcm9kdWN0RGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Dev web/Cs-Plantlover/Areas/Customer/Views/Home/SanPhamTheoLoai - Copy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcSG9tZVxTYW5QaGFtVGhlb0xvYWkgLSBDb3B5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Dev web/Cs-Plantlover/Areas/Customer/Views/Home/SanPhamTheoLoai.cshtml]
@@ -218,6 +246,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzXFJlZ2lzdGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Dev web/Cs-Plantlover/Views/Shared/Components/BlogMenu/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQmxvZ01lbnVcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Dev web/Cs-Plantlover/Views/Shared/Components/CartWidget/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ2FydFdpZGdldFxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -238,6 +270,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Dev web/Cs-Plantlover/Views/Shared/PartialBlog.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxCbG9nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Dev web/Cs-Plantlover/Views/Shared/PartialProductShopGrid.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxQcm9kdWN0U2hvcEdyaWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -248,6 +284,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Dev web/Cs-Plantlover/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Dev web/Cs-Plantlover/Views/Shared/_LayoutBlog.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRCbG9nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Dev web/Cs-Plantlover/Views/Shared/_LayoutBlogDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRCbG9nRGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Dev web/Cs-Plantlover/Views/Shared/_LayoutCheckOut.cshtml]

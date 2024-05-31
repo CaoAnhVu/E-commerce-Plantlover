@@ -11,41 +11,45 @@
 <p>@TempData["Message"]</p>
 <hr />
 <div class="order-details common-card">
-    <table class="table table-striped">
-        <thead>
-            <tr class="card-header">
-                <th>
-                    Tên khách hàng
-                </th>
-                <th>
-                    Email
-                </th>
-                <th>
-                    Messenger
-                </th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-    @foreach (var item in Model) {
-            <tr class="table-secondary">
-                <td>
-                    @Html.DisplayFor(modelItem => item.FullName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Email)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Messenger)
-                </td>
-                <td>
-                        <a asp-action="DetailLeaveMessenger" asp-route-id="@item.Id"><i class="fa-solid fa-pen-to-square"></i></a> |
-                        <a asp-action="XoaLeaveMessenger" asp-route-id="@item.Id"><i class="fa-solid fa-trash-can"></i></a>
-                </td>
-            </tr>
-    }
-        </tbody>
-    </table>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr class="card-header">
+                    <th>
+                        Tên khách hàng
+                    </th>
+                    <th>
+                        Email
+                    </th>
+                    <th>
+                        Messenger
+                    </th>
+                    <th>
+                        Action
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+        @foreach (var item in Model) {
+                <tr class="table-secondary">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FullName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+                        @Html.Raw(item.Messenger)
+                    </td>
+                    <td>
+                            <a asp-action="DetailLeaveMessenger" asp-route-id="@item.Id"><i class="fa-solid fa-pen-to-square"></i></a> |
+                            <a asp-action="XoaLeaveMessenger" asp-route-id="@item.Id"><i class="fa-solid fa-trash-can"></i></a>
+                    </td>
+                </tr>
+        }
+            </tbody>
+        </table>
+    </div>
 </div>
 @Html.PagedListPager(Model, page => Url.Action("LeaveMessenger", new { page = page }), new PagedListRenderOptions()
 {
@@ -83,9 +87,39 @@
     }
 
 
+    .table-responsive {
+        overflow-x: auto;
+        width: 100%;
+    }
+
     .order-details table {
         width: 100%;
         margin-top: 20px;
+        border-collapse: separate;
     }
+
+    .order-details thead th {
+        position: sticky;
+        top: 0;
+        background-color: #7eae37; /* Ensure the header has the same background color */
+        z-index: 2;
+    }
+
+    /* Optional: Customize the scrollbar */
+    .table-responsive::-webkit-scrollbar {
+        height: 12px;
+    }
+
+    .table-responsive::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    .table-responsive::-webkit-scrollbar-thumb {
+        background: #7eae37;
+    }
+
+        .table-responsive::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
 
 </style>

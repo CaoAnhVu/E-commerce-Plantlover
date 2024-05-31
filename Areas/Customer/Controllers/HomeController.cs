@@ -31,7 +31,7 @@ namespace Cs_Plantlover.Areas.Customer.Controllers
         {
             int pageSize = 8;
             int pageNumber = page == null || page < 0 ? 1 : page.Value;
-            var lstsanpham = _db.DanhMucSps.AsNoTracking().OrderBy(x => x.TenSP);
+            var lstsanpham = _db.DanhMucSps.AsNoTracking().OrderBy(x => x.MaSP);
             PagedList<DanhMucSP> lst = new PagedList<DanhMucSP>(lstsanpham, pageNumber, pageSize);
             return View(lst);
         }

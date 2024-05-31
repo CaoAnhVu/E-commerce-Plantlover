@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutBlog.cshtml";
+}
+@using X.PagedList.Mvc.Core;
+@model X.PagedList.IPagedList<BlogDetail>
+
+@foreach (var item in Model)
+{
+    @await Html.PartialAsync("PartialBlog", item)
+}
+
+<div class="product__pagination">
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))
+</div>

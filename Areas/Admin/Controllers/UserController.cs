@@ -29,7 +29,7 @@ namespace Cs_Plantlover.Areas.Admin.Controllers
             _signInManager = signInManager;
             _roleManager = roleManager;
         }
-        [Route("")]
+        /*[Route("")]
         [Route("index")]
         public IActionResult Index()
         {
@@ -51,6 +51,43 @@ namespace Cs_Plantlover.Areas.Admin.Controllers
                 user.Role = roles.FirstOrDefault(u => u.Id == roleId).Name;
             }
             return View(lst);
+        }*/
+        [Route("")]
+        [Route("index")]
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        [Route("ListUser")]
+        public IActionResult ListUser(int? page)
+        {
+            int pageSize = 10;
+            int pageNumber = page == null || page < 0 ? 1 : page.Value;
+
+            // Use a join to fetch users with their roles
+            var usersWithRoles = from user in _db.User
+                                 join userRole in _db.UserRoles on user.Id equals userRole.UserId
+                                 join role in _db.Roles on userRole.RoleId equals role.Id
+                                 select new
+                                 {
+                                     User = user,
+                                     RoleName = role.Name
+                                 };
+
+            // Apply pagination
+            var paginatedUsers = usersWithRoles.Skip((pageNumber - 1) * pageSize).Take(pageSize).ToList();
+
+            // Create a list of users with roles
+            var userList = paginatedUsers.Select(u =>
+            {
+                u.User.Role = u.RoleName; // Assuming the User model has a Role property
+                return u.User;
+            }).ToList();
+
+            PagedList<User> lst = new PagedList<User>(userList, pageNumber, pageSize);
+
+            return View(lst);
         }
         [HttpPost]
         [Route("LockAccount")]
@@ -62,19 +99,20 @@ namespace Cs_Plantlover.Areas.Admin.Controllers
             {
                 return RedirectToAction(nameof(ListUser));
             }
-
             if (user.LockoutEnd != null && user.LockoutEnd > DateTime.Now)
             {
+                // Unlock the account
                 user.LockoutEnd = DateTime.Now;
+                TempData["Message"] = "Tài khoản đã được mở khóa thành công.";
             }
             else
             {
+                // Lock the account
                 user.LockoutEnd = DateTime.Now.AddYears(1000);
+                TempData["Message"] = "Tài khoản đã được khóa thành công.";
             }
             // Lưu thay đổi vào cơ sở dữ liệu
             await _db.SaveChangesAsync();
-
-            TempData["Message"] = "Tài khoản đã được khóa thành công.";
             return RedirectToAction(nameof(ListUser));
         }
         [HttpPost]
@@ -91,7 +129,7 @@ namespace Cs_Plantlover.Areas.Admin.Controllers
             _db.User.Remove(user);
             await _db.SaveChangesAsync();
 
-            TempData["Message"] = "Người dùng đã được xóa thành công.";
+            TempData["Message"] = "Tài khoản người dùng đã được xóa thành công.";
             return RedirectToAction(nameof(ListUser));
         }
 

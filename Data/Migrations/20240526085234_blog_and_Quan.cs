@@ -5,25 +5,24 @@
 namespace Cs_Plantlover.Migrations
 {
     /// <inheritdoc />
-    public partial class delete_district : Migration
+    public partial class blog_and_Quan : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropColumn(
-                name: "District",
-                table: "OrderHeaders");
-        }
-
-        /// <inheritdoc />  
-        protected override void Down(MigrationBuilder migrationBuilder)
-        {
-            migrationBuilder.AddColumn<string>(
+            migrationBuilder.RenameColumn(
                 name: "District",
                 table: "OrderHeaders",
-                type: "nvarchar(max)",
-                nullable: false,
-                defaultValue: "");
+                newName: "Quan");
+        }
+
+        /// <inheritdoc />
+        protected override void Down(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.RenameColumn(
+                name: "Quan",
+                table: "OrderHeaders",
+                newName: "District");
         }
     }
 }

@@ -409,12 +409,8 @@
       "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\blog\\details\\details-author.jpg"
     },
     {
-      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\blog\\details\\details-hero.jpg",
-      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\blog\\details\\details-hero.jpg"
-    },
-    {
-      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\blog\\details\\details-pic.jpg",
-      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\blog\\details\\details-pic.jpg"
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\blog\\details\\details-hero1.jpg",
+      "PackagePath": "staticwebassets\\1LayoutPlantlover\\img\\blog\\details\\details-hero1.jpg"
     },
     {
       "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\1LayoutPlantlover\\img\\blog\\ngugiabi.jpg",
@@ -999,6 +995,118 @@
     {
       "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\Assets\\js\\toastr.min.js",
       "PackagePath": "staticwebassets\\Assets\\js\\toastr.min.js"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\BlogImages\\4024c6180cd77cca64a2caa4cff661ac-400x400.jpeg",
+      "PackagePath": "staticwebassets\\BlogImages\\4024c6180cd77cca64a2caa4cff661ac-400x400.jpeg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\BlogImages\\Images\\4024c6180cd77cca64a2caa4cff661ac-400x400.jpeg",
+      "PackagePath": "staticwebassets\\BlogImages\\Images\\4024c6180cd77cca64a2caa4cff661ac-400x400.jpeg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\BlogImages\\Images\\bin1579577577_373-400x222.jpg",
+      "PackagePath": "staticwebassets\\BlogImages\\Images\\bin1579577577_373-400x222.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\BlogImages\\Images\\cay-bong-mat.jpg",
+      "PackagePath": "staticwebassets\\BlogImages\\Images\\cay-bong-mat.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\BlogImages\\Images\\cay-canh-van-phong-1.jpg",
+      "PackagePath": "staticwebassets\\BlogImages\\Images\\cay-canh-van-phong-1.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\BlogImages\\Images\\cay-kim-ngan-don-than-to-1-300x400.jpg",
+      "PackagePath": "staticwebassets\\BlogImages\\Images\\cay-kim-ngan-don-than-to-1-300x400.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\BlogImages\\Images\\cay-kim-ngan-thuy-sinh-400x349.png",
+      "PackagePath": "staticwebassets\\BlogImages\\Images\\cay-kim-ngan-thuy-sinh-400x349.png"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\BlogImages\\Images\\cay-kim-tien-3-842-400x400.jpg",
+      "PackagePath": "staticwebassets\\BlogImages\\Images\\cay-kim-tien-3-842-400x400.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\BlogImages\\Images\\cay-rung-la-307x400.jpg",
+      "PackagePath": "staticwebassets\\BlogImages\\Images\\cay-rung-la-307x400.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\BlogImages\\Images\\hoa-cay-cuc-tan-an-do-400x300.jpg",
+      "PackagePath": "staticwebassets\\BlogImages\\Images\\hoa-cay-cuc-tan-an-do-400x300.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\BlogImages\\Images\\sen-da-hong-map-dep-420x420.png",
+      "PackagePath": "staticwebassets\\BlogImages\\Images\\sen-da-hong-map-dep-420x420.png"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\BlogImages\\Images\\sen-da-len-mau-400x270.jpg",
+      "PackagePath": "staticwebassets\\BlogImages\\Images\\sen-da-len-mau-400x270.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\BlogImages\\Images\\z5489390513124_0f2b7c5c91d3a6a4b2f4dd74f3bf5ca9.jpg",
+      "PackagePath": "staticwebassets\\BlogImages\\Images\\z5489390513124_0f2b7c5c91d3a6a4b2f4dd74f3bf5ca9.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\BlogImages\\Images\\z5489390850834_bce49f084b1535564bbdbf1355266b18.jpg",
+      "PackagePath": "staticwebassets\\BlogImages\\Images\\z5489390850834_bce49f084b1535564bbdbf1355266b18.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\BlogImages\\Images\\z5489390988062_edacf1d14b66080fcaae24557b3d4995.jpg",
+      "PackagePath": "staticwebassets\\BlogImages\\Images\\z5489390988062_edacf1d14b66080fcaae24557b3d4995.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\BlogImages\\bin1579577577_373-400x222.jpg",
+      "PackagePath": "staticwebassets\\BlogImages\\bin1579577577_373-400x222.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\BlogImages\\cay-bong-mat.jpg",
+      "PackagePath": "staticwebassets\\BlogImages\\cay-bong-mat.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\BlogImages\\cay-canh-van-phong-1.jpg",
+      "PackagePath": "staticwebassets\\BlogImages\\cay-canh-van-phong-1.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\BlogImages\\cay-kim-ngan-don-than-to-1-300x400.jpg",
+      "PackagePath": "staticwebassets\\BlogImages\\cay-kim-ngan-don-than-to-1-300x400.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\BlogImages\\cay-kim-ngan-thuy-sinh-400x349.png",
+      "PackagePath": "staticwebassets\\BlogImages\\cay-kim-ngan-thuy-sinh-400x349.png"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\BlogImages\\cay-kim-tien-3-842-400x400.jpg",
+      "PackagePath": "staticwebassets\\BlogImages\\cay-kim-tien-3-842-400x400.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\BlogImages\\cay-rung-la-307x400.jpg",
+      "PackagePath": "staticwebassets\\BlogImages\\cay-rung-la-307x400.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\BlogImages\\hoa-cay-cuc-tan-an-do-400x300.jpg",
+      "PackagePath": "staticwebassets\\BlogImages\\hoa-cay-cuc-tan-an-do-400x300.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\BlogImages\\sen-da-hong-map-dep-420x420.png",
+      "PackagePath": "staticwebassets\\BlogImages\\sen-da-hong-map-dep-420x420.png"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\BlogImages\\sen-da-len-mau-400x270.jpg",
+      "PackagePath": "staticwebassets\\BlogImages\\sen-da-len-mau-400x270.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\BlogImages\\z5489390513124_0f2b7c5c91d3a6a4b2f4dd74f3bf5ca9.jpg",
+      "PackagePath": "staticwebassets\\BlogImages\\z5489390513124_0f2b7c5c91d3a6a4b2f4dd74f3bf5ca9.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\BlogImages\\z5489390850834_bce49f084b1535564bbdbf1355266b18.jpg",
+      "PackagePath": "staticwebassets\\BlogImages\\z5489390850834_bce49f084b1535564bbdbf1355266b18.jpg"
+    },
+    {
+      "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\BlogImages\\z5489390988062_edacf1d14b66080fcaae24557b3d4995.jpg",
+      "PackagePath": "staticwebassets\\BlogImages\\z5489390988062_edacf1d14b66080fcaae24557b3d4995.jpg"
     },
     {
       "Id": "D:\\Dev web\\Cs-Plantlover\\wwwroot\\LayoutAdmin\\.gitignore",

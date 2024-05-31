@@ -45,7 +45,57 @@ namespace CsPlantlover.Migrations
 
                     b.HasIndex("MaSP");
 
-                    b.ToTable("AnhSP", (string)null);
+                    b.ToTable("AnhSP");
+                });
+
+            modelBuilder.Entity("Cs_Plantlover.Models.BlogDetail", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("ChucNangSPMaChucNang")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreateAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("HinhAnh")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("MaChucNang")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MaViTri")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int?>("ViTriMaViTri")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ChucNangSPMaChucNang");
+
+                    b.HasIndex("UserId");
+
+                    b.HasIndex("ViTriMaViTri");
+
+                    b.ToTable("BlogDetails");
                 });
 
             modelBuilder.Entity("Cs_Plantlover.Models.CheDoAS", b =>
@@ -63,7 +113,7 @@ namespace CsPlantlover.Migrations
 
                     b.HasKey("MaCheDoAS");
 
-                    b.ToTable("CheDoAs", (string)null);
+                    b.ToTable("CheDoAs");
                 });
 
             modelBuilder.Entity("Cs_Plantlover.Models.ChiTietHoaDon", b =>
@@ -99,7 +149,7 @@ namespace CsPlantlover.Migrations
 
                     b.HasIndex("MaHoaDonNavigationMaHoaDon");
 
-                    b.ToTable("ChiTietHoaDons", (string)null);
+                    b.ToTable("ChiTietHoaDons");
                 });
 
             modelBuilder.Entity("Cs_Plantlover.Models.ChiTietSP", b =>
@@ -140,7 +190,7 @@ namespace CsPlantlover.Migrations
 
                     b.HasIndex("MaSpNavigationMaSP");
 
-                    b.ToTable("ChiTietSps", (string)null);
+                    b.ToTable("ChiTietSps");
                 });
 
             modelBuilder.Entity("Cs_Plantlover.Models.ChucNangSP", b =>
@@ -158,7 +208,7 @@ namespace CsPlantlover.Migrations
 
                     b.HasKey("MaChucNang");
 
-                    b.ToTable("ChiTietSP", (string)null);
+                    b.ToTable("ChiTietSP");
                 });
 
             modelBuilder.Entity("Cs_Plantlover.Models.DanhMucSP", b =>
@@ -229,7 +279,7 @@ namespace CsPlantlover.Migrations
 
                     b.HasIndex("MaViTriNavigationMaViTri");
 
-                    b.ToTable("DanhMucSps", (string)null);
+                    b.ToTable("DanhMucSps");
                 });
 
             modelBuilder.Entity("Cs_Plantlover.Models.HoaDon", b =>
@@ -271,7 +321,7 @@ namespace CsPlantlover.Migrations
 
                     b.HasIndex("MaNhanVienNavigationMaNhanVien");
 
-                    b.ToTable("HoaDons", (string)null);
+                    b.ToTable("HoaDons");
                 });
 
             modelBuilder.Entity("Cs_Plantlover.Models.KhachHang", b =>
@@ -310,7 +360,7 @@ namespace CsPlantlover.Migrations
 
                     b.HasKey("MaKhachHang");
 
-                    b.ToTable("KhachHangs", (string)null);
+                    b.ToTable("KhachHangs");
                 });
 
             modelBuilder.Entity("Cs_Plantlover.Models.KichThuocSP", b =>
@@ -328,7 +378,7 @@ namespace CsPlantlover.Migrations
 
                     b.HasKey("MaKichThuoc");
 
-                    b.ToTable("KichThuocSps", (string)null);
+                    b.ToTable("KichThuocSps");
                 });
 
             modelBuilder.Entity("Cs_Plantlover.Models.LeaveMessenger", b =>
@@ -353,7 +403,7 @@ namespace CsPlantlover.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("LeaveMessengers", (string)null);
+                    b.ToTable("LeaveMessengers");
                 });
 
             modelBuilder.Entity("Cs_Plantlover.Models.MoiTruongSongSP", b =>
@@ -371,7 +421,7 @@ namespace CsPlantlover.Migrations
 
                     b.HasKey("MaMoiTruongSong");
 
-                    b.ToTable("MoiTruongSongSps", (string)null);
+                    b.ToTable("MoiTruongSongSps");
                 });
 
             modelBuilder.Entity("Cs_Plantlover.Models.NhanVien", b =>
@@ -413,7 +463,7 @@ namespace CsPlantlover.Migrations
 
                     b.HasKey("MaNhanVien");
 
-                    b.ToTable("NhanViens", (string)null);
+                    b.ToTable("NhanViens");
                 });
 
             modelBuilder.Entity("Cs_Plantlover.Models.OrderDetails", b =>
@@ -442,7 +492,7 @@ namespace CsPlantlover.Migrations
 
                     b.HasIndex("OrderId");
 
-                    b.ToTable("OrderDetails", (string)null);
+                    b.ToTable("OrderDetails");
                 });
 
             modelBuilder.Entity("Cs_Plantlover.Models.OrderHeader", b =>
@@ -486,6 +536,10 @@ namespace CsPlantlover.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Quan")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("ShippingDate")
                         .HasColumnType("datetime2");
 
@@ -502,11 +556,15 @@ namespace CsPlantlover.Migrations
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<string>("Village")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("OrderHeaders", (string)null);
+                    b.ToTable("OrderHeaders");
                 });
 
             modelBuilder.Entity("Cs_Plantlover.Models.Unit", b =>
@@ -523,7 +581,7 @@ namespace CsPlantlover.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Units", (string)null);
+                    b.ToTable("Units");
                 });
 
             modelBuilder.Entity("Cs_Plantlover.Models.User", b =>
@@ -622,7 +680,7 @@ namespace CsPlantlover.Migrations
 
                     b.HasKey("MaViTri");
 
-                    b.ToTable("ViTris", (string)null);
+                    b.ToTable("ViTris");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -767,6 +825,27 @@ namespace CsPlantlover.Migrations
                         .IsRequired();
 
                     b.Navigation("DanhMucSP");
+                });
+
+            modelBuilder.Entity("Cs_Plantlover.Models.BlogDetail", b =>
+                {
+                    b.HasOne("Cs_Plantlover.Models.ChucNangSP", "ChucNangSP")
+                        .WithMany()
+                        .HasForeignKey("ChucNangSPMaChucNang");
+
+                    b.HasOne("Cs_Plantlover.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
+                    b.HasOne("Cs_Plantlover.Models.ViTri", "ViTri")
+                        .WithMany()
+                        .HasForeignKey("ViTriMaViTri");
+
+                    b.Navigation("ChucNangSP");
+
+                    b.Navigation("User");
+
+                    b.Navigation("ViTri");
                 });
 
             modelBuilder.Entity("Cs_Plantlover.Models.ChiTietHoaDon", b =>

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Cs_Plantlover.Migrations
 {
     [DbContext(typeof(DoAnWebDbContext))]
-    [Migration("20240518152224_delete_district")]
-    partial class delete_district
+    [Migration("20240527093257_Blogitem")]
+    partial class Blogitem
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -49,6 +49,52 @@ namespace Cs_Plantlover.Migrations
                     b.HasIndex("MaSP");
 
                     b.ToTable("AnhSP");
+                });
+
+            modelBuilder.Entity("Cs_Plantlover.Models.BlogDetail", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreateAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("HinhAnh")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("MaChucNang")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MaViTri")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MaChucNang");
+
+                    b.HasIndex("MaViTri");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("BlogDetails");
                 });
 
             modelBuilder.Entity("Cs_Plantlover.Models.CheDoAS", b =>
@@ -489,6 +535,10 @@ namespace Cs_Plantlover.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Quan")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("ShippingDate")
                         .HasColumnType("datetime2");
 
@@ -774,6 +824,31 @@ namespace Cs_Plantlover.Migrations
                         .IsRequired();
 
                     b.Navigation("DanhMucSP");
+                });
+
+            modelBuilder.Entity("Cs_Plantlover.Models.BlogDetail", b =>
+                {
+                    b.HasOne("Cs_Plantlover.Models.ChucNangSP", "ChucNangSP")
+                        .WithMany()
+                        .HasForeignKey("MaChucNang")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Cs_Plantlover.Models.ViTri", "ViTri")
+                        .WithMany()
+                        .HasForeignKey("MaViTri")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Cs_Plantlover.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("ChucNangSP");
+
+                    b.Navigation("User");
+
+                    b.Navigation("ViTri");
                 });
 
             modelBuilder.Entity("Cs_Plantlover.Models.ChiTietHoaDon", b =>

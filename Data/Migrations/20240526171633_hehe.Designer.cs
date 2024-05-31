@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Cs_Plantlover.Migrations
 {
     [DbContext(typeof(DoAnWebDbContext))]
-    [Migration("20240413072234_Order")]
-    partial class Order
+    [Migration("20240526171633_hehe")]
+    partial class hehe
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,32 +24,6 @@ namespace Cs_Plantlover.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.Entity("Cs_Plantlover.Models.AnhChiTietSP", b =>
-                {
-                    b.Property<int>("MaChiTietSP")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MaChiTietSP"));
-
-                    b.Property<int?>("ChiTietSPMaChiTietSP")
-                        .HasColumnType("int");
-
-                    b.Property<string>("TenFileAnh")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<short>("Vitri")
-                        .HasColumnType("smallint");
-
-                    b.HasKey("MaChiTietSP");
-
-                    b.HasIndex("ChiTietSPMaChiTietSP");
-
-                    b.ToTable("AnhChiTietSP");
-                });
 
             modelBuilder.Entity("Cs_Plantlover.Models.AnhSP", b =>
                 {
@@ -77,7 +51,7 @@ namespace Cs_Plantlover.Migrations
                     b.ToTable("AnhSP");
                 });
 
-            modelBuilder.Entity("Cs_Plantlover.Models.Cart", b =>
+            modelBuilder.Entity("Cs_Plantlover.Models.BlogDetail", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -85,23 +59,42 @@ namespace Cs_Plantlover.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("Count")
+                    b.Property<int>("ChucNangSPMaChucNang")
                         .HasColumnType("int");
 
-                    b.Property<int>("MaSP")
-                        .HasColumnType("int");
+                    b.Property<DateTime>("CreateAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("HinhAnh")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("UserId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("ViTriMaViTri")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("MaSP");
+                    b.HasIndex("ChucNangSPMaChucNang");
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Carts");
+                    b.HasIndex("ViTriMaViTri");
+
+                    b.ToTable("BlogDetails");
                 });
 
             modelBuilder.Entity("Cs_Plantlover.Models.CheDoAS", b =>
@@ -179,6 +172,9 @@ namespace Cs_Plantlover.Migrations
                         .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("HinhAnhs")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("MaSP")
                         .HasColumnType("int");
@@ -267,8 +263,8 @@ namespace Cs_Plantlover.Migrations
 
                     b.Property<string>("TenSP")
                         .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
+                        .HasMaxLength(4000)
+                        .HasColumnType("nvarchar(4000)");
 
                     b.HasKey("MaSP");
 
@@ -384,6 +380,31 @@ namespace Cs_Plantlover.Migrations
                     b.ToTable("KichThuocSps");
                 });
 
+            modelBuilder.Entity("Cs_Plantlover.Models.LeaveMessenger", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Email")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("FullName")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Messenger")
+                        .HasMaxLength(4000)
+                        .HasColumnType("nvarchar(4000)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("LeaveMessengers");
+                });
+
             modelBuilder.Entity("Cs_Plantlover.Models.MoiTruongSongSP", b =>
                 {
                     b.Property<int>("MaMoiTruongSong")
@@ -482,14 +503,9 @@ namespace Cs_Plantlover.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Carrier")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("City")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("District")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -501,7 +517,6 @@ namespace Cs_Plantlover.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("OrderStatus")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<long>("OrderTotal")
@@ -514,10 +529,13 @@ namespace Cs_Plantlover.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("PaymentStatus")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Quan")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -529,15 +547,12 @@ namespace Cs_Plantlover.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TrackingNumber")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TransactionId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Village")
@@ -551,6 +566,23 @@ namespace Cs_Plantlover.Migrations
                     b.ToTable("OrderHeaders");
                 });
 
+            modelBuilder.Entity("Cs_Plantlover.Models.Unit", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Units");
+                });
+
             modelBuilder.Entity("Cs_Plantlover.Models.User", b =>
                 {
                     b.Property<string>("Id")
@@ -562,11 +594,14 @@ namespace Cs_Plantlover.Migrations
                     b.Property<string>("Address")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Age")
+                    b.Property<string>("City")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("District")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
@@ -612,6 +647,9 @@ namespace Cs_Plantlover.Migrations
                     b.Property<string>("UserName")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("Village")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -777,13 +815,6 @@ namespace Cs_Plantlover.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("Cs_Plantlover.Models.AnhChiTietSP", b =>
-                {
-                    b.HasOne("Cs_Plantlover.Models.ChiTietSP", null)
-                        .WithMany("AnhChiTietSPs")
-                        .HasForeignKey("ChiTietSPMaChiTietSP");
-                });
-
             modelBuilder.Entity("Cs_Plantlover.Models.AnhSP", b =>
                 {
                     b.HasOne("Cs_Plantlover.Models.DanhMucSP", "DanhMucSP")
@@ -795,23 +826,29 @@ namespace Cs_Plantlover.Migrations
                     b.Navigation("DanhMucSP");
                 });
 
-            modelBuilder.Entity("Cs_Plantlover.Models.Cart", b =>
+            modelBuilder.Entity("Cs_Plantlover.Models.BlogDetail", b =>
                 {
-                    b.HasOne("Cs_Plantlover.Models.DanhMucSP", "DanhMucSP")
+                    b.HasOne("Cs_Plantlover.Models.ChucNangSP", "ChucNangSP")
                         .WithMany()
-                        .HasForeignKey("MaSP")
+                        .HasForeignKey("ChucNangSPMaChucNang")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Cs_Plantlover.Models.User", "User")
                         .WithMany()
-                        .HasForeignKey("UserId")
+                        .HasForeignKey("UserId");
+
+                    b.HasOne("Cs_Plantlover.Models.ViTri", "ViTri")
+                        .WithMany()
+                        .HasForeignKey("ViTriMaViTri")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("DanhMucSP");
+                    b.Navigation("ChucNangSP");
 
                     b.Navigation("User");
+
+                    b.Navigation("ViTri");
                 });
 
             modelBuilder.Entity("Cs_Plantlover.Models.ChiTietHoaDon", b =>
@@ -899,7 +936,7 @@ namespace Cs_Plantlover.Migrations
                         .IsRequired();
 
                     b.HasOne("Cs_Plantlover.Models.OrderHeader", "OrderHeader")
-                        .WithMany()
+                        .WithMany("OrderDetails")
                         .HasForeignKey("OrderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -913,9 +950,7 @@ namespace Cs_Plantlover.Migrations
                 {
                     b.HasOne("Cs_Plantlover.Models.User", "User")
                         .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UserId");
 
                     b.Navigation("User");
                 });
@@ -978,8 +1013,6 @@ namespace Cs_Plantlover.Migrations
 
             modelBuilder.Entity("Cs_Plantlover.Models.ChiTietSP", b =>
                 {
-                    b.Navigation("AnhChiTietSPs");
-
                     b.Navigation("ChiTietHoaDons");
                 });
 
@@ -1018,6 +1051,11 @@ namespace Cs_Plantlover.Migrations
             modelBuilder.Entity("Cs_Plantlover.Models.NhanVien", b =>
                 {
                     b.Navigation("HoaDons");
+                });
+
+            modelBuilder.Entity("Cs_Plantlover.Models.OrderHeader", b =>
+                {
+                    b.Navigation("OrderDetails");
                 });
 
             modelBuilder.Entity("Cs_Plantlover.Models.ViTri", b =>

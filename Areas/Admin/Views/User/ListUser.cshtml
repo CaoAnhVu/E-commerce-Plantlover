@@ -16,82 +16,75 @@
 </p>
 <p>@TempData["Message"]</p>
 <div class="order-details common-card">
-    <table  class="table table-striped">
-        <thead>
-            <tr class="card-header"> 
-                <th>Tên người dùng</th>
-                <th>Email</th>
-                <th>Địa chỉ</th>
-                <th>PhoneNumber</th>
-                <th>Role</th>
-                <th>Actions</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-    @foreach (var item in Model) {
-            <tr class="table-secondary">
-                <td>
-                    @Html.DisplayFor(modelItem => item.FullName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Email)
-                </td>
-                <td class="address-info">
-                    @Html.DisplayFor(modelItem => item.Address),
-                    @Html.DisplayFor(modelItem => item.Village),
-                    @Html.DisplayFor(modelItem => item.District),
-                    @Html.DisplayFor(modelItem => item.City) 
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.PhoneNumber)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Role)
-                </td>
-                <td>
-
-                        @if(@item.LockoutEnd > DateTimeOffset.Now){
-                            <form asp-action="LockAccount" method="post" asp-route-id="@item.Id">
-                                <button type="submit" formnovalidate
-                                        class="@btnDanger button-lock">
-                                    <i class="fa-solid fa-lock"></i>
-                                    Unlock
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr class="card-header">
+                    <th>Tên người dùng</th>
+                    <th>Email</th>
+                    <th>Địa chỉ</th>
+                    <th>Số điện thoại</th>
+                    <th>Role</th>
+                    <th>Lock/Unlock</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr class="table-secondary">
+                        <td>@Html.DisplayFor(modelItem => item.FullName)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                        <td class="address-info">
+                            @Html.DisplayFor(modelItem => item.Address),
+                            @Html.DisplayFor(modelItem => item.Village),
+                            @Html.DisplayFor(modelItem => item.District),
+                            @Html.DisplayFor(modelItem => item.City)
+                        </td>
+                        <td>@Html.DisplayFor(modelItem => item.PhoneNumber)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Role)</td>
+                        <td>
+                            @if (item.LockoutEnd > DateTimeOffset.Now)
+                            {
+                                <form asp-action="LockAccount" method="post" asp-route-id="@item.Id">
+                                    <button type="submit" formnovalidate class="@btnDanger button-lock">
+                                        <i class="fa-solid fa-lock"></i>
+                                        Unlock
+                                    </button>
+                                </form>
+                            }
+                            else
+                            {
+                                <form asp-action="LockAccount" method="post" asp-route-id="@item.Id">
+                                    <button type="submit" formnovalidate class="@btnSucess button-lock">
+                                        <i class="fa-solid fa-lock-open"></i>
+                                        Lock
+                                    </button>
+                                </form>
+                            }
+                            <span class="lock-success-msg text-success" style="display: none;">Đã khóa</span>
+                            <span class="lock-error-msg text-danger" style="display: none;">Khóa không thành công. Vui lòng thử lại sau.</span>
+                        </td>
+                        <td>
+                            <form asp-action="DeleteUser" method="post">
+                                <input type="hidden" name="Id" value="@item.Id" />
+                                <button type="submit" class="button-icon">
+                                    <i class="fa-solid fa-trash-can"></i>
                                 </button>
                             </form>
-                        }else{
-                            <form asp-action="LockAccount" method="post" asp-route-id="@item.Id">
-                                <button type="submit" formnovalidate
-                                        class="@btnSucess button-lock">
-                                    <i class="fa-solid fa-lock-open"></i>
-                                    Lock
-                                </button>
-                            </form>
-                        }
-                    
-                
-                    <span class="lock-success-msg text-success" style="display: none;">Đã khóa</span>
-                    <span class="lock-error-msg text-danger" style="display: none;">Khóa không thành công. Vui lòng thử lại sau.</span>
-                </td>
-                    <td>
-                        <form asp-action="DeleteUser" method="post">
-                            <input type="hidden" name="Id" value="@item.Id" />
-                            <button type="submit" class="button-icon">
-                                <i class="fa-solid fa-trash-can"></i>
-                        </form>
-                    </td>
-                    
-            </tr>
-    }
-        </tbody>
-    </table>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 </div>
-
 @Html.PagedListPager(Model, page => Url.Action("ListUser", new { page = page }), new PagedListRenderOptions()
 {
-        LiElementClasses = new List<string> { "page-item" }, 
-        PageClasses = new List<string> { "page-link" } 
- })
+    LiElementClasses = new List<string> { "page-item" },
+    PageClasses = new List<string> { "page-link" }
+})
+
 <style>
     .button-icon {
         background: none;
@@ -120,14 +113,45 @@
     .card-header {
         background-color: #7eae37;
         color: white;
+        position: sticky;
+        top: 0;
+        z-index: 1;
     }
 
+    .table-responsive {
+        overflow-x: auto;
+        width: 100%;
+    }
 
     .order-details table {
         width: 100%;
         margin-top: 20px;
+        border-collapse: separate;
     }
 
+    .order-details thead th {
+        position: sticky;
+        top: 0;
+        background-color: #7eae37; /* Ensure the header has the same background color */
+        z-index: 2;
+    }
+
+    /* Optional: Customize the scrollbar */
+    .table-responsive::-webkit-scrollbar {
+        height: 12px;
+    }
+
+    .table-responsive::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    .table-responsive::-webkit-scrollbar-thumb {
+        background: #7eae37;
+    }
+
+        .table-responsive::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
 </style>
 
 <script>
@@ -161,6 +185,4 @@
             return false;
         });
     });
-
 </script>
-

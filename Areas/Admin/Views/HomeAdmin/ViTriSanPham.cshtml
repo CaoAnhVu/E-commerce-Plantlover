@@ -11,39 +11,41 @@
 <h1 class="text-center">Vị Trí Các Sản Phẩm</h1>
 <hr />
 <p>
-    <a class="btn btn-primary" asp-action="ThemViTri"><i class="fas fa-plus"></i> &nbsp; Create New Location</a>
+    <a class="btn btn-primary" asp-action="ThemViTri"><i class="fas fa-plus"></i> &nbsp; Thêm vị trí sản phẩm</a>
 </p>
 <p>@TempData["Message"]</p>
 <div class="order-details common-card">
-    <table class="table table-striped">
-        <thead>
-            <tr class="card-header">
-                <th>
-                    Mã vị trí
-                </th>
-                <th>
-                    Tên vị trí
-                </th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-    @foreach (var item in Model) {
-            <tr class="table-secondary">
-               <td>
-                   @Html.DisplayFor(modelItem => item.MaViTri)
-               </td>
-               <td>
-                   @Html.DisplayFor(modelItem => item.TenViTri)
-               </td>
-                <td>
-                        <a asp-action="SuaViTri" asp-route-maViTri="@item.MaViTri"><i class="fa-solid fa-pen-to-square"></i></a> |
-                        <a asp-action="XoaViTri" asp-route-maViTri="@item.MaViTri"><i class="fa-solid fa-trash-can"></i></a>
-                </td>
-            </tr>
-    }
-        </tbody>
-    </table>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr class="card-header">
+                    <th>
+                        Mã vị trí
+                    </th>
+                    <th>
+                        Tên vị trí
+                    </th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+        @foreach (var item in Model) {
+                <tr class="table-secondary">
+                   <td>
+                       @Html.DisplayFor(modelItem => item.MaViTri)
+                   </td>
+                   <td>
+                       @Html.DisplayFor(modelItem => item.TenViTri)
+                   </td>
+                    <td>
+                            <a asp-action="SuaViTri" asp-route-maViTri="@item.MaViTri"><i class="fa-solid fa-pen-to-square"></i></a> |
+                            <a asp-action="XoaViTri" asp-route-maViTri="@item.MaViTri"><i class="fa-solid fa-trash-can"></i></a>
+                    </td>
+                </tr>
+        }
+            </tbody>
+        </table>
+    </div>
 </div>
 @Html.PagedListPager(Model, page => Url.Action("ViTriSanPham", new { page = page }), new PagedListRenderOptions()
 {
@@ -66,9 +68,39 @@
     }
 
 
+    .table-responsive {
+        overflow-x: auto;
+        width: 100%;
+    }
+
     .order-details table {
         width: 100%;
         margin-top: 20px;
+        border-collapse: separate;
     }
+
+    .order-details thead th {
+        position: sticky;
+        top: 0;
+        background-color: #7eae37; /* Ensure the header has the same background color */
+        z-index: 2;
+    }
+
+    /* Optional: Customize the scrollbar */
+    .table-responsive::-webkit-scrollbar {
+        height: 12px;
+    }
+
+    .table-responsive::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    .table-responsive::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+
+        .table-responsive::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
 
 </style>

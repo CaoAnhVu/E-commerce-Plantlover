@@ -2517,6 +2517,19 @@
           "lib/netstandard2.0/NuGet.Versioning.dll": {}
         }
       },
+      "RestSharp/111.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SQLitePCLRaw.bundle_e_sqlite3/2.1.6": {
         "type": "package",
         "dependencies": {
@@ -8090,6 +8103,31 @@
         "nuget.versioning.nuspec"
       ]
     },
+    "RestSharp/111.0.0": {
+      "sha512": "jcokQTLsLFR5juvFkKWjvFkPgD66pT9Dp1zwOJpFiK8dzs0WzTvTri7sJiOZPIZPx76Kk57mWwVYlCk6eGUGRA==",
+      "type": "package",
+      "path": "restsharp/111.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net471/RestSharp.dll",
+        "lib/net471/RestSharp.xml",
+        "lib/net48/RestSharp.dll",
+        "lib/net48/RestSharp.xml",
+        "lib/net6.0/RestSharp.dll",
+        "lib/net6.0/RestSharp.xml",
+        "lib/net7.0/RestSharp.dll",
+        "lib/net7.0/RestSharp.xml",
+        "lib/net8.0/RestSharp.dll",
+        "lib/net8.0/RestSharp.xml",
+        "lib/netstandard2.0/RestSharp.dll",
+        "lib/netstandard2.0/RestSharp.xml",
+        "restsharp.111.0.0.nupkg.sha512",
+        "restsharp.nuspec",
+        "restsharp.png"
+      ]
+    },
     "SQLitePCLRaw.bundle_e_sqlite3/2.1.6": {
       "sha512": "BmAf6XWt4TqtowmiWe4/5rRot6GerAeklmOPfviOvwLoF5WwgxcJHAxZtySuyW9r9w+HLILnm8VfJFLCUJYW8A==",
       "type": "package",
@@ -10679,6 +10717,7 @@
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.3",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 8.0.2",
       "NEST >= 7.17.5",
+      "RestSharp >= 111.0.0",
       "Stripe.net >= 44.0.0",
       "Twilio >= 7.0.4",
       "Utility >= 1.0.0",
@@ -10797,6 +10836,10 @@
           "NEST": {
             "target": "Package",
             "version": "[7.17.5, )"
+          },
+          "RestSharp": {
+            "target": "Package",
+            "version": "[111.0.0, )"
           },
           "Stripe.net": {
             "target": "Package",

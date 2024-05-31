@@ -11,63 +11,65 @@
 <h1 class="text-center">Danh Sách Chi Tiết Về Sản Phẩm</h1>
 <hr />
 <p>
-    <a class="btn btn-primary" asp-action="ThemChiTietSanPham"><i class="fas fa-plus"></i> &nbsp; Create New Product</a>
+    <a class="btn btn-primary" asp-action="ThemChiTietSanPham"><i class="fas fa-plus"></i> &nbsp; Thêm chi tiết sản phẩm</a>
 </p>
 <p>@TempData["Message"]</p>
 <div class="order-details common-card">
-    <table  class="table table-striped">
-        <thead>
-            <tr class="card-header">
-                <th>
-                    Mã sản phẩm
-                </th>
-                <th>
-                    Hình ảnh
-                </th>
-                <th>
-                    Đơn giá bán
-                </th>
-                <th>
-                    Giảm giá
-                <th>
-                    Giá bán
-                </th>
-                <th>
-                    Số lượng
-                </th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-    @foreach (var item in Model) {
-                <tr class="table-secondary">
-                <td>
-                    @Html.DisplayFor(modelItem => item.MaSP)
-                </td>
-                <td>
-                    <img src="@item.HinhAnh" alt="Hinh Anh San Pham" style="width: 100px; height: 100px;" />
+    <div class="table-responsive">
+        <table  class="table table-striped">
+            <thead>
+                <tr class="card-header">
+                    <th>
+                        Mã sản phẩm
+                    </th>
+                    <th>
+                        Hình ảnh
+                    </th>
+                    <th>
+                        Đơn giá bán
+                    </th>
+                    <th>
+                        Giảm giá
+                    <th>
+                        Giá bán
+                    </th>
+                    <th>
+                        Số lượng
+                    </th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+        @foreach (var item in Model) {
+                    <tr class="table-secondary">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MaSP)
+                    </td>
+                    <td>
+                        <img src="@item.HinhAnh" alt="Hinh Anh San Pham" style="width: 100px; height: 100px;" />
                   
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DonGiaBan)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.GiamGia)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.GiaBan)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.SoLuong)
-                </td>
-                <td>
-                        <a asp-action="SuaChiTietSanPham" asp-route-maChiTietSP="@item.MaChiTietSP">Edit</a> |
-                        <a asp-action="XoaChiTietSanPham" asp-route-maChiTietSP="@item.MaChiTietSP">Delete</a>
-                </td>
-            </tr>
-    }
-        </tbody>
-    </table>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DonGiaBan)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.GiamGia)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.GiaBan)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SoLuong)
+                    </td>
+                    <td>
+                            <a asp-action="SuaChiTietSanPham" asp-route-maChiTietSP="@item.MaChiTietSP"><i class="fa-solid fa-pen-to-square"></i></a> |
+                            <a asp-action="XoaChiTietSanPham" asp-route-maChiTietSP="@item.MaChiTietSP"><i class="fa-solid fa-trash-can"></i></a>
+                    </td>
+                </tr>
+        }
+            </tbody>
+        </table>
+    </div>
 </div>
 @Html.PagedListPager(Model, page => Url.Action("ChiTietSanPham", new { page = page }), new PagedListRenderOptions()
 {
@@ -90,9 +92,39 @@
     }
 
 
+    .table-responsive {
+        overflow-x: auto;
+        width: 100%;
+    }
+
     .order-details table {
         width: 100%;
         margin-top: 20px;
+        border-collapse: separate;
     }
+
+    .order-details thead th {
+        position: sticky;
+        top: 0;
+        background-color: #7eae37; /* Ensure the header has the same background color */
+        z-index: 2;
+    }
+
+    /* Optional: Customize the scrollbar */
+    .table-responsive::-webkit-scrollbar {
+        height: 12px;
+    }
+
+    .table-responsive::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    .table-responsive::-webkit-scrollbar-thumb {
+        background: #7eae37;
+    }
+
+        .table-responsive::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
 
 </style>

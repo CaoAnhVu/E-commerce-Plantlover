@@ -1,0 +1,28 @@
+﻿@model BlogDetail
+
+<div class="col-lg-6 col-md-6 col-sm-6">
+    <div class="blog__item">
+        <div class="blog__item__pic">
+            <img src="@Url.Content(Model.HinhAnh)" alt="Blog Image">
+        </div>
+        <div class="blog__item__text">
+            <ul>
+                <li><i class="fa fa-calendar-o"></i> Create Blog @Model.CreateAt.ToString("dd/MM/yyyy HH:mm:ss")</li>
+                <li><i class="fa fa-comment-o"></i> 5</li>
+            </ul>
+            <h5><a href="#">@Model.Title</a></h5>
+            <p style="max-width: 50px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                @Html.Raw(Truncate(Model.Description, 100))
+            </p>
+            <a asp-area="Customer" asp-controller="Blog" asp-action="BlogDetail" asp-route-id="@Model.Id" class="blog__btn">READ MORE <span class="arrow_right"></span></a>
+        </div>
+    </div>
+</div>
+
+@functions {
+    private string Truncate(string value, int maxLength)
+    {
+        if (string.IsNullOrEmpty(value)) return value;
+        return value.Length <= maxLength ? value : value.Substring(0, maxLength) + "...";
+    }
+}

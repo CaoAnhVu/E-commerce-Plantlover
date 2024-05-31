@@ -1,12 +1,14 @@
 ﻿using Cs_Plantlover.Areas.Admin.Models;
 using Cs_Plantlover.Migrations;
 using Cs_Plantlover.Models;
+using Cs_Plantlover.ViewModels;
 using Data;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Nest;
 using System.Collections.Generic;
 using X.PagedList;
 
@@ -30,10 +32,34 @@ namespace Cs_Plantlover.Areas.Admin.Controllers
             _signInManager = signInManager;
             
         }
+        /*public IActionResult Dashboard()
+        {
+            var model = new DashboardVM
+            {
+                SoSanPham = _db.DanhMucSps.ToList().Count,
+                SoDonHang = _db.OrderDetails.ToList().Count,
+                SoNguoiDung = _db.Users.ToList().Count,
+                SoTinNhan = _db.LeaveMessengers.ToList().Count,
+                SoChucNang = _db.ChiTietSP.ToList().Count,
+            };
+
+            return View(model);
+        }*/
         [Route("")]
         public IActionResult Index()
         {
-            IEnumerable<User> userList = _db.User.ToList();
+            var model = new DashboardVM
+            {
+                SoSanPham = _db.DanhMucSps.ToList().Count,
+                SoDonHang = _db.OrderDetails.ToList().Count,
+                SoNguoiDung = _db.Users.ToList().Count,
+                SoTinNhan = _db.LeaveMessengers.ToList().Count,
+                SoChucNang = _db.ChiTietSP.ToList().Count,
+                SoBlog = _db.BlogDetails.ToList().Count,
+            };
+
+            return View(model);
+            /*IEnumerable<User> userList = _db.User.ToList();
             var userRole = _db.UserRoles.ToList();
             var roles = _db.Roles.ToList();
             foreach (var user in userList)
@@ -41,7 +67,7 @@ namespace Cs_Plantlover.Areas.Admin.Controllers
                 var roleId = userRole.FirstOrDefault(u => u.UserId == user.Id).RoleId;
                 user.Role = roles.FirstOrDefault(u => u.Id == roleId).Name;
             }
-            return View(userList);
+            return View(userList);*/
         }
         //quan ly danh muc san pham
         [Route("danhmucsanpham")]
@@ -49,7 +75,7 @@ namespace Cs_Plantlover.Areas.Admin.Controllers
         {
             int pageSize = 10;
             int pageNumber = page == null || page < 0 ? 1 : page.Value;
-            var lstsanpham = _db.DanhMucSps.AsNoTracking().OrderBy(x => x.TenSP);
+            var lstsanpham = _db.DanhMucSps.AsNoTracking().OrderBy(x => x.MaSP);
             PagedList<DanhMucSP> lst = new PagedList<DanhMucSP>(lstsanpham, pageNumber, pageSize);
             return View(lst);
         }
@@ -375,6 +401,160 @@ namespace Cs_Plantlover.Areas.Admin.Controllers
                 TempData["Message"] = "Tin nhắn đã được xóa thành công";
             }
             return RedirectToAction("LeaveMessenger", "HomeAdmin");
+        }
+
+
+        //quan ly Blog
+        /*[Route("DanhMucBlog")]
+        public IActionResult DanhMucBlog(int? page)
+        {
+            int pageSize = 10;
+            int pageNumber = page == null || page < 0 ? 1 : page.Value;
+            var lstblogdetail = _db.BlogDetails.Include(u => u.User).AsNoTracking().OrderBy(x => x.Id);
+            PagedList<BlogDetail> lst = new PagedList<BlogDetail>(lstblogdetail, pageNumber, pageSize);
+            return View(lst);
+        }*/
+        [Route("DanhMucBlog")]
+        public IActionResult DanhMucBlog(int? page)
+        {
+            int pageSize = 10;
+            int pageNumber = page == null || page < 0 ? 1 : page.Value;
+
+            // Fetch blog details with user data
+            var lstblogdetail = _db.BlogDetails
+                .Include(b => b.User)
+                .AsNoTracking()
+                .OrderBy(x => x.Id)
+                .ToList();
+
+            // Fetch user roles and roles
+            var userRoles = _db.UserRoles.AsNoTracking().ToList();
+            var roles = _db.Roles.AsNoTracking().ToList();
+
+            // Assign roles to users
+            foreach (var item in lstblogdetail)
+            {
+                if (item.User != null)
+                {
+                    var roleId = userRoles.FirstOrDefault(u => u.UserId == item.User.Id)?.RoleId;
+                    if (roleId != null)
+                    {
+                        item.User.Role = roles.FirstOrDefault(r => r.Id == roleId)?.Name;
+                    }
+                }
+            }
+
+            PagedList<BlogDetail> lst = new PagedList<BlogDetail>(lstblogdetail, pageNumber, pageSize);
+            return View(lst);
+        }
+
+        [Route("AddBlog")]
+        [HttpGet]
+        public IActionResult AddBlog()
+        {
+            return View();
+        }
+        [Route("AddBlog")]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AddBlog(BlogDetail blog, IFormFile HinhAnh)
+        {
+            if (ModelState.IsValid)
+            {
+                if (HinhAnh != null && HinhAnh.Length > 0)
+                {
+                    var fileName = Path.GetFileName(HinhAnh.FileName);
+                    var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/BlogImages/", fileName);
+
+                    using (var fileStream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await HinhAnh.CopyToAsync(fileStream);
+                    }
+
+                    blog.HinhAnh = "/BlogImages/" + fileName; // Set the image path relative to the root
+                }
+                _db.BlogDetails.Add(blog);
+                await _db.SaveChangesAsync();
+                TempData["SuccessMessage"] = "Blog đã được thêm thành công!";
+                return RedirectToAction("DanhMucBlog");
+            }
+            return View(blog);
+        }
+        //cái này nè đạt
+        [Route("EditBlog")]
+        [HttpGet]
+        public IActionResult EditBlog(int id)
+        {
+            var blog = _db.BlogDetails.Find(id);
+            return View(blog);
+        }
+
+        [Route("EditBlog")]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> EditBlog(int id, BlogDetail blog, IFormFile HinhAnh, string existingImagePath)
+        {
+            if (ModelState.IsValid)
+            {
+                if (HinhAnh != null && HinhAnh.Length > 0)
+                {
+                    var fileName = Path.GetFileName(HinhAnh.FileName);
+                    var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "BlogImages", fileName);
+
+                    using (var fileStream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await HinhAnh.CopyToAsync(fileStream);
+                    }
+
+                    blog.HinhAnh = "/BlogImages/" + fileName; // Set the image path relative to the root
+                }
+                else
+                {
+                    // Use the existing image path if no new image is uploaded
+                    blog.HinhAnh = existingImagePath;
+                }
+
+                blog.Id = id; // Ensure the ID is set before updating the entity state
+                _db.Entry(blog).State = EntityState.Modified;
+
+                try
+                {
+                    _db.SaveChanges();
+                }
+                catch (Exception ex)
+                {
+                    // Log the exception (ex) and return an appropriate view with error message
+                    ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists, see your system administrator.");
+                    return View(blog);
+                }
+
+                return RedirectToAction("DanhMucBlog", "HomeAdmin");
+            }
+            return View(blog);
+        }
+
+
+        [Route("DeleteBlog")]
+        [HttpGet]
+        public IActionResult DeleteBlog(int id)
+        {
+            TempData["Message"] = "Bạn có muốn xóa blog này không?";
+            var blogDetails = _db.BlogDetails.Where(x => x.Id == id).ToList();
+            /*if (blogDetails.Count() > 0)
+            {
+                TempData["Message"] = "Không xóa được blog này!";
+                return RedirectToAction("DanhMucBlog", "HomeAdmin");
+            }*/
+            var hinhAnh = _db.BlogDetails.Where(x => x.Id == id);
+            if (hinhAnh.Any()) _db.RemoveRange(hinhAnh);
+            var blog = _db.BlogDetails.Find(id);
+            if (blog != null)
+            {
+                _db.Remove(blog);
+                _db.SaveChanges();
+                TempData["Message"] = "Blog đã được xóa thành công";
+            }
+            return RedirectToAction("DanhMucBlog", "HomeAdmin");
         }
     }
 }

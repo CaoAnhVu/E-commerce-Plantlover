@@ -1,0 +1,69 @@
+﻿@model Cs_Plantlover.Models.BlogDetail
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "AddBlog";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1 class="text-center">Hãy Viết Blog Của Bạn</h1>
+
+<hr />
+<p>@TempData["Message"]</p>
+<div class="row">
+    <div class="col-md-12">
+        <form method="post" asp-action="AddBlog" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HinhAnh" class="control-label"></label>
+                <input asp-for="HinhAnh" type="file" class="form-control" />
+                <span asp-validation-for="HinhAnh" class="text-danger"></span>
+            </div>
+         
+            <div class="form-group">
+                <label asp-for="Description">Description</label>
+                <textarea id="MoTa" asp-for="Description" name="description"placeholder="Mô tả" ></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreateAt" class="control-label"></label>
+                <input asp-for="CreateAt" class="form-control" />
+                <span asp-validation-for="CreateAt" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="UserId" class="control-label"></label>
+                <input asp-for="UserId" class="form-control" />
+                <span asp-validation-for="UserId" class="text-danger"></span>
+            </div>
+           
+            <div class="form-group">
+                <label asp-for="Id" class="control-label"></label>
+                <input asp-for="Id" class="form-control" />
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="MaChucNang" class="control-label"></label>
+                <input asp-for="MaChucNang" class="form-control" />
+                <span asp-validation-for="MaChucNang" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaViTri" class="control-label"></label>
+                <input asp-for="MaViTri" class="form-control" />
+                <span asp-validation-for="MaViTri" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="DanhMucBlog" class="btn btn-primary">Trở lại danh sách</a>
+</div>

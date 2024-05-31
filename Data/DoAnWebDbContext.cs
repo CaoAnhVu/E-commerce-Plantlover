@@ -41,11 +41,14 @@ namespace Data
 
         public DbSet<ViTri> ViTris { get; set; }
         public DbSet<LeaveMessenger> LeaveMessengers { get; set; }
-
+        
         /*public DbSet<Cart> Carts { get; set; }*/
         public DbSet<OrderDetails> OrderDetails { get; set; }
+
         public DbSet<OrderHeader> OrderHeaders { get; set; }
+
         public DbSet<Unit> Units { get; set; }
+        public DbSet<BlogDetail> BlogDetails { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<DanhMucSP>()
@@ -77,8 +80,7 @@ namespace Data
                 .Property(c => c.TongTien)
                 .HasColumnType("decimal(17,2)");
 
-
-
+          
             base.OnModelCreating(modelBuilder);
         }
     }

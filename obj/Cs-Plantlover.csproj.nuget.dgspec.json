@@ -112,6 +112,10 @@
               "target": "Package",
               "version": "[7.17.5, )"
             },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[111.0.0, )"
+            },
             "Stripe.net": {
               "target": "Package",
               "version": "[44.0.0, )"

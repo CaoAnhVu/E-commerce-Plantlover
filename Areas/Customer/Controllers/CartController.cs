@@ -4,10 +4,12 @@ using Cs_Plantlover.Infrastructure;
 using Cs_Plantlover.Models;
 using Cs_Plantlover.ViewModels;
 using Data;
-using Cs_Plantlover.Repository.IRepository;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Cs_Plantlover.Models.Services;
+using Cs_Plantlover.Services;
+using Cs_Plantlover.Repository.IRepository;
 using Nest;
 using Stripe;
 using System.Diagnostics;
@@ -15,9 +17,9 @@ using System.Security.Claims;
 using X.PagedList;
 using System.Threading.Tasks;
 using System.Linq;
-using Cs_Plantlover.Models.Services;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+using Cs_Plantlover.Models.Momo;
 
 namespace Cs_Plantlover.Areas.Customer.Controllers
 {
@@ -33,14 +35,16 @@ namespace Cs_Plantlover.Areas.Customer.Controllers
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
         private readonly IVnPayService _vnPayService;
+        private IMomoService _momoService;
 
-        public CartController(DoAnWebDbContext db, ILogger<HomeController> logger, UserManager<User> userManager, SignInManager<User> signInManager, IVnPayService vnPayService)
+        public CartController(DoAnWebDbContext db, ILogger<HomeController> logger, UserManager<User> userManager, SignInManager<User> signInManager, IVnPayService vnPayService, IMomoService momoService)
         {
             _db = db;
             _logger = logger;
             _userManager = userManager;
             _signInManager = signInManager;
             _vnPayService = vnPayService;
+            _momoService = momoService;
         }
 
         public IActionResult Index()
@@ -159,7 +163,7 @@ namespace Cs_Plantlover.Areas.Customer.Controllers
                 };
                 return Redirect(_vnPayService.CreatePaymentUrl(HttpContext, vnPayModel));
             }
-
+         
             var orderHeader = new OrderHeader
             {
                 UserId = user.Id,
@@ -184,7 +188,7 @@ namespace Cs_Plantlover.Areas.Customer.Controllers
                 Name = user.FullName,
                 StreetAddress = StreetAddress,
                 Village = Village,
-                District = District,
+                Quan = user.District,
                 City = City
             };
 
@@ -232,6 +236,7 @@ namespace Cs_Plantlover.Areas.Customer.Controllers
             // Pass the OrderHeader object to the view
             return View(order);
         }
+
         public IActionResult PaymentCallBack()
         {
             var response = _vnPayService.PaymentExecute(Request.Query);
@@ -262,7 +267,7 @@ namespace Cs_Plantlover.Areas.Customer.Controllers
                 Name = user.FullName,
                 StreetAddress = user.Address,
                 Village = user.Village,
-                District = user.District,
+                Quan = user.District,
                 City = user.City
             };
 
@@ -290,6 +295,7 @@ namespace Cs_Plantlover.Areas.Customer.Controllers
             TempData["Message"] = "Thanh toán VnPay thành công";
             return RedirectToAction("Success", new { id = orderHeader.Id });
         }
+       
         public IActionResult OrderConfirmation(int id)
         {
             var order = _db.OrderHeaders

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "JD3QaQsGbImtU791snpp6wS8aFBCu2jU1kmP+g14ifHpwm01VMk1KkHuTeXEqrtLzGWtaFjThja0e3J6urTozw==",
+  "dgSpecHash": "K8emcB24ULgsaO95jJtoA+wqRfhJoYz2ZefVry/TG2rMRvnFAO/RgqwnXs93xNKjdiYWFGXVlMWmleFkm1o2AA==",
   "success": true,
   "projectFilePath": "D:\\Dev web\\Cs-Plantlover\\Cs-Plantlover.csproj",
   "expectedPackageFiles": [
@@ -152,6 +152,7 @@
     "C:\\Users\\admin\\.nuget\\packages\\nuget.projectmodel\\6.9.1\\nuget.projectmodel.6.9.1.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\nuget.protocol\\6.9.1\\nuget.protocol.6.9.1.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\nuget.versioning\\6.9.1\\nuget.versioning.6.9.1.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\restsharp\\111.0.0\\restsharp.111.0.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.6\\sqlitepclraw.bundle_e_sqlite3.2.1.6.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\sqlitepclraw.core\\2.1.6\\sqlitepclraw.core.2.1.6.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.6\\sqlitepclraw.lib.e_sqlite3.2.1.6.nupkg.sha512",

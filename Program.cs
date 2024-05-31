@@ -11,6 +11,7 @@ using Data;
 using Repository.IRepository;
 using Cs_Plantlover.Repository.IRepository;
 using Cs_Plantlover.Models.Services;
+using Cs_Plantlover.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,13 +28,14 @@ builder.Services.AddDbContext<DoAnWebDbContext>(x => x.UseSqlServer(connectionSt
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IChucNangSPRepository, ChucNangSPRepository>();
+builder.Services.AddScoped<IBlogRepository, BlogRepository>();
 builder.Services.AddScoped<IViTriRepository, ViTriRepository>();
 
 //add Identity
-builder.Services.AddIdentity <User, IdentityRole> ()
+builder.Services.AddIdentity<User, IdentityRole>()
 .AddDefaultTokenProviders()
 .AddDefaultUI()
-.AddEntityFrameworkStores <DoAnWebDbContext> ();
+.AddEntityFrameworkStores<DoAnWebDbContext>();
 builder.Services.AddRazorPages();
 
 builder.Services.ConfigureApplicationCookie(options =>
@@ -42,7 +44,7 @@ builder.Services.ConfigureApplicationCookie(options =>
     options.LogoutPath = $"/Identity/Account/Logout";
     options.LoginPath = $"/Identity/Account/AccessDenied";
 }
-) ;
+);
 
 // Add services to the container.
 
@@ -55,6 +57,8 @@ builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession();
 
 builder.Services.AddSingleton<IVnPayService, VnPayService>();
+builder.Services.AddSingleton<IMomoService, MomoService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -73,7 +77,7 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.UseEndpoints(endpoints => 
+app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllerRoute("default", "{area=Customer}/{controller=Home}/{action=Index}/{id?}");
     endpoints.MapControllerRoute("Admin", "{area=exists}/{controller=Home}/{action=Index}/{id?}");
