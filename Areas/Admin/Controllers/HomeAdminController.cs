@@ -480,7 +480,7 @@ namespace Cs_Plantlover.Areas.Admin.Controllers
             }
             return View(blog);
         }
-        //cái này nè đạt
+        
         [Route("EditBlog")]
         [HttpGet]
         public IActionResult EditBlog(int id)
